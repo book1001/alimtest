@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Halim Lee</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="naver-site-verification" content="a2f6dc73c779bbb018325e96aab39261c5d97361" />
+    <!-- css -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="scroll.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ewy8kjf.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      $(function(){
+
+        var link = $('#navbar a.dot');
+        link.on('click',function(e){
+
+            //href 속성을 통해, section id 타겟을 잡음
+            var target = $($(this).attr('href'));
+
+            //target section의 좌표를 통해 꼭대기로 이동
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            },600);
+
+            //active 클래스 부여
+            $(this).addClass('active');
+
+            //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
+            e.preventDefault();
+        });
+
+        $(window).on('scroll',function(){
+            findPosition();
+        });
+
+        function findPosition(){
+            $('section').each(function(){
+                if( ($(this).offset().top - $(window).scrollTop() ) < 20){
+                    link.removeClass('active');
+                    $('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+                }
+            });
+        }
+
+        findPosition();
+    });
+    </script>
+
+    <div id="column4">
+    <!-- Start Nav Section -->
+    <div id="navbar" class="navbar container">
+    <div class="nav-menu container">
+
+      <div>
+        <a data-scroll="home" href="#home" class="dot active">
+          <div>
+          <img id="FiveImage2" src="./image_previews/Preview_2019_Five_sketch2.png" style="width: 70%;" onclick="openModal(this);currentSlide(5)" class="thumbnail">
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <a data-scroll="one" href="#one" class="dot container">
+          <div style="width: 40%; background-color: #555;"> </div>
+          <div>
+            A-lim <br><br>
+            About <br>
+            Instagram <br><br>
+            Show all <br>
+            Books <br>
+            Typography <br>
+            Branding <br>
+            Illustration <br>
+            Digital <br><br>
+            2022 <br>
+            2021 <br>
+            2020 <br>
+            2019 <br>
+            2018 <br>
+            2017 <br>
+            2016 <br>
+            2015 <br>
+            A-lim <br><br>
+            About <br>
+            Instagram <br><br>
+            Show all <br>
+            Books <br>
+            Typography <br>
+            Branding <br>
+            Illustration <br>
+            Digital <br><br>
+            2022 <br>
+            2021 <br>
+            2020 <br>
+            2019 <br>
+            2018 <br>
+            2017 <br>
+            2016 <br>
+            2015 <br>
+            A-lim <br><br>
+            About <br>
+            Instagram <br><br>
+            Show all <br>
+            Books <br>
+            Typography <br>
+            Branding <br>
+            Illustration <br>
+            Digital <br><br>
+            2022 <br>
+            2021 <br>
+            2020 <br>
+            2019 <br>
+            2018 <br>
+            2017 <br>
+            2016 <br>
+            2015 <br>
+            A-lim <br><br>
+            About <br>
+            Instagram <br><br>
+            Show all <br>
+            Books <br>
+            Typography <br>
+            Branding <br>
+            Illustration <br>
+            Digital <br><br>
+            2022 <br>
+            2021 <br>
+            2020 <br>
+            2019 <br>
+            2018 <br>
+            2017 <br>
+            2016 <br>
+            2015 <br>
+            A-lim <br><br>
+            About <br>
+            Instagram <br><br>
+            Show all <br>
+            Books <br>
+            Typography <br>
+            Branding <br>
+            Illustration <br>
+            Digital <br><br>
+            2022 <br>
+            2021 <br>
+            2020 <br>
+            2019 <br>
+            2018 <br>
+            2017 <br>
+            2016 <br>
+            2015 <br>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <a data-scroll="two" href="#two" class="dot">
+          <div>two</div>
+        </a>
+      </div>
+
+      <div>
+        <a data-scroll="three" href="#three" class="dot">
+          <div>Three</div>
+        </a>
+      </div>
+
+      <div>
+        <a data-scroll="four" href="#four" class="dot">
+          <div>Four</div>
+        </a>
+      </div>
+
+    </div>
+    </div>
+
+    <!-- End Nav Section -->
+
+    <section id="home">
+      <div style="float: right; width:50%;">
+        <img src="./image_details/Detail_2020_iAm_p.3,4,5.jpg" style="width: 100%; display: block;">
+        <br>
+      </div>
+    </section>
+    <section id="one"></section>
+    <section id="two"></section>
+    <section id="three"></section>
+    <section id="four"></section>
+    <footer>
+      created
+    </footer>
+
+  </div>
+  </body>
+</html>

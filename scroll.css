@@ -1,0 +1,63 @@
+* {
+box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Start Section Styles */
+
+section {
+  /* width: 100%; */
+  /* max-width: calc(100% - 300px); */
+  /* min-height: 200px; */
+}
+
+#home {
+  /* background-color: white; */
+}
+
+#one {
+  /* background-color: blue; */
+}
+
+#two {
+  background-color: yellow;
+}
+
+#three {
+  background-color: salmon;
+}
+
+#four {
+  background-color: purple;
+}
+/* End Section Styles */
+
+/* Start Nav Styles */
+
+.navbar {
+  /* position: fixed; */
+  z-index: 999;
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 50%; */
+  /* height: 100%; */
+  /* background-color: #ffff00;
+  overflow-y: auto; */
+  /* pointer-events:none; */
+}
+
+/* dots */
+.navbar .nav-menu {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  /* list-style-type: none; */
+}
+
+.container::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}

@@ -1,0 +1,46 @@
+/* filter */
+/* .video-thumbnail-view {
+ margin: 0;
+ width: 155px;
+} */
+
+
+
+.thumbnail-view-item {
+  width: 100%;
+  margin: 0;
+}
+
+
+.filterDiv {
+  cursor: default;
+  opacity: 20%;
+  -webkit-opacity: 20%;
+  display:none;
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show {
+  /* cursor: pointer; */
+  opacity: 100%;
+  -webkit-opacity: 100%;
+  display:block;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  transition: 0.3s linear;
+}
+
+
+.video_preview_center{
+  display: block;
+  margin: 0 auto 0 auto;
+  background-color: #000000;
+}
+
+img.video_preview_center:hover {
+  cursor: pointer;
+}
+filterDiv

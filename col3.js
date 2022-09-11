@@ -4,7 +4,6 @@ function filterSelection(c) {
   for (var i = 0; i < x.length; i++) {
     x[i].classList.remove("show");
     x[i].parentElement.style.display = "none";
-    window.scrollTo({ top: 0 });
 
     document.getElementById("col2-0").style.display = "none";
     document.getElementById("col2-1").style.display = "block";
@@ -13,13 +12,15 @@ function filterSelection(c) {
     if (c == "all" || x[i].classList.contains(c)) {
       x[i].classList.add("show");
       x[i].parentElement.style.display = "block";
-      window.scrollTo({ top: 0 });
 
       document.getElementById("col2-0").style.display = "none";
       document.getElementById("col2-1").style.display = "block";
       document.getElementById("col2-2").style.display = "block";
     }
   }
+
+
+
 
   var descFilter = document.getElementsByClassName("desc-filter");
   var isActive=false;
@@ -37,7 +38,7 @@ function filterSelection(c) {
       }
     }
   }
-
+  // TODO ???
   var x = window.matchMedia("screen and (max-width:450px),(max-height:450px)")
   responsive(x)
   x.addListener(responsive)
@@ -75,4 +76,10 @@ function filterSelection(c) {
       // $grid.masonry('layout');
     }
   }
+
+  console.log($('body').scrollTop());
+  $('body').scrollTop(1);
+  $('body').scrollTop(0);
+
+  console.log($('body').scrollTop());
 }

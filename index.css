@@ -128,7 +128,6 @@ img.right {
   width: var(--col2-1-width);
   height: 100%;
   padding: 10px calc(10px - var(--scrollbar-left)) 0 10px;
-  display: none;
   overflow-y: auto;
   transition: all .3s ease;
   background-color: transparent;

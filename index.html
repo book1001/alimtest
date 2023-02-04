@@ -38,33 +38,15 @@
       $(function(){
 
         var link = $('#col2-1 .col2-1-class');
-        var link2 = $('#col2-2-title .col2-2-title-class');
         link.on('click',function(e){
 
             //href 속성을 통해, section id 타겟을 잡음
             var target = $($(this).attr('href'));
 
             //target section의 좌표를 통해 꼭대기로 이동
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            },600);
-
-            //active 클래스 부여
-            $(this).addClass('active');
-
-            //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
-            e.preventDefault();
-        });
-
-        link2.on('click',function(e){
-
-            //href 속성을 통해, section id 타겟을 잡음
-            var target = $($(this).attr('href'));
-
-            //target section의 좌표를 통해 꼭대기로 이동
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            },600);
+            // $('html, body').animate({
+            //     scrollTop: target.offset().top
+            // },600);
 
             //active 클래스 부여
             $(this).addClass('active');
@@ -83,8 +65,6 @@
                     if($(this).find('.show')[0] != undefined) {
                       link.removeClass('active');
                       $('#col2-1').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
-                      link2.removeClass('active');
-                      $('#col2-2-title').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
                     }
                 }
             });
@@ -532,29 +512,32 @@
                 <br><br>
                 Throughout “Now We Are Five”, Sedaris apologizes for his indifference toward Tiffany. In my writing, "Five”, I apologize for forgetting my aunts.
                 <br><br>
+                <img class="left" src="./image_details/Detail_2019_Five_Sedaris.svg" style="width: 50%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
             <div data-scroll="sec_Five_sketch2" href="#sec_Five_sketch2" class="col2-1-class desc-filter illustration 2019">
-              <div class="font-description"></div>
+              <div class="font-description">
+              </div>
             </div>
           </div>
 
-          <div>
+          <!-- <div>
             <div data-scroll="sec_Five_sketch1" href="#sec_Five_sketch1" class="col2-1-class desc-filter illustration 2019">
               <div class="font-description"></div>
             </div>
-          </div>
+          </div> -->
 
           <div>
             <div data-scroll="sec_TheLibraryProject" href="#sec_TheLibraryProject" class="col2-1-class desc-filter books 2015">
               <div class="font-description">
                 The Google Books Library Project was started in order to digitize every book in the world. Since the idea came out in 2004, the project has generated controversy regarding the demise of paper books. “The Library Project” is an outline of the Google Books Library Project.
                 <br><br>
-                Category: Book<br>
-                Year: 2015
+                <img class="left" src="./image_details/Detail_2015_TheLibraryProject_10.png" style="width: 75%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
@@ -626,6 +609,8 @@
               <div class="font-description">
                 “Experiment” was created as a project for cost-efficiency. Using my old home printer, I produced prints similar to screen-printing outcomes.
                 <br><br>
+                <img class="left" src="./image_details/Detail_2016_Experiment_pinter.png" style="width: 90%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
@@ -653,359 +638,19 @@
         </div>
       </div>
 
-      <!-- End Nav Section: Title -->
-      <div id="col2-2-title">
-        <div class="nav-menu container">
-
-          <div>
-            <div data-scroll="sec_iAm" href="#sec_iAm" class="col2-2-title-class desc-filter books typography 2020 active">
-              <div class="titleview">
-                <div class="font-title">
-                  iAm Type speciman
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-
-              <!-- <div id="Ko" class="font-description">
-                i.Am Type Specimen<br>
-                Category: Book Typography<br>
-                Year: 2020
-              </div> -->
-
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_BarcodeBand" href="#sec_BarcodeBand" class="col2-2-title-class desc-filter digital 2017 container">
-              <div class="titleview">
-                <div class="font-title">
-                  Barcode Band ― The fourth project
-                </div>
-                <div class="font-year">
-                  2017
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_Waves" href="#sec_Waves" class="col2-2-title-class desc-filter illustration digital scripts 2021">
-              <div class="titleview">
-                <div class="font-title">
-                  Waves
-                </div>
-                <div class="font-year">
-                  2021
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_TimeMuseum" href="#sec_TimeMuseum" class="col2-2-title-class desc-filter books branding 2019">
-              <div class="titleview">
-                <div class="font-title">
-                  Time Museum Visual Identity
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_IceAndFire" href="#sec_IceAndFire" class="col2-2-title-class desc-filter books illustration digital scripts 2021">
-              <div class="titleview">
-                <div class="font-title">
-                  A Song of Ice and Fire
-                </div>
-                <div class="font-year">
-                  2021
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_DotDotDot" href="#sec_DotDotDot" class="col2-2-title-class desc-filter typography digital 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  Dot Dot Dot
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_able" href="#sec_able" class="col2-2-title-class desc-filter typography digital 2021">
-              <div class="titleview">
-                <div class="font-title">
-                  able
-                </div>
-                <div class="font-year">
-                  2021
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_CodeLab" href="#sec_CodeLab" class="col2-2-title-class desc-filter branding digital 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  2022 RISD Code Lab Visual Identity
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_AndOn" href="#sec_AndOn" class="col2-2-title-class desc-filter typography digital 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  And On And On
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_FrozenIsland" href="#sec_FrozenIsland" class="col2-2-title-class desc-filter digital google 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  Frozen Island
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_DancingMoonlight" href="#sec_DancingMoonlight" class="col2-2-title-class desc-filter digital google 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  Dancing in the Moonlight
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_ThePortal" href="#sec_ThePortal" class="col2-2-title-class desc-filter digital google 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  The Portal
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_NemoNemo" href="#sec_NemoNemo" class="col2-2-title-class desc-filter illustration digital scripts 2022">
-              <div class="titleview">
-                <div class="font-title">
-                  Nemo Nemo
-                </div>
-                <div class="font-year">
-                  2022
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_Five" href="#sec_Five" class="col2-2-title-class desc-filter books illustration 2019">
-              <div class="titleview">
-                <div class="font-title">
-                  Five
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_Five_sketch2" href="#sec_Five_sketch2" class="col2-2-title-class desc-filter illustration 2019">
-              <div class="titleview">
-                <div class="font-title">
-                  Palm Tree
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_Five_sketch1" href="#sec_Five_sketch1" class="col2-2-title-class desc-filter illustration 2019">
-              <div class="titleview">
-                <div class="font-title">
-                  Palm Tree
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_TheLibraryProject" href="#sec_TheLibraryProject" class="col2-2-title-class desc-filter books 2015">
-              <div class="titleview">
-                <div class="font-title">
-                  The Library Project
-                </div>
-                <div class="font-year">
-                  2015
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_Numbering" href="#sec_Numbering" class="col2-2-title-class desc-filter typography 2015">
-              <div class="titleview">
-                <div class="font-title">
-                  Numbering
-                </div>
-                <div class="font-year">
-                  2015
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_SpookyDecember" href="#sec_SpookyDecember" class="col2-2-title-class desc-filter typography 2015">
-              <div class="titleview">
-                <div class="font-title">
-                  Spooky December
-                </div>
-                <div class="font-year">
-                  2015
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_RYB" href="#sec_RYB" class="col2-2-title-class desc-filter illustration 2015">
-              <div class="titleview">
-                <div class="font-title">
-                  RYB
-                </div>
-                <div class="font-year">
-                  2015
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_MeasuredCreature" href="#sec_MeasuredCreature" class="col2-2-title-class desc-filter digital 2018">
-              <div class="titleview">
-                <div class="font-title">
-                  Measured Creature
-                </div>
-                <div class="font-year">
-                  2018
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_CubeZeroZeroSix" href="#sec_CubeZeroZeroSix" class="col2-2-title-class desc-filter digital 2019">
-              <div class="titleview">
-                <div class="font-title">
-                  Cube Zero Zero × Six
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_Experiment" href="#sec_Experiment" class="col2-2-title-class desc-filter typography 2016">
-              <div class="titleview">
-                <div class="font-title">
-                  Experiment
-                </div>
-                <div class="font-year">
-                  2016
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_KIAS_SoundStudy" href="#sec_KIAS_SoundStudy" class="col2-2-title-class desc-filter typography illustration 2021">
-              <div class="titleview">
-                <div class="font-title">
-                  Illustrations for the science web magazine, “Horizon”
-                </div>
-                <div class="font-year">
-                  2021
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div data-scroll="sec_OneUI2" href="#sec_OneUI2" class="col2-2-title-class desc-filter digital 2019">
-              <div class="titleview">
-                <div class="font-title">
-                  One UI 2
-                </div>
-                <div class="font-year">
-                  2019
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
       <!-- End Nav Section -->
       <div id="col2-2" style="scroll-snap-type: y mandatory;">
         <section id="sec_iAm" style="scroll-snap-align: start;">
           <div id="filter_iAm" class="filterDiv books typography 2020 show">
-            <div class="padding-title"></div>
-
-            <div style="position: -webkit-sticky; position: sticky; top: 0;">
+            <div class="titlesticky"><div class="titleview">
               <div class="font-title">
-                Barcode Band ― The fourth project
+                iAm Type speciman
               </div>
               <div class="font-year">
-                2017
+                2019
               </div>
-            </div>
+            </div></div>
+            <div class="padding-title"></div>
 
             <div class="workview1">
               <img class="zoomIn" src="./image_details/Detail_2020_iAm_p.3,4,5.jpg" style="width: 100%;">
@@ -1022,17 +667,20 @@
             </div>
 
             <div class="padding-bottom"></div>
-            <!-- <div style="color: white;" class="text-align-center">
-              ☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎
-            </div> -->
-
           </div>
         </section>
 
 
         <section id="sec_BarcodeBand" style="scroll-snap-align: start;">
           <div id="filter_BarcodeBand" class="filterDiv digital 2017 show">
-
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Barcode Band ― The fourth project
+              </div>
+              <div class="font-year">
+                2017
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-9">
@@ -1059,6 +707,14 @@
 
         <section id="sec_Waves">
           <div id="filter_Waves" class="filterDiv illustration digital scripts 2021 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Waves
+              </div>
+              <div class="font-year">
+                2021
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-9">
@@ -1080,6 +736,14 @@
 
         <section id="sec_TimeMuseum">
           <div id="filter_TimeMuseum" class="filterDiv books branding 2019 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Time Museum Visual Identity
+              </div>
+              <div class="font-year">
+                2019
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
@@ -1109,7 +773,7 @@
             </div>
 
             <div class="workview1">
-              <img class="zoomIn right" src="./image_details/Detail_2019_TimeMuseum_CD1.png" style="width: 80%;">
+              <img class="zoomIn right" src="./image_details/Detail_2019_TimeMuseum_CD1.png" style="width: 80%; padding-bottom: 50px;">
               <img class="zoomIn center" src="./image_details/Detail_2019_TimeMuseum_CD2.png" style="width: 100%;">
             </div>
 
@@ -1119,6 +783,14 @@
 
         <section id="sec_IceAndFire">
           <div id="filter_IceAndFire" class="filterDiv books illustration digital scripts 2021 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                A Song of Ice and Fire
+              </div>
+              <div class="font-year">
+                2021
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
@@ -1126,7 +798,7 @@
             </div>
 
             <div class="workview2">
-              <div>
+              <div class="workview1">
                 <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.2,3.png" style="width: 100%;">
                 <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.6,7.png" style="width: 100%;">
                 <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.8,9.png" style="width: 100%;">
@@ -1141,8 +813,10 @@
                 <div class="video-16-9">
                   <iframe class="video-responsive" src="https://player.vimeo.com/video/718869891?h=b8488fd411" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <img class="zoomIn center" src="./image_details/Detail_2021_IceAndFire_p.1.png" style="width: 58%;">
-                <img class="zoomIn center" src="./image_details/Detail_2021_IceAndFire_p.14.png" style="width: 58%;">
+                <div class="workview1">
+                  <img class="zoomIn center" src="./image_details/Detail_2021_IceAndFire_p.1.png" style="width: 58%;">
+                  <img class="zoomIn center" src="./image_details/Detail_2021_IceAndFire_p.14.png" style="width: 58%;">
+                </div>
               </div>
             </div>
 
@@ -1152,6 +826,14 @@
 
         <section id="sec_DotDotDot">
           <div id="filter_DotDotDot" class="filterDiv typography digital 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Dot Dot Dot
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
@@ -1173,6 +855,14 @@
 
         <section id="sec_able">
           <div id="filter_able" class="filterDiv typography digital 2021 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                able
+              </div>
+              <div class="font-year">
+                2021
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-10">
@@ -1189,13 +879,21 @@
 
         <section id="sec_CodeLab">
           <div id="filter_CodeLab" class="filterDiv branding digital 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                2022 RISD Code Lab Visual Identity
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
               <img class="zoomIn center" src="./image_details/Detail_2022_CodeLab_logo.svg" style="width: 100%;">
             </div>
 
-            <div class="workview1">
+            <div style="padding: 50px 0 30px 0;">
               <img class="center" src="./image_details/Detail_2022_CodeLab_web1.png" style="width: 75%;">
               <img class="center" src="./image_details/Detail_2022_CodeLab_web2.gif" style="width: 75%;">
               <img class="center" src="./image_details/Detail_2022_CodeLab_web3.png" style="width: 75%;">
@@ -1224,15 +922,20 @@
 
         <section id="sec_AndOn">
           <div id="filter_AndOn" class="filterDiv typography digital 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                And On And On
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview3">
               <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_1.png" style="width: 100%;"></div>
               <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_2.png" style="width: 100%;"></div>
               <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_3.png" style="width: 100%;"></div>
-            </div>
-
-            <div class="workview3">
               <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_4.png" style="width: 100%;"></div>
               <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_5.png" style="width: 100%;"></div>
               <div></div>
@@ -1244,6 +947,14 @@
 
         <section id="sec_FrozenIsland">
           <div id="filter_FrozenIsland" class="filterDiv digital google 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Frozen Island
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-10">
@@ -1265,6 +976,14 @@
 
         <section id="sec_DancingMoonlight">
           <div id="filter_DancingMoonlight" class="filterDiv digital google 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Dancing in the Moonlight
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-10">
@@ -1284,6 +1003,14 @@
 
         <section id="sec_ThePortal">
           <div id="filter_ThePortal" class="filterDiv digital google 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                The Portal
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-9">
@@ -1291,8 +1018,8 @@
             </div>
 
             <div class="workview1">
-              <img class="zoomIn center" src="./image_details/Detail_2022_ThePortal_Open.gif" style="width: 80%;">
-              <img class="zoomIn center" src="./image_details/Detail_2022_ThePortal_Providence,Eiffel.gif" style="width: 80%;">
+              <img class="center" src="./image_details/Detail_2022_ThePortal_Open.gif" style="width: 80%;">
+              <img class="center" src="./image_details/Detail_2022_ThePortal_Providence,Eiffel.gif" style="width: 80%;">
             </div>
 
             <div class="padding-bottom"></div>
@@ -1301,6 +1028,14 @@
 
         <section id="sec_NemoNemo">
           <div id="filter_NemoNemo" class="filterDiv illustration digital 2022 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Nemo Nemo
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-10">
@@ -1317,25 +1052,71 @@
 
         <section id="sec_Five">
           <div id="filter_Five" class="filterDiv books illustration 2019 show">
-            <div class="padding-title"></div>
-            <div class="padding-bottom"></div>
-          </div>
-        </section>
-
-        <section id="sec_Five_sketch2">
-          <div id="filter_Five_sketch2" class="filterDiv illustration 2019 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Five
+              </div>
+              <div class="font-year">
+                2019
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
-              <img class="zoomIn center" src="./image_details/Detail_2019_Five_sketch2.png" style="width: 60%;">
+              <img class="zoomIn" src="./image_details/Detail_2019_Five_p.1.png" style="width: 100%;">
+            </div>
+
+            <div class="workview3_07-1-2">
+              <div>
+                <img class="zoomIn" src="./image_details/Detail_2019_Five_Me.svg" style="width: 100%;">
+              </div>
+              <div>
+            	   <div><img class="zoomIn center" src="./image_details/Detail_2019_Five_1.png" style="width: 80%; padding-bottom: 20px;"></div>
+                 <div><img class="zoomIn center" src="./image_details/Detail_2019_Five_2.png" style="width: 80%; padding-bottom: 50px;"></div>
+            	   <div><img class="zoomIn center" src="./image_details/Detail_2019_Five_children.svg" style="width: 80%; padding-bottom: 20px;"></div>
+                 <div><img class="zoomIn center" src="./image_details/Detail_2019_Five_particles.svg" style="width: 30%; padding-bottom: 20px;"></div>
+              </div>
+              <div>
+            	   <div><img class="zoomIn" src="./image_details/Detail_2019_Five_p.4-4,4-5.png" style="width: 100%; padding-bottom: 20px;"></div>
+            	   <div><img class="zoomIn" src="./image_details/Detail_2019_Five_p.5-6,6-1.png" style="width: 100%; padding-bottom: 20px;"></div>
+            	   <div><img class="zoomIn" src="./image_details/Detail_2019_Five_p.6-4,6-5.png" style="width: 100%; padding-bottom: 20px;"></div>
+              </div>
             </div>
 
             <div class="padding-bottom"></div>
           </div>
         </section>
 
-        <section id="sec_Five_sketch1">
+        <section id="sec_Five_sketch2">
           <div id="filter_Five_sketch2" class="filterDiv illustration 2019 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Palm Tree
+              </div>
+              <div class="font-year">
+                2019
+              </div>
+            </div></div>
+            <div class="padding-title"></div>
+
+            <div class="workview1">
+              <img class="zoomIn center" src="./image_details/Detail_2019_Five_sketch2.png" style="width: 60%;">
+            </div>
+
+            <div id="filter_Five_sketch1" class="filterDiv illustration 2019 show">
+              <div class="padding-title"></div>
+
+              <div class="workview1">
+                <img class="zoomIn center" src="./image_details/Detail_2019_Five_sketch1.png" style="width: 60%;">
+              </div>
+            </div>
+
+            <div class="padding-bottom"></div>
+          </div>
+        </section>
+
+        <!-- <section id="sec_Five_sketch1">
+          <div id="filter_Five_sketch1" class="filterDiv illustration 2019 show">
             <div class="padding-title"></div>
 
             <div class="workview1">
@@ -1344,17 +1125,58 @@
 
             <div class="padding-bottom"></div>
           </div>
-        </section>
+        </section> -->
 
         <section id="sec_TheLibraryProject">
           <div id="filter_TheLibraryProject" class="filterDiv books 2015 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                The Library Project
+              </div>
+              <div class="font-year">
+                2015
+              </div>
+            </div></div>
             <div class="padding-title"></div>
+
+            <div class="workview3_11-7-7" style="padding-bottom: 50px;">
+              <div>
+                <img class="zoomIn center" src="./image_details/Detail_2015_TheLibraryProject_layout_1.png" style="width: 65%;">
+              </div>
+              <div>
+            	  <img class="zoomIn center" src="./image_details/Detail_2015_TheLibraryProject_2.png" style="width: 100%;">
+              </div>
+              <div>
+            	  <img class="zoomIn center" src="./image_details/Detail_2015_TheLibraryProject_3.png" style="width: 100%;">
+              </div>
+            </div>
+
+            <div class="workview3_11-7-7" style="padding-bottom: 50px;">
+              <div>
+                <img class="zoomIn center" src="./image_details/Detail_2015_TheLibraryProject_moving.gif" style="width: 100%;">
+              </div>
+              <div>
+            	  <img class="zoomIn center" src="./image_details/Detail_2015_TheLibraryProject_8.png" style="width: 100%;">
+              </div>
+              <div>
+            	  <img class="zoomIn center" src="./image_details/Detail_2015_TheLibraryProject_9.png" style="width: 100%;">
+              </div>
+            </div>
+
             <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_Numbering">
           <div id="filter_Numbering" class="filterDiv typography 2015 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Numbering
+              </div>
+              <div class="font-year">
+                2015
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
@@ -1371,6 +1193,14 @@
 
         <section id="sec_SpookyDecember">
           <div id="filter_SpookyDecember" class="filterDiv typography 2015 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Spooky December
+              </div>
+              <div class="font-year">
+                2015
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview2">
@@ -1384,6 +1214,14 @@
 
         <section id="sec_RYB">
           <div id="filter_RYB" class="filterDiv illustration 2015 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                RYB
+              </div>
+              <div class="font-year">
+                2015
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview3">
@@ -1398,6 +1236,14 @@
 
         <section id="sec_MeasuredCreature">
           <div id="filter_MeasuredCreature" class="filterDiv digital 2018 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Measured Creature
+              </div>
+              <div class="font-year">
+                2018
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-9">
@@ -1423,6 +1269,14 @@
 
         <section id="sec_CubeZeroZeroSix">
           <div id="filter_CubeZeroZeroSix" class="filterDiv digital 2019 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Cube Zero Zero × Six
+              </div>
+              <div class="font-year">
+                2019
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-10">
@@ -1442,13 +1296,41 @@
 
         <section id="sec_Experiment">
           <div id="filter_Experiment" class="filterDiv typography 2016 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Experiment
+              </div>
+              <div class="font-year">
+                2016
+              </div>
+            </div></div>
             <div class="padding-title"></div>
+
+            <div class="workview4">
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_1.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_2.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_3.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_4.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_5.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_6.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_7.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2016_Experiment_8.png" style="width: 100%;"></div>
+            </div>
+
             <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_KIAS_SoundStudy">
           <div id="filter_KIAS_SoundStudy" class="filterDiv typography illustration 2021 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Illustrations for the science web magazine, “Horizon”
+              </div>
+              <div class="font-year">
+                2021
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="workview1">
@@ -1467,6 +1349,14 @@
 
         <section id="sec_OneUI2">
           <div id="filter_OneUI2" class="filterDiv digital 2019 show">
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                One UI 2
+              </div>
+              <div class="font-year">
+                2019
+              </div>
+            </div></div>
             <div class="padding-title"></div>
 
             <div class="video-16-9">
@@ -1475,7 +1365,6 @@
 
             <div class="workview2">
               <img class="zoomIn" src="./image_details/Detail_2019_OneUI2_1.png" style="width: 100%; display: block;">
-              <div></div>
               <img class="zoomIn" src="./image_details/Detail_2019_OneUI2_2.png" style="width: 100%; display: block;">
             </div>
 

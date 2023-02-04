@@ -7,20 +7,22 @@
 .titlesticky {
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
-  padding-bottom: 76px;
+  /* top: 10px; */
+  top: 0px;
   z-index: 3;
 }
 
 .titleview {
 	display: grid;
 	height: 30px;
+  /* padding: 0; */
 	padding: 10px 0 4px 0;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   column-gap: 10px;
-  row-gap: 10px;
+  row-gap: 0px;
+  /* row-gap: 10px; */
   font-size: 0;
-	/* background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); */
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
 /* About ================================================ */
@@ -37,7 +39,9 @@
 /* Grid Layout ================================================ */
 
 .workview1 {
+  display: grid;
 	margin-bottom: 20px;
+  row-gap: 20px;
   font-size: 0;
 }
 
@@ -60,11 +64,34 @@
 .workview3 {
 	display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 20px;
+  row-gap: 20px;
   font-size: 0;
 }
 
+.workview3_07-1-2 {
+	display: grid;
+  grid-template-columns: 0.7fr 1fr 2fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  font-size: 0;
+}
+
+.workview3_11-7-7 {
+	display: grid;
+  grid-template-columns: 11fr 7fr 7fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  font-size: 0;
+}
+
+.workview4 {
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  font-size: 0;
+}
 
 /* Video ================================================ */
 

@@ -66,14 +66,8 @@
     padding: 10px 20px 0 20px;
   }
 
-  #col2-2-title {
-    margin-left: calc(var(--col2-1-width) + var(--scrollbar-width) - var(--scrollbar-right));
-  }
-
-  .col2-2-title-class div {
+  .titlesticky {
     top: calc(var(--col1-height) + var(--col4-height));
-    /* width: calc(100% - var(--col2-1-width) - var(--col3-width) - 20px); */
-    width: calc(100% - var(--col2-1-width) - var(--scrollbar-width) - var(--scrollbar-right) - var(--col3-width) - var(--col2-extra));
   }
 
   #col3 {
@@ -158,22 +152,12 @@
   }
 
   .col2-1-class.active div {
-    display: none;
+    /* display: none; */
   }
 
   #col2-2 {
     width: 100%;
     margin-left: 20px;
-  }
-
-  #col2-2-title {
-    margin-left: 20px;
-  }
-
-  .col2-2-title-class div {
-    width: 100%;
-    padding: 10px 40px 0 0;
-    overflow: hidden;
   }
 
   .padding-title {

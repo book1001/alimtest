@@ -23,19 +23,19 @@ function openAbout() {
   document.getElementById("col2-0").style.display = "block";
   document.getElementById("col2-1").style.display = "none";
   document.getElementById("col2-2").style.display = "none";
-  document.getElementById("col2-2-title").style.display = "none";
+
+  console.log($('body').scrollTop());
+  $('body').scrollTop(1);
+  $('body').scrollTop(0);
+
+  console.log($('body').scrollTop());
 }
 
 function thumbnailSelection() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "block";
   document.getElementById("col2-2").style.display = "block";
-  document.getElementById("col2-2-title").style.display = "block";
 }
-
-// function filterSelection() {
-//   document.getElementById("col2-2-title").style.display = "block";
-// }
 
 
 // En Ko

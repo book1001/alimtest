@@ -10,15 +10,14 @@ var modalImg = document.getElementById("img01");
 var xIcon = document.getElementsByClassName("close")[0];
 var modalBg = document.getElementsByClassName("modal-dimbg")[0];
 
-let images = document.getElementsByClassName("myImg");
+let images = document.getElementsByClassName("zoomIn");
 
 for(let i=0; i<images.length; i++) {
   images[i].onclick = function(){
     modal.style.display = "block";
     xIcon.style.display = "block";
     modalImg.src = this.src;
-
-    document.body.style.overflowY = "hidden";
+    // document.body.style.overflowY = "hidden";
   }
 }
 
@@ -26,11 +25,11 @@ for(let i=0; i<images.length; i++) {
 xIcon.onclick = function() {
   modal.style.display = "none";
   xIcon.style.display = "none";
-  document.body.style.overflowY = "scroll";
+  // document.body.style.overflowY = "scroll";
 }
 
 modalBg.onclick = function() {
   modal.style.display = "none";
   xIcon.style.display = "none";
-  document.body.style.overflowY = "scroll";
+  // document.body.style.overflowY = "scroll";
 }

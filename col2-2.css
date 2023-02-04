@@ -1,15 +1,51 @@
 /* Grid Layout ================================================ */
 
+.divider {
+  border-top: 1px solid black;
+}
+
+.titlesticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding-bottom: 76px;
+  z-index: 3;
+}
+
+.titleview {
+	display: grid;
+	height: 30px;
+	padding: 10px 0 4px 0;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  font-size: 0;
+	/* background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); */
+}
+
+/* About ================================================ */
+
+.aboutview3 {
+	display: grid;
+  grid-template-columns: 100px 3fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  font-size: 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Grid Layout ================================================ */
+
 .workview1 {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
   font-size: 0;
 }
 
 .workview2 {
 	display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 20px;
+  row-gap: 20px;
   font-size: 0;
 }
 
@@ -37,7 +73,7 @@
   width: 100%;
   overflow: hidden;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .video-16-10 {
@@ -45,7 +81,7 @@
   width: 100%;
   overflow: hidden;
   padding-top: 63%; /* 16:10 Aspect Ratio ????? */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .video-20-31 {
@@ -53,7 +89,7 @@
   width: 100%;
   overflow: hidden;
   padding-top: 155%; /* 20:31 Aspect Ratio ????? */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .video-responsive {
@@ -70,31 +106,34 @@
 
 /* Padding ================================================ */
 
-.padding-bottom {
-  height: 300px;
+.padding-title {
+	height: 76px;
+  /* height: 70px; */
 }
 
-.padding-title {
-  height: 50px;
+.padding-bottom {
+  height: 300px;
 }
 
 
 /* Modal: image zoom ================================================ */
 
 
-.myImg {
+.zoomIn {
   cursor: zoom-in;
   transition: 0.3s;
 }
 
-.myImg:hover {opacity: 0.7;}
+.zoomIn:hover {
+  /* opacity: 0.7; */
+}
 
 
 /* The Modal (background) */
 .modal-dimbg {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 6; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   top: 0;
   left: 0;
@@ -107,6 +146,10 @@
   cursor: zoom-out;
 }
 
+.modal-dimbg::-webkit-scrollbar {
+  width: 0px;
+}
+
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
@@ -117,6 +160,7 @@
 
 /* Add Animation */
 .modal-content {
+  padding-bottom: 100px;
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -143,8 +187,8 @@
   position: fixed;
   top: 0px;
   right: 21px;
-  padding: 12px 0px 20px 20px;
-	z-index: 2;
+  padding: 20px 0px 20px 20px;
+	z-index: 7;
   transition: 0.3s;
   user-select: none;
   -webkit-user-select: none;

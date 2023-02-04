@@ -8,6 +8,7 @@ function filterSelection(c) {
     document.getElementById("col2-0").style.display = "none";
     document.getElementById("col2-1").style.display = "block";
     document.getElementById("col2-2").style.display = "block";
+    document.getElementById("col2-2-title").style.display = "block";
 
     if (c == "all" || x[i].classList.contains(c)) {
       x[i].classList.add("show");
@@ -16,6 +17,7 @@ function filterSelection(c) {
       document.getElementById("col2-0").style.display = "none";
       document.getElementById("col2-1").style.display = "block";
       document.getElementById("col2-2").style.display = "block";
+      document.getElementById("col2-2-title").style.display = "block";
     }
   }
 

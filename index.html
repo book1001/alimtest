@@ -13,12 +13,18 @@
     <link rel="stylesheet" href="col3.css">
     <link rel="stylesheet" href="scroll.css">
     <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="index_media.css">
 
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ewy8kjf.css">
-
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+    <!-- script: index_ie.js -->
+    <script type="text/javascript" src="index_ie.js"></script>
+
+    <!-- script: Masonry -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -31,8 +37,26 @@
     <script>
       $(function(){
 
-        var link = $('#col2-1 .dot');
+        var link = $('#col2-1 .col2-1-class');
+        var link2 = $('#col2-2-title .col2-2-title-class');
         link.on('click',function(e){
+
+            //href 속성을 통해, section id 타겟을 잡음
+            var target = $($(this).attr('href'));
+
+            //target section의 좌표를 통해 꼭대기로 이동
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            },600);
+
+            //active 클래스 부여
+            $(this).addClass('active');
+
+            //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
+            e.preventDefault();
+        });
+
+        link2.on('click',function(e){
 
             //href 속성을 통해, section id 타겟을 잡음
             var target = $($(this).attr('href'));
@@ -59,6 +83,8 @@
                     if($(this).find('.show')[0] != undefined) {
                       link.removeClass('active');
                       $('#col2-1').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+                      link2.removeClass('active');
+                      $('#col2-2-title').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
                     }
                 }
             });
@@ -69,26 +95,198 @@
     </script>
 
 
-    <div id="col1" class="text-align-left font-menu" style="font-size: 0.7rem;">
-      <button class="col1-btn font-menu font-weight-bold" style="cursor: w-resize;" onclick="location.href='index.html'" type="button">Halim Lee</button>
-      <br><br>
+    <div id="col1" class="text-align-left font-menu">
+      <!-- <div id="En" class="font-description">
+        Halim Lee<br><br>
+        About<br>
+        instagram
+      </div> -->
+      <button class="col1-btn font-menu" style="cursor: w-resize;" onclick="location.href='index.html'" type="button">Halim Lee</button>
+      <div class="btn-br2"></div>
+      <!-- <button class="col1-btn font-menu" style="cursor: none; pointer-events: none; color: transparent;" type="button">HALIM LEE</button> -->
       <button class="col1-btn font-menu" style="cursor: alias;" onclick="openAbout()">About</button>
-      <br>
+      <div class="btn-br1"></div>
       <button class="col1-btn font-menu" style="cursor: alias;" onclick="javascript:window.open('https://www.instagram.com/alim.db', '_blank');" type="button">Instagram</button>
 
-      <button class="col1-btn col1-btn-language font-menu" style="cursor: w-resize;" onclick="EnKo()" type="button">En / Ko</button>
+      <!-- <button class="col1-btn col1-btn-language font-menu" style="cursor: w-resize;" onclick="EnKo()" type="button">En / Ko</button> -->
     </div>
 
 
     <div id="col2">
       <div id="col2-0" class="font-description" style="color: white;">
-        Halim Lee is a multidisciplinary graphic designer from Seoul, South Korea. After working for Samsung as a Galaxy UX designer for seven years, she is currently pursuing an MFA in Graphic Design at the Rhode Island School of Design in Providence, Rhode Island.
+        <div class="workview2 font-description">
+          <p>
+            Halim Lee is a multidisciplinary graphic designer from Seoul, South Korea. After working for Samsung as a Galaxy UX designer for seven years, she is currently pursuing an MFA in Graphic Design at the Rhode Island School of Design in Providence, Rhode Island.
+            <br><br>
+            She is intrigued by both print and digital design, and utilizes technology to add an uncanny feeling to classical narratives. She enjoys laying down on the beach in the sun and believes the sunlight energizes and purifies her.
+          </p>
+          <p>
+            <a href="https://www.instagram.com/alim.db" target="_blank">Instagram: @alim.db</a>
+            <br>
+            <a href="mailto:book1001.db@gmail.com" target="_blank">book1001.db@gmail.com</a>
+          </p>
+        </div>
         <br><br>
-        She is intrigued by both print and digital design, and utilizes technology to add an uncanny feeling to classical narratives. She enjoys laying down on the beach in the sun and believes the sunlight energizes and purifies her.
+
+        Awards
+        <hr>
+        <div>
+          <div class="aboutview3">
+            <div class="font-description">2022</div>
+            <div class="font-description">KSDS Tangshan International Invitational Exhibition Special Prize</div>
+            <div class="font-description text-align-right">Work Title: Waves</div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2021</div>
+            <div class="font-description">TDC 67 Communication Design Competition</div>
+            <div class="font-description text-align-right">Work Title: i.Am Type Specimen</div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2013</div>
+            <div class="font-description">Adobe Design Achievement Awards: Print Communications</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2013</div>
+            <div class="font-description">Adobe Design Achievement Awards: Print Communications</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2013</div>
+            <div class="font-description">iF Concept Design Award</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Vimeo Staff Picks</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Adobe Design Achievement Awards: Print Communications</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Adobe Design Achievement Awards: Live Action</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2010</div>
+            <div class="font-description">Reddot Design Award Winner</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+        </div>
         <br><br>
-        <a href="https://www.instagram.com/alim.db" target="_blank">Instagram: @alim.db</a>
-        <br>
-        <a href="mailto:book1001.db@gmail.com" target="_blank">book1001.db@gmail.com</a>
+
+        Featured Media
+        <hr>
+        <div>
+          <div class="aboutview3">
+            <div class="font-description">2022</div>
+            <div class="font-description">Design Magazine CA 262: Digital Artwork & NFT</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2015</div>
+            <div class="font-description">S+V+M</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2014</div>
+            <div class="font-description">Logograma: logo design for dynamic identities</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2014</div>
+            <div class="font-description">VJs TV</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">eYeka Global</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">OFF magazine</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Curious Brain</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Design boom</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">CeCi magazine</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Naver TVcast</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2012</div>
+            <div class="font-description">Discovery Channel: Outrageous Acts of Science</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2011</div>
+            <div class="font-description">Tuvie</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2011</div>
+            <div class="font-description">Trendhunter</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2011</div>
+            <div class="font-description">Yanco Design</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2009</div>
+            <div class="font-description">Maeil Business Newspaper</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+
+          <div class="aboutview3">
+            <div class="font-description">2009</div>
+            <div class="font-description">Design Jungle</div>
+            <div class="font-description text-align-right"></div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Start Nav Section -->
@@ -96,23 +294,18 @@
         <div class="nav-menu container">
 
           <div>
-            <div data-scroll="sec_iAm" href="#sec_iAm" class="dot desc-filter books typography 2020 active">
+            <div data-scroll="sec_iAm" href="#sec_iAm" class="col2-1-class desc-filter books typography 2020 active">
               <div id="En" class="font-description">
-                i.Am Type Specimen
-                <br><br>
                 We are often deprived of defining ourselves and who we are. As you are the master of your own life and destiny, you should be the only one who defines yourself.
                 <br><br>
                 My font, called "i.Am", supports one’s right to self-expression, liberty, and uniqueness.
                 <br><br>
                 This piece received the “Certificate of Typographic Excellence” in TDC 67 Communication Design Competition.
                 <br><br>
-                Category: Book Typography<br>
-                Year: 2020
-                <br><br><br>
                 <img src="./image_details/Detail_2020_iAm_motion.gif" style="width:70%; display: block;">
-
-                <!-- <br><br>
-                <img class="center" src="./image_details/Detail_2020_iAm_RoundPix_A.svg" style="width: 50%; display: block;"> -->
+                <br><br>
+                <br><br>
+                <img class="center" src="./image_details/Detail_2020_iAm_RoundPix_A.svg" style="width: 50%; display: block;">
               </div>
 
               <div id="Ko" class="font-description">
@@ -132,7 +325,7 @@
           </div>
 
           <div>
-            <div data-scroll="sec_BarcodeBand" href="#sec_BarcodeBand" class="dot desc-filter digital 2017 container">
+            <div data-scroll="sec_BarcodeBand" href="#sec_BarcodeBand" class="col2-1-class desc-filter digital 2017 container">
               <div class="font-description">
                 When the barcode graphics on the paper are scanned, they represent the inherent sounds and then create music. This new digital instrument compresses existing heavy musical instruments onto a single piece of paper, exemplifying the essence of the digital society.
                 <br><br>
@@ -140,20 +333,18 @@
                 <br><br>
                 View the first project: <a href="https://vimeo.com/41132461" target="_blank">https://vimeo.com/41132461</a>
                 <br><br>
-                Category: Digital<br>
-                Year: 2017
-                <br><br><br><br>
                 <img src="./image_details/Detail_2018_BarcodeBand_instrument_1.png" style="width: 70%; display: block;">
-                <br><br>
+                <br>
                 <img src="./image_details/Detail_2018_BarcodeBand_instrument_2.png" style="width: 70%; display: block;">
-                <br><br>
+                <br>
                 <img src="./image_details/Detail_2018_BarcodeBand_instrument_3.png" style="width: 70%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_Waves" href="#sec_Waves" class="dot desc-filter illustration digital scripts 2021">
+            <div data-scroll="sec_Waves" href="#sec_Waves" class="col2-1-class desc-filter illustration digital scripts 2021">
               <div class="font-description">
                 "Waves" was one of my RISD Studio projects whose prompt was to create a piece from the analysis of one of the special collections at the local public library. I choose a book that shows the image-making process of roes made from lithography and defined the essence of the book as “combination” and “separation”.
                 <br><br>
@@ -165,29 +356,25 @@
                 <br><br>
                 To show the results of the generated images, I mapped three different projects of red, green, and blue lights. The lights from the projectors were overlaid on top of one another and generated a full-color combination.
                 <br><br>
-                Category: Illustration Digital<br>
-                Year: 2021
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_TimeMuseum" href="#sec_TimeMuseum" class="dot desc-filter books branding 2019">
+            <div data-scroll="sec_TimeMuseum" href="#sec_TimeMuseum" class="col2-1-class desc-filter books branding 2019">
               <div class="font-description">
                 The visual motifs of the Time Museum Visual Identity are the sundial and mechanical clock. (The sundial is the first man-made clock and the mechanical clock is what we commonly use nowadays.)
                 <br><br>
                 The yellow hand at the center of the logo rotates 360 degrees and forms the shape of the sun.
-                <br><br>
-                Category: Book Branding<br>
-                Year: 2019
                 <br><br><br>
                 <img class="center modal-img-deco" src="./image_details/Detail_2019_TimeMuseum_moving.gif" style="width: 80%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_IceAndFire" href="#sec_IceAndFire" class="dot desc-filter books illustration digital scripts 2021">
+            <div data-scroll="sec_IceAndFire" href="#sec_IceAndFire" class="col2-1-class desc-filter books illustration digital scripts 2021">
               <div class="font-description">
                 “A Song of Ice and Fire” is a book generated by code. When I run the script, the entire page of the book is automatically created, and the images on the left side of the book are converted into the images on the right side.
                 <br><br>
@@ -195,14 +382,12 @@
                 <br>
                 The facial expressions of the generated images reminded me of the sense of the madness that I felt when watching “Game of Thrones”. I named my book after the original novel of the TV series - “A Song of Ice and Fire”.
                 <br><br>
-                Category: Book Illustration Digital Script<br>
-                Year: 2021
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_DotDotDot" href="#sec_DotDotDot" class="dot desc-filter typography digital 2022">
+            <div data-scroll="sec_DotDotDot" href="#sec_DotDotDot" class="col2-1-class desc-filter typography digital 2022">
               <div class="font-description">
                 “Dot Dot Dot” is a project that includes different forms of dots. It was developed through a series of simple practices. The first practice was conducted by using a circular ruler. I sprayed on the ruler and created an uppercase alphabet.
                 <br><br>
@@ -214,14 +399,12 @@
                 <br>
                 For the second practice, I applied a little glass to the app and generated pixelated images. In order to represent the aesthetic of the practice, I created a script (<a href="#filter_NemoNemo">Nemo Nemo</a>) that can generate pixelated images and applied the code to the compositions created in the first practice.
                 <br><br>
-                Category: Typography Digital<br>
-                Year: 2022
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_able" href="#sec_able" class="dot desc-filter typography digital 2021">
+            <div data-scroll="sec_able" href="#sec_able" class="col2-1-class desc-filter typography digital 2021">
               <div class="font-description">
                 “able”, which implies ability and possibility, is a variable font of which users can change the width freely.
                 <br><br>
@@ -231,14 +414,12 @@
                 <br>
                 Every single page can be printed as a postcard, and the original website where the images were downloaded can be shown when the mouse moves to the bottom-right most area.
                 <br><br>
-                Category: Typography Digital Web<br>
-                Year: 2021
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_CodeLab" href="#sec_CodeLab" class="dot desc-filter branding digital 2022">
+            <div data-scroll="sec_CodeLab" href="#sec_CodeLab" class="col2-1-class desc-filter branding digital 2022">
               <div class="font-description">
                 RISD Code Lab was organized by several RISD faculty members in order to support students’ coding issues. This year, they wanted to expand the scale of the event, and I was assigned to design the visual identity.
                 <br><br>
@@ -253,15 +434,13 @@
                 The AR face filter below was used as a demo for the workshop. The slogan of this was “For beginners, all you need to bring is a smile!”. When you smile on this filter, a little cat emoji appears on your face.
                 <br><br>
                 <img class="center" src="./image_details/Detail_2022_CodeLab_Smile.gif" style="width: 60%; display: block;">
-                <br>
-                Category: Branding Digital AR<br>
-                Year: 2022
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_AndOn" href="#sec_AndOn" class="dot desc-filter typography digital 2022">
+            <div data-scroll="sec_AndOn" href="#sec_AndOn" class="col2-1-class desc-filter typography digital 2022">
               <div class="font-description">
                 “And On And On” was created by following the process of office work. Each letter was designed by using Google Sheets and then printed out with a home printer.
                 <br><br>
@@ -272,15 +451,13 @@
                 As a printer does not recognize the end of the loop, it continuously prints, and the letters of the expression “And On And On” automatically go through the printer over and over.
                 <br><br>
                 <img class="center" src="./image_details/Detail_2022_AndOn_printer.gif" style="width: 100%; display: block;">
-                <br>
-                Category: Typography Digital<br>
-                Year: 2022
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_FrozenIsland" href="#sec_FrozenIsland" class="dot desc-filter digital google 2022">
+            <div data-scroll="sec_FrozenIsland" href="#sec_FrozenIsland" class="col2-1-class desc-filter digital google 2022">
               <div class="font-description">
                 Google Maps not only accumulates information about locations but also records unexpected moments in time. Frozen Island is an archive of frozen time on Google Maps. Viewers can explore these captured moments by dropping their Google Maps avatars into the Mario Pipe on the island. When users discover new findings, they can report them to request new postings.
                 <br><br>
@@ -297,14 +474,12 @@
                 <br>
                 The slides are the layers of frozen time. Just like looking at a sample under a microscope, you can observe the frozen time more closely under a slide viewer.
                 <br><br>
-                Category: Digital<br>
-                Year: 2022
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_DancingMoonlight" href="#sec_DancingMoonlight" class="dot desc-filter digital google 2022">
+            <div data-scroll="sec_DancingMoonlight" href="#sec_DancingMoonlight" class="col2-1-class desc-filter digital google 2022">
               <div class="font-description">
                 *on-going project
                 <br><br>
@@ -322,27 +497,23 @@
                 <br>
                 I’ve always thought that Google Maps is the Earth in miniature. Above the earth, the moon always shines down. The avatars created by participants are shown on Google Maps in yellow as figures of moonlight. If more participants join this project, the initially dark Google Maps interface will become brighter with their individual moonlight avatars.
                 <br><br>
-                Category: Digital<br>
-                Year: 2022
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_ThePortal" href="#sec_ThePortal" class="dot desc-filter digital google 2022">
+            <div data-scroll="sec_ThePortal" href="#sec_ThePortal" class="col2-1-class desc-filter digital google 2022">
               <div class="font-description">
                 Today, many countries still have travel restrictions. Due to self-isolation related to the pandemic or the ongoing war in Ukraine, people nowadays lose the freedom of mobility. “The Portal” opens the gate to the world on the walls within your own home. Now you can go anywhere in the world by saying the names of the places you care about. This could mean your hometown that you haven't been to in a long time or a new travel destination. The portal was made from Google Maps, therefore you can traverse virtual streets in “The Portal”.
                 <br><br>
                 Technically, “The Portal” is not a real portal. It was made using web programming language and then projected on the wall. A smartphone is used as a controller when you traverse virtual streets on Google Maps. However, this piece does not articulate the truth. “The Portal” is a doorway to the new world. It is a piece about pursuing freedom under restrictions. By tweaking the truth, “The Portal” generates magic and makes our lives more fun and pleasurable.
                 <br><br>
-                Category: Digital<br>
-                Year: 2022
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_NemoNemo" href="#sec_NemoNemo" class="dot desc-filter illustration digital scripts 2022">
+            <div data-scroll="sec_NemoNemo" href="#sec_NemoNemo" class="col2-1-class desc-filter illustration digital scripts 2022">
               <div class="font-description">
                 "Nemo Nemo" is a script that can automatically convert any videos or images into pixelated videos. By running this code, users can get animated gif + mp4 files and png sequence images.
                 <br><br>
@@ -350,39 +521,35 @@
                 <br><br>
                 <img src="./image_details/Detail_2022_NemoNemo.gif" style="width: 100%;">
                 <br><br>
-                Category: Illustration Digital Script<br>
-                Year: 2022
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_Five" href="#sec_Five" class="dot desc-filter books illustration 2019">
+            <div data-scroll="sec_Five" href="#sec_Five" class="col2-1-class desc-filter books illustration 2019">
               <div class="font-description">
                 In “Now We Are Five”, one of David Sedaris’ essays, he reminisces about his lost sister and reflects on his previous indifference toward her.
                 <br><br>
                 Throughout “Now We Are Five”, Sedaris apologizes for his indifference toward Tiffany. In my writing, "Five”, I apologize for forgetting my aunts.
                 <br><br>
-                Category: Book Illustration<br>
-                Year: 2019
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_Five_sketch2" href="#sec_Five_sketch2" class="dot desc-filter illustration 2019">
+            <div data-scroll="sec_Five_sketch2" href="#sec_Five_sketch2" class="col2-1-class desc-filter illustration 2019">
               <div class="font-description"></div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_Five_sketch1" href="#sec_Five_sketch1" class="dot desc-filter illustration 2019">
+            <div data-scroll="sec_Five_sketch1" href="#sec_Five_sketch1" class="col2-1-class desc-filter illustration 2019">
               <div class="font-description"></div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_TheLibraryProject" href="#sec_TheLibraryProject" class="dot desc-filter books 2015">
+            <div data-scroll="sec_TheLibraryProject" href="#sec_TheLibraryProject" class="col2-1-class desc-filter books 2015">
               <div class="font-description">
                 The Google Books Library Project was started in order to digitize every book in the world. Since the idea came out in 2004, the project has generated controversy regarding the demise of paper books. “The Library Project” is an outline of the Google Books Library Project.
                 <br><br>
@@ -393,103 +560,431 @@
           </div>
 
           <div>
-            <div data-scroll="sec_Numbering" href="#sec_Numbering" class="dot desc-filter typography 2015">
+            <div data-scroll="sec_Numbering" href="#sec_Numbering" class="col2-1-class desc-filter typography 2015">
               <div class="font-description">
                 Numbering is a participatory form of typography that users can do themselves. People can draw figures and characters freely on grids that consist of circular and rectangular shapes.
                 <br><br>
                 <img class="center" src="./image_details/Detail_2015_Numbering_moving.gif" style="width: 90%; display: block;">
-                <br>
-                Category: Typography<br>
-                Year: 2015
                 <br><br>
                 <img class="center" src="./image_details/Detail_2015_Numbering_alim.png" style="width: 85%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_SpookyDecember" href="#sec_SpookyDecember" class="dot desc-filter typography 2015">
+            <div data-scroll="sec_SpookyDecember" href="#sec_SpookyDecember" class="col2-1-class desc-filter typography 2015">
               <div class="font-description">
                 By only using Riso black ink, I intended to give the impression of neon spot colors. The pink graphic on the poster is made using pink color paper.
                 <br><br>
-                Category: Typography<br>
-                Year: 2015
-                <br>
                 <img class="center" src="./image_details/Detail_2015_SpookyDecember_ink.png" style="width: 50%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_RYB" href="#sec_RYB" class="dot desc-filter illustration 2015">
+            <div data-scroll="sec_RYB" href="#sec_RYB" class="col2-1-class desc-filter illustration 2015">
               <div class="font-description"></div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_MeasuredCreature" href="#sec_MeasuredCreature" class="dot desc-filter digital 2018">
+            <div data-scroll="sec_MeasuredCreature" href="#sec_MeasuredCreature" class="col2-1-class desc-filter digital 2018">
               <div class="font-description">
                 Measured Creature is a digital microscopic organism born in smartphones. Its entity lies within a hologram and grows in three dimensions in the real world. Its growth rate is proportional to the frequency of the owner's smartphone use. Every time the owner uses the phone, the Measured creature grows into a larger organism.
-                <br><br>
-                Category: Digital Hologram<br>
-                Year: 2018
                 <br><br>
                 <img src="./image_details/Detail_2018_MeasuredCreature_moving1.gif" style="width: 100%; display: block;">
                 <br><br>
                 <img src="./image_details/Detail_2018_MeasuredCreature_moving2.gif" style="width: 100%; display: block;">
                 <br><br>
                 <img class="center" src="./image_details/Detail_2018_MeasuredCreature_poster_back.png" style="width: 80%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_CubeZeroZeroSix" href="#sec_CubeZeroZeroSix" class="dot desc-filter digital 2019">
+            <div data-scroll="sec_CubeZeroZeroSix" href="#sec_CubeZeroZeroSix" class="col2-1-class desc-filter digital 2019">
               <div class="font-description">
                 Cube Zero Zero × Six takes its motif from the film Cube (1997). When users type any film title on the search bar, reviews of the film are sorted into negative and positive categories by machine learning. While positive reviews are represented as blue cubes, negative reviews are shown as red cubes (being defined as dangerous ones).
                 <br><br>
                 Based on the web data, Cube Zero Zero × Six continuously grows as an artificial web organism.
-                <br><br>
-                Category: Digital<br>
-                Year: 2019
                 <br><br>
                 <img class="center" src="./image_details/Detail_2019_CubeZeroZeroSix_1.gif" style="width: 85%; display: block;">
                 <br><br>
                 <img class="center" src="./image_details/Detail_2019_CubeZeroZeroSix_2.png" style="width: 85%; display: block;">
                 <br><br>
                 <img class="center" src="./image_details/Detail_2019_CubeZeroZeroSix_R1.gif" style="width: 60%; display: block;">
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_Experiment" href="#sec_Experiment" class="dot desc-filter typography 2016">
+            <div data-scroll="sec_Experiment" href="#sec_Experiment" class="col2-1-class desc-filter typography 2016">
               <div class="font-description">
                 “Experiment” was created as a project for cost-efficiency. Using my old home printer, I produced prints similar to screen-printing outcomes.
                 <br><br>
-                Category: Typography<br>
-                Year: 2016
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_KIAS_SoundStudy" href="#sec_KIAS_SoundStudy" class="dot desc-filter typography illustration 2021">
+            <div data-scroll="sec_KIAS_SoundStudy" href="#sec_KIAS_SoundStudy" class="col2-1-class desc-filter typography illustration 2021">
               <div class="font-description">
                 Illustrations for the science web magazine, “Horizon”
+                <br><br>
               </div>
             </div>
           </div>
 
           <div>
-            <div data-scroll="sec_OneUI2" href="#sec_OneUI2" class="dot desc-filter digital 2019">
+            <div data-scroll="sec_OneUI2" href="#sec_OneUI2" class="col2-1-class desc-filter digital 2019">
               <div class="font-description">
                 One UI, the user interface for Samsung Galaxy, was designed as part of a goal to make Galaxy's hardware and software "work together in perfect harmony". It allows users to control their device with a single hand with the two divided areas - viewing area and interaction area.
                 <br><br>
-                Category: Digital<br>
-                Year: 2019
-                <br><br>
                 <img class="left" src="./image_details/Detail_2019_OneUI2_Samsung.svg" style="width: 80px; display: block;">
+                <br><br>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- End Nav Section: Title -->
+      <div id="col2-2-title">
+        <div class="nav-menu container">
+
+          <div>
+            <div data-scroll="sec_iAm" href="#sec_iAm" class="col2-2-title-class desc-filter books typography 2020 active">
+              <div class="titleview">
+                <div class="font-title">
+                  iAm Type speciman
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
+              </div>
+
+              <!-- <div id="Ko" class="font-description">
+                i.Am Type Specimen<br>
+                Category: Book Typography<br>
+                Year: 2020
+              </div> -->
+
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_BarcodeBand" href="#sec_BarcodeBand" class="col2-2-title-class desc-filter digital 2017 container">
+              <div class="titleview">
+                <div class="font-title">
+                  Barcode Band ― The fourth project
+                </div>
+                <div class="font-year">
+                  2017
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_Waves" href="#sec_Waves" class="col2-2-title-class desc-filter illustration digital scripts 2021">
+              <div class="titleview">
+                <div class="font-title">
+                  Waves
+                </div>
+                <div class="font-year">
+                  2021
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_TimeMuseum" href="#sec_TimeMuseum" class="col2-2-title-class desc-filter books branding 2019">
+              <div class="titleview">
+                <div class="font-title">
+                  Time Museum Visual Identity
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_IceAndFire" href="#sec_IceAndFire" class="col2-2-title-class desc-filter books illustration digital scripts 2021">
+              <div class="titleview">
+                <div class="font-title">
+                  A Song of Ice and Fire
+                </div>
+                <div class="font-year">
+                  2021
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_DotDotDot" href="#sec_DotDotDot" class="col2-2-title-class desc-filter typography digital 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  Dot Dot Dot
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_able" href="#sec_able" class="col2-2-title-class desc-filter typography digital 2021">
+              <div class="titleview">
+                <div class="font-title">
+                  able
+                </div>
+                <div class="font-year">
+                  2021
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_CodeLab" href="#sec_CodeLab" class="col2-2-title-class desc-filter branding digital 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  2022 RISD Code Lab Visual Identity
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_AndOn" href="#sec_AndOn" class="col2-2-title-class desc-filter typography digital 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  And On And On
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_FrozenIsland" href="#sec_FrozenIsland" class="col2-2-title-class desc-filter digital google 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  Frozen Island
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_DancingMoonlight" href="#sec_DancingMoonlight" class="col2-2-title-class desc-filter digital google 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  Dancing in the Moonlight
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_ThePortal" href="#sec_ThePortal" class="col2-2-title-class desc-filter digital google 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  The Portal
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_NemoNemo" href="#sec_NemoNemo" class="col2-2-title-class desc-filter illustration digital scripts 2022">
+              <div class="titleview">
+                <div class="font-title">
+                  Nemo Nemo
+                </div>
+                <div class="font-year">
+                  2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_Five" href="#sec_Five" class="col2-2-title-class desc-filter books illustration 2019">
+              <div class="titleview">
+                <div class="font-title">
+                  Five
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_Five_sketch2" href="#sec_Five_sketch2" class="col2-2-title-class desc-filter illustration 2019">
+              <div class="titleview">
+                <div class="font-title">
+                  Palm Tree
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_Five_sketch1" href="#sec_Five_sketch1" class="col2-2-title-class desc-filter illustration 2019">
+              <div class="titleview">
+                <div class="font-title">
+                  Palm Tree
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_TheLibraryProject" href="#sec_TheLibraryProject" class="col2-2-title-class desc-filter books 2015">
+              <div class="titleview">
+                <div class="font-title">
+                  The Library Project
+                </div>
+                <div class="font-year">
+                  2015
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_Numbering" href="#sec_Numbering" class="col2-2-title-class desc-filter typography 2015">
+              <div class="titleview">
+                <div class="font-title">
+                  Numbering
+                </div>
+                <div class="font-year">
+                  2015
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_SpookyDecember" href="#sec_SpookyDecember" class="col2-2-title-class desc-filter typography 2015">
+              <div class="titleview">
+                <div class="font-title">
+                  Spooky December
+                </div>
+                <div class="font-year">
+                  2015
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_RYB" href="#sec_RYB" class="col2-2-title-class desc-filter illustration 2015">
+              <div class="titleview">
+                <div class="font-title">
+                  RYB
+                </div>
+                <div class="font-year">
+                  2015
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_MeasuredCreature" href="#sec_MeasuredCreature" class="col2-2-title-class desc-filter digital 2018">
+              <div class="titleview">
+                <div class="font-title">
+                  Measured Creature
+                </div>
+                <div class="font-year">
+                  2018
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_CubeZeroZeroSix" href="#sec_CubeZeroZeroSix" class="col2-2-title-class desc-filter digital 2019">
+              <div class="titleview">
+                <div class="font-title">
+                  Cube Zero Zero × Six
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_Experiment" href="#sec_Experiment" class="col2-2-title-class desc-filter typography 2016">
+              <div class="titleview">
+                <div class="font-title">
+                  Experiment
+                </div>
+                <div class="font-year">
+                  2016
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_KIAS_SoundStudy" href="#sec_KIAS_SoundStudy" class="col2-2-title-class desc-filter typography illustration 2021">
+              <div class="titleview">
+                <div class="font-title">
+                  Illustrations for the science web magazine, “Horizon”
+                </div>
+                <div class="font-year">
+                  2021
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_OneUI2" href="#sec_OneUI2" class="col2-2-title-class desc-filter digital 2019">
+              <div class="titleview">
+                <div class="font-title">
+                  One UI 2
+                </div>
+                <div class="font-year">
+                  2019
+                </div>
               </div>
             </div>
           </div>
@@ -500,308 +995,313 @@
       <!-- End Nav Section -->
       <div id="col2-2" style="scroll-snap-type: y mandatory;">
         <section id="sec_iAm" style="scroll-snap-align: start;">
-          <div class="padding-title"></div>
-          <div class="font-title">i.Am Type Specimen</div>
-          <div class="padding-title"></div>
           <div id="filter_iAm" class="filterDiv books typography 2020 show">
+            <div class="padding-title"></div>
+
+            <div style="position: -webkit-sticky; position: sticky; top: 0;">
+              <div class="font-title">
+                Barcode Band ― The fourth project
+              </div>
+              <div class="font-year">
+                2017
+              </div>
+            </div>
 
             <div class="workview1">
-              <img class="myImg" src="./image_details/Detail_2020_iAm_p.3,4,5.jpg" style="width: 100%;">
+              <img class="zoomIn" src="./image_details/Detail_2020_iAm_p.3,4,5.jpg" style="width: 100%;">
             </div>
 
             <div class="workview2">
-            	<div><img class="myImg" src="./image_details/Detail_2020_iAm_p.6,7.jpg" style="width: 100%;"></div>
-            	<div><img class="myImg" src="./image_details/Detail_2020_iAm_p.12,13.jpg" style="width: 100%;"></div>
-            	<div><img class="myImg" src="./image_details/Detail_2020_iAm_p.8,9.jpg" style="width: 100%;"></div>
-            	<div><img class="myImg" src="./image_details/Detail_2020_iAm_p.14,15.jpg" style="width: 100%;"></div>
-              <div><img class="myImg" src="./image_details/Detail_2020_iAm_p.8,10,11.jpg" style="width: 100%;"></div>
-            	<div><img class="myImg" src="./image_details/Detail_2020_iAm_p.16,17.jpg" style="width: 100%;"></div>
-              <div><img class="myImg" src="./image_details/Detail_2020_iAm_p.18,19.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.6,7.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.12,13.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.8,9.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.14,15.jpg" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.8,10,11.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.16,17.jpg" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.18,19.jpg" style="width: 100%;"></div>
             </div>
+
+            <div class="padding-bottom"></div>
+            <!-- <div style="color: white;" class="text-align-center">
+              ☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎☀︎
+            </div> -->
 
           </div>
         </section>
 
+
         <section id="sec_BarcodeBand" style="scroll-snap-align: start;">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Barcode Band ― The fourth project</div>
-          <div class="padding-title"></div>
           <div id="filter_BarcodeBand" class="filterDiv digital 2017 show">
+
+            <div class="padding-title"></div>
 
             <div class="video-16-9">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/387102413?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview1">
-              <img src="./image_details/Detail_2018_BarcodeBand_R1.gif" style="width: 100%;">
+              <img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_R1.gif" style="width: 100%;">
             </div>
 
             <div class="workview2">
-            	<div><img src="./image_details/Detail_2018_BarcodeBand_1.png" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2018_BarcodeBand_R2.png" style="width: 100%;"></div>
-            	<div><img src="./image_details/Detail_2018_BarcodeBand_2.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2018_BarcodeBand_6.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2018_BarcodeBand_3.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2018_BarcodeBand_4.png" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2018_BarcodeBand_5.png" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_1.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_R2.png" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_2.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_6.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_3.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_4.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2018_BarcodeBand_5.png" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_Waves">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Waves</div>
-          <div class="padding-title"></div>
           <div id="filter_Waves" class="filterDiv illustration digital scripts 2021 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-9">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/675724226?h=cc96393936" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview2">
-              <div><img src="./image_details/Detail_2021_Waves_camera1.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2021_Waves_me.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2021_Waves_Outro1.png" style="width: 88%;"></div>
-              <div><img src="./image_details/Detail_2021_Waves_PalmTree1.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2021_Waves_Outro2.png" style="width: 88%;"></div>
-              <div><img class="center" src="./image_details/Detail_2021_Waves_Outro3.png" style="width: 80%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2021_Waves_camera1.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2021_Waves_me.gif" style="width: 100%;"></div>
+              <div><img src="./image_details/Detail_2021_Waves_Outro1.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2021_Waves_PalmTree1.gif" style="width: 100%;"></div>
+              <div><img src="./image_details/Detail_2021_Waves_Outro2.png" style="width: 100%;"></div>
+              <div><img src="./image_details/Detail_2021_Waves_Outro3.png" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_TimeMuseum">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Time Museum Visual Identity</div>
-          <div class="padding-title"></div>
           <div id="filter_TimeMuseum" class="filterDiv books branding 2019 show">
+            <div class="padding-title"></div>
 
-          <div class="workview1">
-            <img src="./image_details/Detail_2019_TimeMuseum_logo.png" style="width: 100%;">
-          </div>
-
-          <div class="workview2_1-3">
-            <div class="video-20-31">
-              <iframe class="video-responsive" src="https://player.vimeo.com/video/387107055" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2019_TimeMuseum_logo.png" style="width: 100%;">
             </div>
-            <div class="video-16-9">
-              <iframe class="video-responsive" src="https://player.vimeo.com/video/387107613" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="workview2_1-3">
+              <div class="video-20-31">
+                <iframe class="video-responsive" src="https://player.vimeo.com/video/387107055" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="video-16-9">
+                <iframe class="video-responsive" src="https://player.vimeo.com/video/387107613" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-          </div>
 
-          <div class="workview2">
-            <div>
-              <img class="left" src="./image_details/Detail_2019_TimeMuseum_card_back_2.png" style="width: 98%;">
+            <div class="workview2">
+              <div>
+                <img class="zoomIn left" src="./image_details/Detail_2019_TimeMuseum_card_back_2.png" style="width: 98%;">
+              </div>
+              <div>
+                <img class="zoomIn right" src="./image_details/Detail_2019_TimeMuseum_card_back_1.png" style="width: 98%;">
+              </div>
             </div>
-            <div>
-              <img class="right" src="./image_details/Detail_2019_TimeMuseum_card_back_1.png" style="width: 98%;">
+
+            <div class="workview1">
+              <img class="zoomIn center" src="./image_details/Detail_2019_TimeMuseum_ticket.gif" style="width: 90%;">
             </div>
-          </div>
 
-          <div class="workview1">
-            <img class="center" src="./image_details/Detail_2019_TimeMuseum_ticket.gif" style="width: 90%;">
-          </div>
+            <div class="workview1">
+              <img class="zoomIn right" src="./image_details/Detail_2019_TimeMuseum_CD1.png" style="width: 80%;">
+              <img class="zoomIn center" src="./image_details/Detail_2019_TimeMuseum_CD2.png" style="width: 100%;">
+            </div>
 
-          <div class="workview1">
-            <img class="right" src="./image_details/Detail_2019_TimeMuseum_CD1.png" style="width: 80%;">
-            <img class="center" src="./image_details/Detail_2019_TimeMuseum_CD2.png" style="width: 100%;">
+            <div class="padding-bottom"></div>
           </div>
-
         </section>
 
         <section id="sec_IceAndFire">
-          <div class="padding-bottom"></div>
-          <div class="font-title">A Song of Ice and Fire</div>
-          <div class="padding-title"></div>
           <div id="filter_IceAndFire" class="filterDiv books illustration digital scripts 2021 show">
+            <div class="padding-title"></div>
 
-          <div class="workview1">
-            <img class="myImg" src="./image_details/Detail_2021_IceAndFire_p.4,5.png" style="width: 100%;">
-          </div>
-
-          <div class="workview2">
-            <div>
-              <img class="myImg" src="./image_details/Detail_2021_IceAndFire_p.2,3.png" style="width: 100%;">
-              <img class="myImg" src="./image_details/Detail_2021_IceAndFire_p.6,7.png" style="width: 100%;">
-              <img class="myImg" src="./image_details/Detail_2021_IceAndFire_p.8,9.png" style="width: 100%;">
-              <img class="myImg" src="./image_details/Detail_2021_IceAndFire_p.10,11.png" style="width: 100%;">
-              <img class="myImg" src="./image_details/Detail_2021_IceAndFire_p.12,13.png" style="width: 100%;">
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.4,5.png" style="width: 100%;">
             </div>
 
-            <div>
-              <div class="video-16-9">
-                <iframe class="video-responsive" src="https://player.vimeo.com/video/699950863?h=45ce026e8a" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <div class="workview2">
+              <div>
+                <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.2,3.png" style="width: 100%;">
+                <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.6,7.png" style="width: 100%;">
+                <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.8,9.png" style="width: 100%;">
+                <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.10,11.png" style="width: 100%;">
+                <img class="zoomIn" src="./image_details/Detail_2021_IceAndFire_p.12,13.png" style="width: 100%;">
               </div>
-              <div class="video-16-9">
-                <iframe class="video-responsive" src="https://player.vimeo.com/video/718869891?h=b8488fd411" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+              <div>
+                <div class="video-16-9">
+                  <iframe class="video-responsive" src="https://player.vimeo.com/video/699950863?h=45ce026e8a" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-16-9">
+                  <iframe class="video-responsive" src="https://player.vimeo.com/video/718869891?h=b8488fd411" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <img class="zoomIn center" src="./image_details/Detail_2021_IceAndFire_p.1.png" style="width: 58%;">
+                <img class="zoomIn center" src="./image_details/Detail_2021_IceAndFire_p.14.png" style="width: 58%;">
               </div>
-              <img class="myImg center" src="./image_details/Detail_2021_IceAndFire_p.1.png" style="width: 58%;">
-              <img class="myImg center" src="./image_details/Detail_2021_IceAndFire_p.14.png" style="width: 58%;">
             </div>
+
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_DotDotDot">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Dot Dot Dot</div>
-          <div class="padding-title"></div>
           <div id="filter_DotDotDot" class="filterDiv typography digital 2022 show">
+            <div class="padding-title"></div>
 
             <div class="workview1">
-              <img class="myImg" src="./image_details/Detail_2022_DotDotDot.png" style="width: 100%;">
+              <img class="zoomIn" src="./image_details/Detail_2022_DotDotDot.png" style="width: 100%;">
             </div>
 
             <div class="workview2">
-              <div><img class="myImg center" src="./image_details/Detail_2022_DotDotDot_1.png" style="width: 95%;"></div>
-              <div><img class="myImg center" src="./image_details/Detail_2022_DotDotDot_pixelated_1.png" style="width: 95%;"></div>
-              <div><img class="myImg center" src="./image_details/Detail_2022_DotDotDot_2.png" style="width: 95%;"></div>
-              <div><img class="myImg center" src="./image_details/Detail_2022_DotDotDot_pixelated_2.png" style="width: 95%;"></div>
-              <div><img class="myImg center" src="./image_details/Detail_2022_DotDotDot_3.png" style="width: 95%;"></div>
-              <div><img class="myImg center" src="./image_details/Detail_2022_DotDotDot_pixelated_3.png" style="width: 95%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_DotDotDot_1.png" style="width: 95%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_DotDotDot_pixelated_1.png" style="width: 95%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_DotDotDot_2.png" style="width: 95%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_DotDotDot_pixelated_2.png" style="width: 95%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_DotDotDot_3.png" style="width: 95%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_DotDotDot_pixelated_3.png" style="width: 95%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_able">
-          <div class="padding-bottom"></div>
-          <div class="font-title">able</div>
-          <div class="padding-title"></div>
           <div id="filter_able" class="filterDiv typography digital 2021 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-10">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/700106058?h=d26e8e47dd" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview1">
-              <img src="./image_details/Detail_2021_able.svg" style="width: 100%;">
+              <img class="zoomIn" src="./image_details/Detail_2021_able.svg" style="width: 100%;">
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_CodeLab">
-          <div class="padding-bottom"></div>
-          <div class="font-title">2022 RISD Code Lab Visual Identity</div>
-          <div class="padding-title"></div>
           <div id="filter_CodeLab" class="filterDiv branding digital 2022 show">
+            <div class="padding-title"></div>
 
-          <div class="workview1">
-            <img class="center" src="./image_details/Detail_2022_CodeLab_logo.svg" style="width: 100%;">
-          </div>
-
-          <div class="workview1">
-            <img class="center" src="./image_details/Detail_2022_CodeLab_web1.png" style="width: 75%;">
-            <img class="center" src="./image_details/Detail_2022_CodeLab_web2.gif" style="width: 75%;">
-            <img class="center" src="./image_details/Detail_2022_CodeLab_web3.png" style="width: 75%;">
-          </div>
-
-          <div class="video-16-9">
-            <iframe class="video-responsive" src="https://player.vimeo.com/video/688575007?h=e71daf83d2" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-          </div>
-
-          <div class="workview2">
-            <div>
-              <img class="center" src="./image_details/Detail_2022_CodeLab_Post_WholeSeries_mockup1.png" style="width: 70%; display: block;">
-              <img class="center" src="./image_details/Detail_2022_CodeLab_Post_WholeSeries_mockup2.gif" style="width: 70%; display: block;">
-              <img class="center" src="./image_details/Detail_2022_CodeLab_Post_WholeSeries_mockup3.png" style="width: 70%; display: block;">
+            <div class="workview1">
+              <img class="zoomIn center" src="./image_details/Detail_2022_CodeLab_logo.svg" style="width: 100%;">
             </div>
-            <div>
-              <img class="center" src="./image_details/Detail_2022_CodeLab_Post_VisitingArtist_mockup1.png" style="width: 70%; display: block;">
-              <img class="center" src="./image_details/Detail_2022_CodeLab_Post_VisitingArtist_mockup2.gif" style="width: 70%; display: block;">
-              <img class="center" src="./image_details/Detail_2022_CodeLab_Post_VisitingArtist_mockup3.png" style="width: 70%; display: block;">
-            </div>
-          </div>
 
+            <div class="workview1">
+              <img class="center" src="./image_details/Detail_2022_CodeLab_web1.png" style="width: 75%;">
+              <img class="center" src="./image_details/Detail_2022_CodeLab_web2.gif" style="width: 75%;">
+              <img class="center" src="./image_details/Detail_2022_CodeLab_web3.png" style="width: 75%;">
+            </div>
+
+            <div class="video-16-9">
+              <iframe class="video-responsive" src="https://player.vimeo.com/video/688575007?h=e71daf83d2" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="workview2">
+              <div>
+                <img class="center" src="./image_details/Detail_2022_CodeLab_Post_WholeSeries_mockup1.png" style="width: 70%; display: block;">
+                <img class="center" src="./image_details/Detail_2022_CodeLab_Post_WholeSeries_mockup2.gif" style="width: 70%; display: block;">
+                <img class="center" src="./image_details/Detail_2022_CodeLab_Post_WholeSeries_mockup3.png" style="width: 70%; display: block;">
+              </div>
+              <div>
+                <img class="center" src="./image_details/Detail_2022_CodeLab_Post_VisitingArtist_mockup1.png" style="width: 70%; display: block;">
+                <img class="center" src="./image_details/Detail_2022_CodeLab_Post_VisitingArtist_mockup2.gif" style="width: 70%; display: block;">
+                <img class="center" src="./image_details/Detail_2022_CodeLab_Post_VisitingArtist_mockup3.png" style="width: 70%; display: block;">
+              </div>
+            </div>
+
+            <div class="padding-bottom"></div>
+          </div>
         </section>
 
         <section id="sec_AndOn">
-          <div class="padding-bottom"></div>
-          <div class="font-title">And On And On</div>
-          <div class="padding-title"></div>
           <div id="filter_AndOn" class="filterDiv typography digital 2022 show">
+            <div class="padding-title"></div>
 
-          <div class="workview3">
-            <div><img class="myImg center" src="./image_details/Detail_2022_AndOn_1.png" style="width: 100%;"></div>
-            <div><img class="myImg center" src="./image_details/Detail_2022_AndOn_2.png" style="width: 100%;"></div>
-            <div><img class="myImg center" src="./image_details/Detail_2022_AndOn_3.png" style="width: 100%;"></div>
+            <div class="workview3">
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_1.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_2.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_3.png" style="width: 100%;"></div>
+            </div>
+
+            <div class="workview3">
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_4.png" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_AndOn_5.png" style="width: 100%;"></div>
+              <div></div>
+            </div>
+
+            <div class="padding-bottom"></div>
           </div>
-
-          <div class="workview3">
-            <div><img class="myImg center" src="./image_details/Detail_2022_AndOn_4.png" style="width: 100%;"></div>
-            <div><img class="myImg center" src="./image_details/Detail_2022_AndOn_5.png" style="width: 100%;"></div>
-            <div></div>
-          </div>
-
         </section>
 
         <section id="sec_FrozenIsland">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Frozen Island</div>
-          <div class="padding-title"></div>
           <div id="filter_FrozenIsland" class="filterDiv digital google 2022 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-10">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/726670909?h=cc4cbf89f3" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview2">
-            	<div><img src="./image_details/Detail_2022_FrozenIsland_Viewing.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2022_FrozenIsland_Hiawatha_eyeview.gif" style="width: 100%;"></div>
-              <div><img src="./image_details/Detail_2022_FrozenIsland_FrogRock.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2022_FrozenIsland_Viewing.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2022_FrozenIsland_Hiawatha_eyeview.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2022_FrozenIsland_FrogRock.gif" style="width: 100%;"></div>
 
-              <div><img class="center" src="./image_details/Detail_2022_FrozenIsland_Slide1.gif" style="width: 60%; display: block;"></div>
-
-            	<div><img src="./image_details/Detail_2022_FrozenIsland_Hiawatha.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./image_details/Detail_2022_FrozenIsland_Slide1.gif" style="width: 60%; display: block;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2022_FrozenIsland_Hiawatha.gif" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_DancingMoonlight">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Dancing in the Moonlight</div>
-          <div class="padding-title"></div>
           <div id="filter_DancingMoonlight" class="filterDiv digital google 2022 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-10">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/728533246?h=14325cc8d9" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview2">
-            	<div><img src="./image_details/Detail_2022_DancingMoonlight_Intro,DropAvatar.gif" style="width: 100%;"></div>
-            	<div><img src="./image_details/Detail_2022_DancingMoonlight_AvatarChange.gif" style="width: 100%;"></div>
-            	<div><img src="./image_details/Detail_2022_DancingMoonlight_Share.gif" style="width: 100%;"></div>
-            	<div><img src="./image_details/Detail_2022_DancingMoonlight_AvatarMap.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2022_DancingMoonlight_Intro,DropAvatar.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2022_DancingMoonlight_AvatarChange.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2022_DancingMoonlight_Share.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2022_DancingMoonlight_AvatarMap.gif" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_ThePortal">
-          <div class="padding-bottom"></div>
-          <div class="font-title">The Portal</div>
-          <div class="padding-title"></div>
           <div id="filter_ThePortal" class="filterDiv digital google 2022 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-9">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/722226260?h=4aabd4e909" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview1">
-              <img class="myImg center" src="./image_details/Detail_2022_ThePortal_Open.gif" style="width: 80%;">
-              <img class="myImg center" src="./image_details/Detail_2022_ThePortal_Providence,Eiffel.gif" style="width: 80%;">
+              <img class="zoomIn center" src="./image_details/Detail_2022_ThePortal_Open.gif" style="width: 80%;">
+              <img class="zoomIn center" src="./image_details/Detail_2022_ThePortal_Providence,Eiffel.gif" style="width: 80%;">
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_NemoNemo">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Nemo Nemo</div>
-          <div class="padding-title"></div>
           <div id="filter_NemoNemo" class="filterDiv illustration digital 2022 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-10">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/688606851?h=d3201d4ec6" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -811,124 +1311,119 @@
               <iframe class="video-responsive" src="https://player.vimeo.com/video/688606936?h=cf34a31fc8" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_Five">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Five</div>
-          <div class="padding-title"></div>
           <div id="filter_Five" class="filterDiv books illustration 2019 show">
+            <div class="padding-title"></div>
+            <div class="padding-bottom"></div>
+          </div>
         </section>
 
         <section id="sec_Five_sketch2">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Palm Tree</div>
-          <div class="padding-title"></div>
           <div id="filter_Five_sketch2" class="filterDiv illustration 2019 show">
+            <div class="padding-title"></div>
 
             <div class="workview1">
-              <img class="myImg center" src="./image_details/Detail_2019_Five_sketch2.png" style="width: 60%;">
+              <img class="zoomIn center" src="./image_details/Detail_2019_Five_sketch2.png" style="width: 60%;">
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_Five_sketch1">
-          <div class="padding-title"></div>
           <div id="filter_Five_sketch2" class="filterDiv illustration 2019 show">
+            <div class="padding-title"></div>
 
             <div class="workview1">
-              <img class="myImg center" src="./image_details/Detail_2019_Five_sketch1.png" style="width: 60%;">
+              <img class="zoomIn center" src="./image_details/Detail_2019_Five_sketch1.png" style="width: 60%;">
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_TheLibraryProject">
-          <div class="padding-bottom"></div>
-          <div class="font-title">The Library Project</div>
-          <div class="padding-title"></div>
           <div id="filter_TheLibraryProject" class="filterDiv books 2015 show">
+            <div class="padding-title"></div>
+            <div class="padding-bottom"></div>
+          </div>
         </section>
 
         <section id="sec_Numbering">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Numbering</div>
-          <div class="padding-title"></div>
           <div id="filter_Numbering" class="filterDiv typography 2015 show">
+            <div class="padding-title"></div>
 
             <div class="workview1">
-              <div><img class="myImg right" src="./image_details/Detail_2015_Numbering_1.png" style="width: 100%;"></div>
+              <div><img class="zoomIn right" src="./image_details/Detail_2015_Numbering_1.png" style="width: 100%;"></div>
             </div>
 
             <div class="workview1">
-              <div><img class="myImg right" src="./image_details/Detail_2015_Numbering_Stay,Ruok.png" style="width: 75.17387%;"></div>
+              <div><img class="zoomIn right" src="./image_details/Detail_2015_Numbering_Stay,Ruok.png" style="width: 75.17387%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_SpookyDecember">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Spooky December</div>
-          <div class="padding-title"></div>
           <div id="filter_SpookyDecember" class="filterDiv typography 2015 show">
+            <div class="padding-title"></div>
 
             <div class="workview2">
-              <div><img class="myImg" src="./image_details/Detail_2015_SpookyDecember_posters1.png" style="width: 100%;"></div>
-              <div><img class="myImg" src="./image_details/Detail_2015_SpookyDecember_posters2.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2015_SpookyDecember_posters1.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2015_SpookyDecember_posters2.png" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_RYB">
-          <div class="padding-bottom"></div>
-          <div class="font-title">RYB</div>
-          <div class="padding-title"></div>
           <div id="filter_RYB" class="filterDiv illustration 2015 show">
+            <div class="padding-title"></div>
 
             <div class="workview3">
-              <div><img class="myImg" src="./image_details/Detail_2015_RYB_R.png" style="width: 100%;"></div>
-              <div><img class="myImg" src="./image_details/Detail_2015_RYB_Y.png" style="width: 100%;"></div>
-              <div><img class="myImg" src="./image_details/Detail_2015_RYB_B.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2015_RYB_R.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2015_RYB_Y.png" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2015_RYB_B.png" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_MeasuredCreature">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Measured Creature</div>
-          <div class="padding-title"></div>
           <div id="filter_MeasuredCreature" class="filterDiv digital 2018 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-9">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/387106240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2018_MeasuredCreature_1.png" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2018_MeasuredCreature_1.png" style="width: 100%;"></div>
             </div>
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2018_MeasuredCreature_2.png" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2018_MeasuredCreature_2.png" style="width: 100%;"></div>
             </div>
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2018_MeasuredCreature_3.png" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2018_MeasuredCreature_3.png" style="width: 100%;"></div>
             </div>
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2018_MeasuredCreature_4.png" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2018_MeasuredCreature_4.png" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_CubeZeroZeroSix">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Cube Zero Zero × Six</div>
-          <div class="padding-title"></div>
           <div id="filter_CubeZeroZeroSix" class="filterDiv digital 2019 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-10">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/387108036" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -941,51 +1436,50 @@
             	<div><img src="./image_details/Detail_2019_CubeZeroZeroSix_2.png" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_Experiment">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Experiment</div>
-          <div class="padding-title"></div>
           <div id="filter_Experiment" class="filterDiv typography 2016 show">
+            <div class="padding-title"></div>
+            <div class="padding-bottom"></div>
+          </div>
         </section>
 
         <section id="sec_KIAS_SoundStudy">
-          <div class="padding-bottom"></div>
-          <div class="font-title">Illustrations for the science web magazine, “Horizon”</div>
-          <div class="padding-title"></div>
           <div id="filter_KIAS_SoundStudy" class="filterDiv typography illustration 2021 show">
+            <div class="padding-title"></div>
 
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2021_KIAS_SoundStudy.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2021_KIAS_SoundStudy.gif" style="width: 100%;"></div>
             </div>
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2021_KIAS_Universality.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2021_KIAS_Universality.gif" style="width: 100%;"></div>
             </div>
             <div class="workview1">
-            	<div><img class="myImg" src="./image_details/Detail_2021_KIAS_Infosphere.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2021_KIAS_Infosphere.jpg" style="width: 100%;"></div>
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
         <section id="sec_OneUI2">
-          <div class="padding-bottom"></div>
-          <div class="font-title">One UI 2</div>
-          <div class="padding-title"></div>
           <div id="filter_OneUI2" class="filterDiv digital 2019 show">
+            <div class="padding-title"></div>
 
             <div class="video-16-9">
               <iframe class="video-responsive" src="https://player.vimeo.com/video/387382742?h=9b0d22f06e" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="workview2">
-              <img src="./image_details/Detail_2019_OneUI2_1.png" style="width: 100%; display: block;">
+              <img class="zoomIn" src="./image_details/Detail_2019_OneUI2_1.png" style="width: 100%; display: block;">
               <div></div>
-              <img src="./image_details/Detail_2019_OneUI2_2.png" style="width: 100%; display: block;">
+              <img class="zoomIn" src="./image_details/Detail_2019_OneUI2_2.png" style="width: 100%; display: block;">
             </div>
 
+            <div class="padding-bottom"></div>
           </div>
         </section>
 
@@ -1001,175 +1495,200 @@
         <div class="thumbnail-view-item">
         <div class="filterDiv books typography 2020 show">
         <a href="#filter_iAm" class="imageNtext">
-        <div><img src="./image_previews/Preview_2020_iAm.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2020_iAm.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">01</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital 2017 show">
         <a href="#filter_BarcodeBand" class="imageNtext">
-        <div><img src="./image_previews/Preview_2018_BarcodeBand.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2018_BarcodeBand.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">02</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv illustration digital scripts 2021 show">
         <a href="#filter_Waves" class="imageNtext">
-        <div><img src="./image_previews/Preview_2021_Waves.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2021_Waves.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">03</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv books branding 2019 show">
         <a href="#filter_TimeMuseum" class="imageNtext">
-        <div><img src="./image_previews/Preview_2019_TimeMuseum.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2019_TimeMuseum.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">04</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv books illustration digital scripts 2021 show">
         <a href="#filter_IceAndFire" class="imageNtext">
-        <div><img src="./image_previews/Preview_2021_IceAndFire.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2021_IceAndFire.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">05</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography digital 2022 show">
         <a href="#filter_DotDotDot" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_DotDotDot.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_DotDotDot.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">06</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography digital 2021 show">
         <a href="#filter_able" class="imageNtext">
-        <div><img src="./image_previews/Preview_2021_able.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2021_able.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">07</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv branding digital 2022 show">
         <a href="#filter_CodeLab" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_CodeLab.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_CodeLab.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">08</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography digital 2022 show">
         <a href="#filter_AndOn" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_AndOn.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_AndOn.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">09</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital google 2022 show">
         <a href="#filter_FrozenIsland" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_FrozenIsland.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_FrozenIsland.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">20</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital google 2022 show">
         <a href="#filter_DancingMoonlight" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_DancingMoonlight.gif" class="video_preview_center" style="width: 61%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_DancingMoonlight.gif" class="video_preview_center" style="width: 61%;"></button>
         <div class="font-thumbnail">21</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital google 2022 show">
         <a href="#filter_ThePortal" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_ThePortal.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_ThePortal.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">22</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv illustration digital scripts 2022 show">
         <a href="#filter_NemoNemo" class="imageNtext">
-        <div><img src="./image_previews/Preview_2022_NemoNemo.gif" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_NemoNemo.gif" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">23</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv books illustration 2019 show">
         <a href="#filter_Five" class="imageNtext">
-        <div><img src="./image_previews/Preview_2019_Five.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2019_Five.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">24</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv illustration 2019 show">
         <a href="#filter_Five_sketch2" class="imageNtext">
-        <div><img src="./image_previews/Preview_2019_Five_sketch2.png" class="video_preview_center" style="width: 50%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2019_Five_sketch2.png" class="video_preview_center" style="width: 50%;"></button>
         <div class="font-thumbnail">25</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv illustration 2019 show">
         <a href="#filter_Five_sketch1" class="imageNtext">
-        <div><img src="./image_previews/Preview_2019_Five_sketch1.png" class="video_preview_center" style="width: 50%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2019_Five_sketch1.png" class="video_preview_center" style="width: 50%;"></button>
         <div class="font-thumbnail">26</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv books 2015 show">
         <a href="#filter_TheLibraryProject" class="imageNtext">
-        <div><img src="./image_previews/Preview_2015_TheLibraryProject.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2015_TheLibraryProject.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">27</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography 2015 show">
         <a href="#filter_Numbering" class="imageNtext">
-        <div><img src="./image_previews/Preview_2015_Numbering.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2015_Numbering.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">28</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography 2015 show">
         <a href="#filter_SpookyDecember" class="imageNtext">
-        <div><img src="./image_previews/Preview_2015_SpookyDecember.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2015_SpookyDecember.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">29</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv illustration 2015 show">
         <a href="#filter_RYB" class="imageNtext">
-        <div><img src="./image_previews/Preview_2015_RYB.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2015_RYB.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">30</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital 2018 show">
         <a href="#filter_MeasuredCreature" class="imageNtext">
-        <div><img src="./image_previews/Preview_2018_MeasuredCreature.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2018_MeasuredCreature.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">31</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital 2019 show">
         <a href="#filter_CubeZeroZeroSix" class="imageNtext">
-        <div><img src="./image_previews/Preview_2019_CubeZeroZeroSix.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2019_CubeZeroZeroSix.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">32</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography 2016 show">
         <a href="#filter_Experiment" class="imageNtext">
-        <div><img src="./image_previews/Preview_2016_Experiment.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2016_Experiment.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">33</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv typography illustration 2021 show">
         <a href="#filter_KIAS_SoundStudy" class="imageNtext">
-        <div><img src="./image_previews/Preview_2021_KIAS_SoundStudy.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2021_KIAS_SoundStudy.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">34</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
         <div class="thumbnail-view-item">
         <div class="filterDiv digital 2019 show">
         <a href="#filter_OneUI2" class="imageNtext">
-        <div><img src="./image_previews/Preview_2019_OneUI2.png" class="video_preview_center" style="width: 100%;"></div>
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2019_OneUI2.png" class="video_preview_center" style="width: 100%;"></button>
         <div class="font-thumbnail">35</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1179,38 +1698,58 @@
     <script type="text/javascript" src="col3.js"></script>
 
     <div id="col4">
+      <!-- <div id="En" class="font-description">
+        Show All<br><br>
+        Books<br>
+        Typography<br>
+        Branding<br>
+        Illustration<br>
+        Digital<br>
+        Google<br>
+        Scripts<br><br>
+        2022<br>
+        2021<br>
+        2020<br>
+        2019<br>
+        2018<br>
+        2017<br>
+        2016<br>
+        2015<br>
+      </div> -->
+
       <div id="filterUnderline">
-        <button class="col1-btn font-menu2 active" onclick="filterSelection('all')">Show all</button> &nbsp;
-        <br><br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('books')">Books</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('typography')">Typography</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('branding')">Branding</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('illustration')">Illustration</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('digital')">Digital</button> &nbsp;
-        <br>
+        <button class="col1-btn font-menu2 active" onclick="filterSelection('all')">Show All</button>
+        <div class="btn-br2"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('books')">Books</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('typography')">Typography</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('branding')">Branding</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('illustration')">Illustration</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('digital')">Digital</button>
+        <div class="btn-br1"></div>
         <button class="col1-btn font-menu2" onclick="filterSelection('google')">Google</button>
-        <br>
+        <div class="btn-br1"></div>
         <button class="col1-btn font-menu2" onclick="filterSelection('scripts')">Scripts</button>
-        <br><br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2022')">2022</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2021')">2021</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2020')">2020</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2019')">2019</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2018')">2018</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2017')">2017</button> &nbsp;
-        <br>
-        <button class="col1-btn font-menu2" onclick="filterSelection('2016')">2016</button> &nbsp;
-        <br>
+        <div class="btn-br2"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2022')">2022</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2021')">2021</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2020')">2020</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2019')">2019</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2018')">2018</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2017')">2017</button>
+        <div class="btn-br1"></div>
+        <button class="col1-btn font-menu2" onclick="filterSelection('2016')">2016</button>
+        <div class="btn-br1"></div>
         <button class="col1-btn font-menu2" onclick="filterSelection('2015')">2015</button>
+
       </div>
     </div>
     <script type="text/javascript" src="col1.js"></script>

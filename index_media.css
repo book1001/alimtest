@@ -1,0 +1,205 @@
+/* Responsive layout */
+@media only screen and (max-width:1300px) {
+
+}
+
+@media only screen and (min-width:1125px) {
+
+}
+
+@media only screen and (max-width:1124px) {
+
+  /* Variable ================================================ */
+
+  :root {
+    --col1-height: 50px;
+    --col2-1-width: 290px;
+    --col4-height: 80px;
+
+    --col1-btn-padding: 6px;
+  }
+
+  /* html, body ------------------------------------------------ */
+
+  html, body {
+    overflow-y: auto;
+  }
+
+  /* Layout: Header ------------------------------------------------ */
+
+  #col1 {
+      width: calc(100% - var(--col3-width));
+      height: var(--col1-height);
+      padding: 10px calc(var(--scrollbar-width) - var(--col1-btn-padding)) 0 calc(var(--scrollbar-width) - var(--col1-btn-padding));
+      background: black;
+  }
+
+  #col4 {
+      float: left;
+      top: var(--col1-height);
+      left: 0px;
+      width: calc(100% - var(--col3-width));
+      height: var(--col4-height);
+      padding: 0 calc(var(--scrollbar-width) - var(--col1-btn-padding)) 0 calc(var(--scrollbar-width) - var(--col1-btn-padding));
+      overflow-y: hidden;
+  }
+
+
+  .btn-br1 {
+    display: none;
+  }
+
+  .btn-br2 {
+    display: none;
+  }
+
+  /* Layout: Work ------------------------------------------------ */
+
+  #col2 {
+      width: calc(100% - var(--col3-width));
+      margin-left: 0px;
+  }
+
+  .col2-1-class div {
+    top: calc(var(--col1-height) + var(--col4-height));
+    left: 0;
+    padding: 10px 20px 0 20px;
+  }
+
+  #col2-2-title {
+    margin-left: calc(var(--col2-1-width) + var(--scrollbar-width) - var(--scrollbar-right));
+  }
+
+  .col2-2-title-class div {
+    top: calc(var(--col1-height) + var(--col4-height));
+    /* width: calc(100% - var(--col2-1-width) - var(--col3-width) - 20px); */
+    width: calc(100% - var(--col2-1-width) - var(--scrollbar-width) - var(--scrollbar-right) - var(--col3-width) - var(--col2-extra));
+  }
+
+  #col3 {
+    right: 0;
+  }
+
+  /* col1.css ================================================ */
+
+  .col1-btn {
+    padding: 0 var(--col1-btn-padding) 0 var(--col1-btn-padding);
+  }
+
+
+  /* col2-2.css ================================================ */
+
+  .padding-title {
+  	height: calc(var(--col1-height) + var(--col4-height) + 76px);
+  }
+
+  .padding-bottom {
+    height: 0;
+  }
+
+  /* font.css ================================================ */
+
+  .font-menu{
+    font-size: 16px;
+  }
+
+  .font-menu2{
+    font-size: 16px;
+  }
+
+  .font-title{
+    font-size: 16px;
+  }
+
+  .font-year{
+    font-size: 16px;
+  }
+
+  .font-description{
+    font-size: 16px;
+  }
+
+  .font-thumbnail{
+    font-size: 10.72px;
+  }
+
+}
+
+
+/* Tablet =============================================== */
+
+@media only screen and (max-width:800px) { /* For tablets: */
+
+  :root {
+    /* --scrollbar-width: 0px; */
+    --col2-1-width: 0px;
+    --col3-width: 0%;
+    /* --col3-width: 30%; */
+  }
+
+  /* Layout: Header ------------------------------------------------ */
+
+  #col1 {
+      width: 100%;
+  }
+
+  #col4 {
+    width: 100%;
+  }
+
+
+  #col2 {
+      width: 100%;
+      margin-left: 0px;
+  }
+
+  #col2-0 {
+    padding: 10px 0px 10px 20px;
+  }
+
+  .col2-1-class.active div {
+    display: none;
+  }
+
+  #col2-2 {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  #col2-2-title {
+    margin-left: 20px;
+  }
+
+  .col2-2-title-class div {
+    width: 100%;
+    padding: 10px 40px 0 0;
+    overflow: hidden;
+  }
+
+  .padding-title {
+  	height: calc(var(--col1-height) + var(--col4-height) + 58px);
+  }
+
+
+  #col3 {
+    display: none;
+    /* top: calc(var(--col1-height) + var(--col4-height)); */
+  }
+
+  /* .font-thumbnail {
+    display: none;
+  }
+
+  .imageNtext {
+    grid-template-columns: calc(100% - 20px) 20px;
+  } */
+
+}
+
+@media only screen and (max-width:600px),(max-height:700px) {   /* For tablets: */
+
+}
+
+@media only screen and (max-width:450px) {   /* For tablets: */
+
+}

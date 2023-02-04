@@ -2,10 +2,16 @@
 
 :root {
   --scrollbar-width: 20px;
-  --col1-width: 150px;
-  --col2-1-width: 300px;
-  --col3-width: 240px;
-  --col4-width: 140px;
+  --scrollbar-right: 8px;
+  --scrollbar-left: 9px;
+
+  --col1-width: 140px;
+  --col2-1-width: 310px;
+  --col2-extra: 3px;
+  --col3-width: 15%;
+  /* --col3-width: 15.8%; */
+  /* --col3-width: 240px; */
+  --col4-width: 120px; /* = --col1-width - --scrollbar-widt */
 }
 
 /* Scrollbar ================================================ */
@@ -23,9 +29,9 @@
   background-clip: padding-box;
   /* border: 8px solid transparent; */
   border-top: 0px solid transparent;
-  border-right: 8px solid transparent;
+  border-right: var(--scrollbar-right) solid transparent;
   border-bottom: 0px solid transparent;
-  border-left: 8px solid transparent;
+  border-left: var(--scrollbar-left) solid transparent;
 }
 ::-webkit-scrollbar-thumb:active { /* Handle on hover */
   /* background: rgb(0,0,0,0.24);
@@ -44,6 +50,7 @@ html, body {
   background: #000000;
   overflow-y: scroll;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
 
@@ -69,16 +76,15 @@ img.right {
 
 #col1 {
     float: left;
-    width: var(--col1-width);
-    height: 100%;
     position: fixed;
     top:0;
     left:0;
+    width: var(--col1-width);
+    height: 100%;
     margin: 0;
-    padding: 10px 0 0 10px;
+    padding: 10px 10px 0 20px;
     overflow-y: auto;
-    background: blue;
-    color: #000000;
+    z-index: 3;
 }
 
 
@@ -93,57 +99,63 @@ img.right {
     /* max-width: calc(80% - var(--col1-width) - var(--col3-width) - var(--col4-width) - var(--scrollbar-width)); */
     width: calc(100% - var(--col1-width) - var(--col3-width) - var(--col4-width));
     /* height: 100%; */
-    margin-left: calc(var(--col1-width));
+    margin-left: var(--col1-width);
     margin-right: 0px;
     padding: 0;
     background: transparent;
-      /* overflow-y: auto; */
+    /* overflow-y: auto; */
 }
+
+
+/* Layout: Col 2: About ------------------------------------------------ */
 
 #col2-0 {
     padding: 10px 10px 10px 10px;
 }
 
+
+/* Layout: Col 2-1: Info Text ------------------------------------------------ */
+
 #col2-1::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
 
-#col2-2 {
-    width: calc(100% - var(--col2-1-width));
-    margin-left: var(--col2-1-width);
-}
-
-section {
-  /* scroll-snap-align: center;
-  display: flex;
-  flex-flow: column;
-  justify-content: center; */
-}
-
-
-/* Col2-1: inactive */
-.dot div {
+.col2-1-class div {
   display: none;
   position: fixed;
   top: 0;
   left: var(--col1-width);
-  /* width: calc(20% + 300px); */
-  /* max-width: calc(50% - 295px); */
   width: var(--col2-1-width);
   height: 100%;
-  padding: 10px 20px 0 10px;
+  padding: 10px calc(10px - var(--scrollbar-left)) 0 10px;
+  display: none;
   overflow-y: auto;
   transition: all .3s ease;
   background-color: transparent;
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
-/* Col2-1: active */
-.dot.active div {
+.col2-1-class.active div {
   display: inline-block;
 }
 
-/* Col2-2: End Nav Styles */
+
+/* Layout: Col 2-2: Work ------------------------------------------------ */
+
+#col2-2 {
+  width: calc(100% - var(--col2-1-width) - var(--scrollbar-width) + var(--scrollbar-right) - var(--col2-extra));
+  margin-left: calc(var(--col2-1-width) + var(--scrollbar-width) - var(--scrollbar-right));
+  /* scroll-snap-type: y mandatory;
+  overflow: scroll;
+  position: relative; */
+  /* height: 100vh; */
+}
+
+/* #col2-2 section {
+  display: flex;
+  scroll-snap-align: start;
+  height: 100vh;
+} */
 
 footer{
   width:100%;
@@ -151,28 +163,63 @@ footer{
   background-color: transparent;
 }
 
+
+
+/* col2-2-title */
+
+#col2-2-title {
+  display: flex;
+  float: left;
+  margin-left: calc(var(--col2-1-width) + var(--scrollbar-width) - var(--scrollbar-right) - var(--col2-extra));
+}
+
+.col2-2-title-class div {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: calc(100% - var(--col1-width) - var(--col2-1-width) - var(--scrollbar-width) - var(--scrollbar-right) - var(--col3-width) - var(--col4-width));
+  height: 40px;
+  padding: 10px 0 0 0;
+  overflow: hidden;
+  z-index: 3;
+  color: white;
+  /* background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); */
+  /* background-color: black; */
+  /* border-bottom: 1px solid #ffffff; */
+  /* mix-blend-mode: difference; */
+  /* grid-template-columns: 1fr 1fr;
+  column-gap: 10px; */
+}
+
+.col2-2-title-class.active div {
+  display: grid;
+}
+
+
 /* Layout: Col 3 ================================================ */
 
 #col3 {
     float: right;
+    position: fixed;
+    top:0;
+    right:calc(var(--col4-width));
     width: var(--col3-width);
-    background: #000000;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-y: auto;
-    position: fixed;
-    top:0;
-    right: calc(var(--col4-width));
+    background: #000000;
 }
 
 #col3::-webkit-scrollbar-track { /* Track */
   background: transparent;
 }
 
+
 /* image+text area: col3 width - scrollbar width */
 .thumbnail-view {
- width: calc(var(--col3-width) - var(--scrollbar-width));
+  width: 100%;
+ /* width: calc(100% - var(--scrollbar-width)); */
  /* margin: 2; */
 }
 
@@ -181,7 +228,7 @@ footer{
   display: grid;
   grid-template-columns: calc(100% - 15px) 15px;
   width:100%;
-  height: 135px;
+  /* height: 135px; */
   text-decoration: none;
 }
 
@@ -196,16 +243,42 @@ footer{
 
 #col4 {
     float: right;
-    width: var(--col4-width);
-    background: #000000;
-    color: #ffffff;
-    height: 100%;
-    margin: 0;
-    padding: 10px 0 0 2px;
-    overflow-y: hidden;
     position: fixed;
     top:0;
     right:0px;
+    width: calc(var(--col4-width));
+    height: 100%;
+    margin: 0;
+    padding: 10px 0 0 calc(20px - var(--scrollbar-right));
+    overflow-y: hidden;
+    background: #000000;
+    color: #ffffff;
+}
+
+
+/* Divider =============================================== */
+
+hr {
+  background: #ffffff;
+    border-color: #ffffff;
+    border: 0;
+    height: 1px;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* btn: br =============================================== */
+
+.btn-br1 {
+  height: 0.5px;
+}
+
+.btn-br2 {
+  height: 24px;
 }
 
 
@@ -214,60 +287,3 @@ footer{
 * {
   box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: yellow;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-/* @media (max-width: 800px) {
-  .column4-1, .column4-2 {
-    flex: 100%;
-  } */

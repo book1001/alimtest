@@ -3,8 +3,35 @@
 @font-face {
   font-family: 'able_studiodoguVF';
   src: url('./font/able_studiodoguVF.ttf') format('truetype');
+}
+@font-face {
   font-family: 'GrotesqueMTStd';
   src: url('./font/GrotesqueMTStd.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Everett-Regular';
+  src: url('./font/Everett-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Everett-Medium';
+  src: url('./font/Everett-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Diatype';
+  src: url('./font/ABCDiatype-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NeueHaasGrotesk';
+  src: url('./font/NeueHaasGroteskText-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'icons';
+  src: url('./font/icons.eot');
+  src: url('./font/icons.woff2') format('woff2'),
+       url('./font/icons.woff') format('woff'),
+       url('./font/icons.ttf') format('truetype'),
+       url('./font/icons.svg#icons-Regular') format('svg'),
+       url('./font/icons.eot?#iefix') format('embedded-opentype');
 }
 
 
@@ -21,10 +48,24 @@
 }
 
 
+/* text: drag color ================================================ */
+
+::selection {
+  color: white;
+  background: black;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+
 /* En . Ko ================================================ */
 #Ko {
   display: none;
 }
+
 
 /* font: basic style ================================================ */
 
@@ -36,9 +77,14 @@
 /* font: menu ================================================ */
 
 .font-menu{
-  font-family: GrotesqueMTStd,sans-serif;
-  font-weight: normal;
-  font-size: 24px;
+  font-family: NeueHaasGrotesk,sans-serif;
+  font-weight: lighter;
+  font-size: 18.72px;
+  letter-spacing: 0.02rem;
+  /* font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.0rem; */
+  /* text-transform: uppercase; */
   color: #ffffff;
 
   /* line-height: 1.3; */
@@ -59,26 +105,53 @@
 }
 
 .font-menu2{
-  font-family: GrotesqueMTStd,sans-serif;
-  font-weight: normal;
-  font-size: 24px;
+  font-family: NeueHaasGrotesk,sans-serif;
+  font-weight: lighter;
+  font-size: 18.72px;
+  letter-spacing: 0.02rem;
+  /* font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.0rem; */
   color: #ffffff;
+  /* text-transform: uppercase; */
 }
 
+
+/* font: work ================================================ */
+
 .font-title{
-  font-family: GrotesqueMTStd,sans-serif;
-  font-weight: normal;
-  font-size: 24px;
+  font-family: NeueHaasGrotesk,sans-serif;
+  font-weight: lighter;
+  font-size: 18.72px;
+  letter-spacing: 0.02rem;
+  /* font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.0rem; */
+  text-align: left;
   color: #ffffff;
-  text-align: center;
+  /* text-transform: uppercase; */
+  transition: all .3s ease;
+}
+
+.font-year{
+  font-family: NeueHaasGrotesk,sans-serif;
+  font-weight: lighter;
+  font-size: 18.72px;
+  letter-spacing: 0.02rem;
+  text-align: right;
+  color: #ffffff;
+  transition: all .3s ease;
 }
 
 /* font: description ================================================ */
 
 .font-description{
-  font-family: GrotesqueMTStd,sans-serif;
-  font-weight: normal;
-  color: #ffffff;
+  font-family: NeueHaasGrotesk,sans-serif;
+  font-weight: lighter;
+  font-size: 18.72px;
+  /* font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.0rem; */
 
   /* font-size: 1.7rem; */
   /* font-size: 1.3rem; */
@@ -103,9 +176,10 @@
 /* font: description ================================================ */
 
 .font-thumbnail{
-  font-family: Helvetica,Arial,sans-serif;
+  font-family: NeueHaasGrotesk,sans-serif;
+  /* font-family: Helvetica,Arial,sans-serif; */
   font-weight: normal;
-  font-size: 12px;
+  font-size: 13.28px;
   color: #ffffff;
 
   writing-mode: vertical-rl;
@@ -113,8 +187,9 @@
   overflow: hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
-  padding-top: 2px;
-  line-height: 14px;
+  padding-top: 15px;
+  text-overflow: ellipsis;
+  /* line-height: 14px; */
 }
 
 

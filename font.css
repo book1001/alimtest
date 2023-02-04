@@ -72,8 +72,8 @@ p {
 
 a {
   text-decoration: none;
-  color: #ffffff;
-  /* color: rgb(255,255,0,1); */
+  /* color: #ffffff; */
+  color: rgb(255,255,0,1);
 }
 
 /* En . Ko ================================================ */
@@ -185,6 +185,21 @@ a {
   /* font-family: gopher, sans-serif;
   font-weight: 300;
   font-style: normal; */
+}
+
+
+.font-description-btn {
+  font-family: NeueHaasGrotesk,sans-serif;
+  font-weight: lighter;
+  font-size: 18.72px;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  /* color: #f0f0f0; */
+  color: rgb(255,255,0,1);
 }
 
 

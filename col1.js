@@ -35,6 +35,8 @@ function thumbnailSelection() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "block";
   document.getElementById("col2-2").style.display = "block";
+
+  
 }
 
 

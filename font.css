@@ -64,6 +64,17 @@
   background: white;
 }
 
+/* text: default ================================================ */
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  /* color: rgb(255,255,0,1); */
+}
 
 /* En . Ko ================================================ */
 #Ko {

@@ -27,6 +27,13 @@
 
 /* About ================================================ */
 
+.aboutview2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  font-size: 0;
+}
+
 .aboutview3 {
 	display: grid;
   grid-template-columns: 100px 3fr 1fr;

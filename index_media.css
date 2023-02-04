@@ -19,6 +19,12 @@
     --col1-btn-padding: 6px;
   }
 
+  /* Scrollbar ================================================ */
+
+  ::-webkit-scrollbar-thumb { /* Handle */
+    background: transparent;
+  }
+
   /* html, body ------------------------------------------------ */
 
   html, body {
@@ -32,6 +38,10 @@
       height: var(--col1-height);
       padding: 10px calc(var(--scrollbar-width) - var(--col1-btn-padding)) 0 calc(var(--scrollbar-width) - var(--col1-btn-padding));
       background: black;
+  }
+
+  #col2-0 {
+    padding: calc(var(--col1-height) + var(--col4-height) + 10px) 0px 10px 20px;
   }
 
   #col4 {
@@ -83,12 +93,16 @@
 
   /* col2-2.css ================================================ */
 
+  .aboutview2 {
+    grid-template-columns: 1fr;
+  }
+
   .padding-title {
   	height: calc(var(--col1-height) + var(--col4-height) + 76px);
   }
 
   .padding-bottom {
-    height: 0;
+    height: 100px;
   }
 
   /* font.css ================================================ */
@@ -147,12 +161,8 @@
       margin-left: 0px;
   }
 
-  #col2-0 {
-    padding: 10px 0px 10px 20px;
-  }
-
   .col2-1-class.active div {
-    /* display: none; */
+    display: none;
   }
 
   #col2-2 {

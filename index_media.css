@@ -37,7 +37,8 @@
       width: calc(100% - var(--col3-width));
       height: var(--col1-height);
       padding: 10px calc(var(--scrollbar-width) - var(--col1-btn-padding)) 0 calc(var(--scrollbar-width) - var(--col1-btn-padding));
-      background: black;
+      /* background: black; */
+      background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   }
 
   #col2-0 {
@@ -52,6 +53,8 @@
       height: var(--col4-height);
       padding: 0 calc(var(--scrollbar-width) - var(--col1-btn-padding)) 0 calc(var(--scrollbar-width) - var(--col1-btn-padding));
       overflow-y: hidden;
+      background: transparent;
+      /* background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); */
   }
 
 
@@ -92,6 +95,10 @@
 
 
   /* col2-2.css ================================================ */
+
+  .titleview {
+    background: transparent;
+  }
 
   .aboutview2 {
     grid-template-columns: 1fr;

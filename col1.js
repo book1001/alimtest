@@ -27,7 +27,6 @@ function openAbout() {
   console.log($('body').scrollTop());
   $('body').scrollTop(1);
   $('body').scrollTop(0);
-
   console.log($('body').scrollTop());
 }
 
@@ -35,6 +34,11 @@ function thumbnailSelection() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "block";
   document.getElementById("col2-2").style.display = "block";
+
+  console.log($('body').scrollTop());
+  $('body').scrollTop(1);
+  $('body').scrollTop(0);
+  console.log($('body').scrollTop());
 }
 
 

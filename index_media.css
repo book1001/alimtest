@@ -104,8 +104,12 @@
     grid-template-columns: 1fr;
   }
 
+  .padding-top {
+    height: calc(var(--col1-height) + var(--col4-height));
+  }
+
   .padding-title {
-  	height: calc(var(--col1-height) + var(--col4-height) + 76px);
+  	height: 40px;
   }
 
   .padding-bottom {
@@ -184,11 +188,6 @@
     width: 100%;
     margin-left: 20px;
   }
-
-  .padding-title {
-  	height: calc(var(--col1-height) + var(--col4-height) + 58px);
-  }
-
 
   #col3 {
     display: none;

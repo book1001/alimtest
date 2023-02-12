@@ -142,11 +142,20 @@
 
 @media only screen and (max-width:800px) { /* For tablets: */
 
+  /* Variable ================================================ */
+
   :root {
     /* --scrollbar-width: 0px; */
     --col2-1-width: 0px;
     --col3-width: 0%;
     /* --col3-width: 30%; */
+    --col4-height: 54px;
+  }
+
+  /* Scrollbar ================================================ */
+
+  ::-webkit-scrollbar { /* width */
+    width: 0;
   }
 
   /* Layout: Header ------------------------------------------------ */
@@ -157,7 +166,7 @@
 
   #col2 {
       width: 100%;
-      margin-right: 20px;
+      padding-right: 20px;
   }
 
   .col2-1-class.active div {

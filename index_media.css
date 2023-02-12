@@ -104,7 +104,7 @@
     grid-template-columns: 1fr;
   }
 
-  .padding-top {
+#padding-top {
     height: calc(var(--col1-height) + var(--col4-height));
   }
 

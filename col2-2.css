@@ -140,16 +140,16 @@
 
 /* Padding ================================================ */
 
-#padding-top {
+.work-padding-top {
   height: 0;
 }
 
-.padding-title {
+.work-padding-title {
 	height: 76px;
   /* height: 70px; */
 }
 
-.padding-bottom {
+.work-padding-bottom {
   height: 300px;
 }
 

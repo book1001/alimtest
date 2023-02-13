@@ -104,15 +104,15 @@
     grid-template-columns: 1fr;
   }
 
-#padding-top {
+  .work-padding-top {
     height: calc(var(--col1-height) + var(--col4-height));
   }
 
-  .padding-title {
+  .work-padding-title {
   	height: 40px;
   }
 
-  .padding-bottom {
+  .work-padding-bottom {
     height: 100px;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .col2-1-class.active div {
-    display: none;
+    /* display: none; */
   }
 
   #col2-2 {
@@ -205,6 +205,10 @@
   .imageNtext {
     grid-template-columns: calc(100% - 20px) 20px;
   } */
+
+  .work-padding-bottom {
+    height: 50px;
+  }
 
 }
 

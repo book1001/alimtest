@@ -1,10 +1,12 @@
-/* filter */
-/* .video-thumbnail-view {
- margin: 0;
- width: 155px;
-} */
+.thumbnail-view:after {  /* Masonry: clear fix */
+  content: '';
+  display: block;
+  clear: both;
+}
 
-
+.thumbnail-view-sizer {  /* Masonry */
+  width: 100%;
+}
 
 .thumbnail-view-item {
   width: 100%;
@@ -33,21 +35,19 @@
   transition: 0.3s linear;
 }
 
-
-.video_preview_center{
-  display: block;
-  margin: 0 auto 0 auto;
-  background-color: #000000;
-}
-
-img.video_preview_center:hover {
-  cursor: pointer;
-}
-
-
 .col3-btn {
   margin: 0;
   padding: 0;
   border-width: 0px;
   background-color: transparent;
+}
+
+.thumbnail-preview{
+  display: block;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.thumbnail-preview:hover {
+  cursor: pointer;
 }

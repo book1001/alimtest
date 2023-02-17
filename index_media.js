@@ -1,18 +1,28 @@
 var tabletStyle = window.matchMedia("(max-width: 800px)")
 var menuNumber = document.getElementsByClassName("mobileNone");
 
+
+
 function myFunction(tabletStyle) {
   if (tabletStyle.matches) { // ~ Tablet: 800px
 
     for (let i = 0; i < menuNumber.length; i++) {
       menuNumber[i].style.display = "none";
     }
+    document.getElementById("col2-1").style.display = "none";
+    // document.getElementById("closeContents").style.display = "inline-block";
 
   } else { // PC: 801px ~
 
    for (let i = 0; i < menuNumber.length; i++) {
      menuNumber[i].style.display = "inline-block";
    }
+   document.getElementById("col2-1").style.display = "block";
+   // document.getElementById("closeContents").style.display = "none";
+
+   // document.getElementById("col2-0").style.display = "";
+   // document.getElementById("col2-2").style.display = "";
+
   }
 }
 

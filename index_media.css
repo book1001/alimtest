@@ -185,13 +185,32 @@
   }
 
   #col2-2 {
+    display: none;
     width: 100%;
     margin-left: 20px;
   }
 
   #col3 {
-    display: none;
-    /* top: calc(var(--col1-height) + var(--col4-height)); */
+    /* display: none; */
+    width: 100%;
+    top: calc(var(--col1-height) + var(--col4-height));
+    padding: 10px 10px 0 10px;
+  }
+
+  /* .thumbnail-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  } */
+
+  .thumbnail-view-sizer {
+    width: 50%;
+  }
+
+  .thumbnail-view-item {
+    display: block;
+    float: left;
+    width: 50%;
   }
 
   #col4 {

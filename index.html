@@ -28,6 +28,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
+    <script type="text/javascript" src="index_media.js"></script>
   </head>
 
   <body>
@@ -88,6 +91,7 @@
       <div class="btn-br1"></div>
       <button class="col1-btn font-menu" style="cursor: alias;" onclick="javascript:window.open('https://www.instagram.com/alim.db', '_blank');" type="button">Instagram</button>
 
+      <button id="closeContents" class="col1-btn font-menu left" style="cursor: alias;" onclick="openShortcuts()">&times;</button>
       <!-- <button class="col1-btn col1-btn-language font-menu" style="cursor: w-resize;" onclick="EnKo()" type="button">En / Ko</button> -->
     </div>
 
@@ -286,6 +290,7 @@
             <div class="font-description text-align-right"></div>
           </div>
         </div>
+        <br><br>
 
       </div>
 
@@ -294,7 +299,57 @@
         <div class="nav-menu container">
 
           <div>
-            <div data-scroll="sec_iAm" href="#sec_iAm" class="col2-1-class desc-filter books typography 2020 active">
+            <div data-scroll="sec_Images" href="#sec_Images" class="col2-1-class desc-filter books illustration 2022 active">
+              <div class="font-description">
+                Image scraping for thesis
+                <br>
+                (on-going)
+                <br><br>
+                1 DotDotDot
+                <br><br>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-scroll="sec_TUD" href="#sec_TUD" class="col2-1-class desc-filter digital 2023">
+              <div class="font-description">
+                "Tools Upside Down" discovers new ways to use tools by hacking, twisting, and flipping them.
+                Including contemporary digital tools, students will be encouraged to bring the tools from their fields of expertise. By exploring and subverting all the tools we use, emphasis will be placed on experimental processes and outcomes.
+                <br><br>
+                <button onclick="window.open('http://toolsupsidedown.com','_blank')" class="font-description-btn" style="color:#00cc00;">toolsupsidedown.com</button>
+                <br><br>
+                <!-- <img src="./image_details/Detail_2023_TUD_type_1.gif" style="width: 62%; display: block;"> -->
+                <!-- <img src="./image_details/Detail_2023_TUD_doodle_1.png" style="width: 62%; display: block;"> -->
+                <!-- <br><br> -->
+                <p class="font-description" style="font-size: 12px; width: 50%;">
+
+                  <img src="./image_details/Detail_2023_TUD_type_1.gif" style="width: 100%; display: block;">
+                  <br>
+                  "Tools Upside Down" discovers new ways to use tools by hacking, twisting, and flipping them.
+                  Including contemporary digital tools, students will be encouraged to bring the tools from their fields of expertise. By exploring and subverting all the tools we use, emphasis will be placed on experimental processes and outcomes.
+
+                  <br><br>
+
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- <div>
+            <div data-scroll="sec_InfiniteFigures" href="#sec_InfiniteFigures" class="col2-1-class desc-filter illustration digital scripts 2022">
+              <div class="font-description">
+                Nowadays, cameras are one of the most common tools for making images. While we spent a lot of time and effort drawing portraits to capture appearances in the past, now we can create infinite figures just by taking photos with smartphone cameras.
+                <br><br>
+                This project is a side project of “Infinite Figures” ⁠— when you take selfie videos, the videos are automatically turned into pixelated GIFs and shown on a website.
+                <br><br>
+              </div>
+            </div>
+          </div> -->
+
+          <div>
+            <div data-scroll="sec_iAm" href="#sec_iAm" class="col2-1-class desc-filter books typography 2020">
               <div id="En" class="font-description">
                 We are often deprived of defining ourselves and who we are. As you are the master of your own life and destiny, you should be the only one who defines yourself.
                 <br><br>
@@ -325,7 +380,7 @@
           </div>
 
           <div>
-            <div data-scroll="sec_BarcodeBand" href="#sec_BarcodeBand" class="col2-1-class desc-filter digital 2017 container">
+            <div data-scroll="sec_BarcodeBand" href="#sec_BarcodeBand" class="col2-1-class desc-filter digital 2017">
               <div class="font-description">
                 When the barcode graphics on the paper are scanned, they represent the inherent sounds and then create music. This new digital instrument compresses existing heavy musical instruments onto a single piece of paper, exemplifying the essence of the digital society.
                 <br><br>
@@ -667,6 +722,90 @@
 
       <!-- End Nav Section -->
       <div id="col2-2" style="scroll-snap-type: y mandatory;">
+
+        <section id="sec_Images" style="scroll-snap-align: start;">
+          <div id="filter_Images" class="filterDiv books illustration 2022 show">
+            <div class="work-padding-top"></div>
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Images
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
+            <div class="work-padding-title"></div>
+
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2022_Images_DotDotDot1.png" style="width: 100%;">
+            </div>
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2022_Images_DotDotDot2.png" style="width: 100%;">
+            </div>
+
+            <div class="work-padding-bottom"></div>
+          </div>
+        </section>
+
+        <section id="sec_TUD" style="scroll-snap-align: start;">
+          <div id="filter_TUD" class="filterDiv digital 2023 show">
+            <div class="work-padding-top"></div>
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Tools Upside Down
+              </div>
+              <div class="font-year">
+                2023
+              </div>
+            </div></div>
+            <div class="work-padding-title"></div>
+
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2023_TUD_1.gif" style="width: 100%;">
+            </div>
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2023_TUD_2.gif" style="width: 100%;">
+            </div>
+
+            <!-- <div class="workview2">
+            	<div><img class="zoomIn" src="./image_details/Detail_2023_TUD_type_1.gif" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2023_TUD_doodle_2.png" style="width: 100%;"></div>
+            </div> -->
+
+            <div class="work-padding-bottom"></div>
+          </div>
+        </section>
+
+        <!-- <section id="sec_InfiniteFigures" style="scroll-snap-align: start;">
+          <div id="filter_InfiniteFigures" class="filterDiv illustration digital scripts 2022 show">
+            <div class="work-padding-top"></div>
+            <div class="titlesticky"><div class="titleview">
+              <div class="font-title">
+                Infinite Figures
+              </div>
+              <div class="font-year">
+                2022
+              </div>
+            </div></div>
+            <div class="work-padding-title"></div>
+
+            <div class="workview1">
+              <img class="zoomIn" src="./image_details/Detail_2023_TUD_1.png" style="width: 100%;">
+            </div>
+
+            <div class="workview2">
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.6,7.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.12,13.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.8,9.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.14,15.jpg" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.8,10,11.jpg" style="width: 100%;"></div>
+            	<div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.16,17.jpg" style="width: 100%;"></div>
+              <div><img class="zoomIn" src="./image_details/Detail_2020_iAm_p.18,19.jpg" style="width: 100%;"></div>
+            </div>
+
+            <div class="work-padding-bottom"></div>
+          </div>
+        </section> -->
 
         <section id="sec_iAm" style="scroll-snap-align: start;">
           <div id="filter_iAm" class="filterDiv books typography 2020 show">
@@ -1440,13 +1579,39 @@
 
 
     <div id="col3">
+
       <div id="thumnailView" class="thumbnail-view">
+        <div class="thumbnail-view-sizer"></div>
+
+        <div class="thumbnail-view-item">
+        <div class="filterDiv books illustration 2022 show">
+        <a href="#filter_Images" class="imageNtext">
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_Images.png" class="thumbnail-preview"></button>
+        <div class="font-thumbnail">01</div></a>
+        <div class="image-padding-bottom"></div></div></div>
+
+        <div class="thumbnail-view-item">
+        <div class="filterDiv digital 2023 show">
+        <a href="#filter_TUD" class="imageNtext">
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2023_TUD.png" class="thumbnail-preview"></button>
+        <div class="font-thumbnail">01</div></a>
+        <div class="image-padding-bottom"></div></div></div>
+
+        <!-- <div class="thumbnail-view-item">
+        <div class="filterDiv illustration digital scripts 2022 show">
+        <a href="#filter_InfiniteFigures" class="imageNtext">
+        <button class="col3-btn" onclick="thumbnailSelection()">
+        <img src="./image_previews/Preview_2022_InfiniteFigures.png" class="thumbnail-preview"></button>
+        <div class="font-thumbnail">01</div></a>
+        <div class="image-padding-bottom"></div></div></div> -->
 
         <div class="thumbnail-view-item">
         <div class="filterDiv books typography 2020 show">
         <a href="#filter_iAm" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2020_iAm.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2020_iAm.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">01</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1454,7 +1619,7 @@
         <div class="filterDiv digital 2017 show">
         <a href="#filter_BarcodeBand" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2018_BarcodeBand.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2018_BarcodeBand.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">02</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1462,7 +1627,7 @@
         <div class="filterDiv illustration digital scripts 2021 show">
         <a href="#filter_Waves" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2021_Waves.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2021_Waves.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">03</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1470,7 +1635,7 @@
         <div class="filterDiv books branding 2019 show">
         <a href="#filter_TimeMuseum" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2019_TimeMuseum.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2019_TimeMuseum.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">04</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1478,7 +1643,7 @@
         <div class="filterDiv books illustration digital scripts 2021 show">
         <a href="#filter_IceAndFire" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2021_IceAndFire.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2021_IceAndFire.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">05</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1486,7 +1651,7 @@
         <div class="filterDiv typography digital 2022 show">
         <a href="#filter_DotDotDot" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_DotDotDot.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2022_DotDotDot.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">06</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1494,7 +1659,7 @@
         <div class="filterDiv typography digital 2021 show">
         <a href="#filter_able" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2021_able.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2021_able.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">07</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1502,7 +1667,7 @@
         <div class="filterDiv branding digital 2022 show">
         <a href="#filter_CodeLab" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_CodeLab.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2022_CodeLab.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">08</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1510,7 +1675,7 @@
         <div class="filterDiv typography digital 2022 show">
         <a href="#filter_AndOn" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_AndOn.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2022_AndOn.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">09</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1518,7 +1683,7 @@
         <div class="filterDiv digital google 2022 show">
         <a href="#filter_FrozenIsland" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_FrozenIsland.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2022_FrozenIsland.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">20</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1526,7 +1691,7 @@
         <div class="filterDiv digital google 2022 show">
         <a href="#filter_DancingMoonlight" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_DancingMoonlight.gif" class="video_preview_center" style="width: 61%;"></button>
+        <img src="./image_previews/Preview_2022_DancingMoonlight.gif" class="thumbnail-preview" style="width: 61%;"></button>
         <div class="font-thumbnail">21</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1534,7 +1699,7 @@
         <div class="filterDiv digital google 2022 show">
         <a href="#filter_ThePortal" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_ThePortal.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2022_ThePortal.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">22</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1542,7 +1707,7 @@
         <div class="filterDiv illustration digital scripts 2022 show">
         <a href="#filter_NemoNemo" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2022_NemoNemo.gif" class="video_preview_center" style="width: 100%; padding: 20px 0 0 0;"></button>
+        <img src="./image_previews/Preview_2022_NemoNemo.gif" class="thumbnail-preview" style="padding: 20px 0 0 0;"></button>
         <div class="font-thumbnail">23</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1550,7 +1715,7 @@
         <div class="filterDiv books illustration 2019 show">
         <a href="#filter_Five" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2019_Five.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2019_Five.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">24</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1558,7 +1723,7 @@
         <div class="filterDiv illustration 2019 show">
         <a href="#filter_Five_sketch2" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2019_Five_sketch2.png" class="video_preview_center" style="width: 45%; padding: 20px 0 10px 0;"></button>
+        <img src="./image_previews/Preview_2019_Five_sketch2.png" class="thumbnail-preview" style="width: 45%; padding: 20px 0 10px 0;"></button>
         <div class="font-thumbnail">25</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1566,7 +1731,7 @@
         <div class="filterDiv illustration 2019 show">
         <a href="#filter_Five_sketch1" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2019_Five_sketch1.png" class="video_preview_center" style="width: 45%; padding: 20px 0 20px 0;"></button>
+        <img src="./image_previews/Preview_2019_Five_sketch1.png" class="thumbnail-preview" style="width: 45%; padding: 20px 0 20px 0;"></button>
         <div class="font-thumbnail">26</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1574,7 +1739,7 @@
         <div class="filterDiv books 2015 show">
         <a href="#filter_TheLibraryProject" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2015_TheLibraryProject.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2015_TheLibraryProject.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">27</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1582,7 +1747,7 @@
         <div class="filterDiv typography 2015 show">
         <a href="#filter_Numbering" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2015_Numbering.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2015_Numbering.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">28</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1590,7 +1755,7 @@
         <div class="filterDiv typography 2015 show">
         <a href="#filter_SpookyDecember" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2015_SpookyDecember.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2015_SpookyDecember.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">29</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1598,7 +1763,7 @@
         <div class="filterDiv illustration 2015 show">
         <a href="#filter_RYB" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2015_RYB.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2015_RYB.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">30</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1606,7 +1771,7 @@
         <div class="filterDiv digital 2018 show">
         <a href="#filter_MeasuredCreature" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2018_MeasuredCreature.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2018_MeasuredCreature.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">31</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1614,7 +1779,7 @@
         <div class="filterDiv digital 2019 show">
         <a href="#filter_CubeZeroZeroSix" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2019_CubeZeroZeroSix.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2019_CubeZeroZeroSix.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">32</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1622,7 +1787,7 @@
         <div class="filterDiv typography 2016 show">
         <a href="#filter_Experiment" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2016_Experiment.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2016_Experiment.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">33</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1630,7 +1795,7 @@
         <div class="filterDiv typography illustration 2021 show">
         <a href="#filter_KIAS_SoundStudy" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2021_KIAS_SoundStudy.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2021_KIAS_SoundStudy.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">34</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1638,7 +1803,7 @@
         <div class="filterDiv digital 2019 show">
         <a href="#filter_OneUI2" class="imageNtext">
         <button class="col3-btn" onclick="thumbnailSelection()">
-        <img src="./image_previews/Preview_2019_OneUI2.png" class="video_preview_center" style="width: 100%;"></button>
+        <img src="./image_previews/Preview_2019_OneUI2.png" class="thumbnail-preview"></button>
         <div class="font-thumbnail">35</div></a>
         <div class="image-padding-bottom"></div></div></div>
 
@@ -1684,6 +1849,8 @@
         <div class="btn-br1"></div>
         <button class="col1-btn font-menu2" onclick="filterSelection('scripts')">Scripts</button>
         <div class="btn-br2"></div>
+        <button class="col1-btn font-menu2 mobileNone" onclick="filterSelection('2023')">2023</button>
+        <div class="btn-br1"></div>
         <button class="col1-btn font-menu2 mobileNone" onclick="filterSelection('2022')">2022</button>
         <div class="btn-br1"></div>
         <button class="col1-btn font-menu2 mobileNone" onclick="filterSelection('2021')">2021</button>

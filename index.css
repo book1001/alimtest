@@ -111,6 +111,7 @@ img.right {
 
 #col2-0 {
     padding: 10px 10px 10px 10px;
+    z-index: 1;
 }
 
 
@@ -121,21 +122,21 @@ img.right {
 }
 
 .col2-1-class div {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: var(--col1-width);
-  width: var(--col2-1-width);
-  height: 100%;
-  padding: 10px calc(10px - var(--scrollbar-left)) 0 10px;
-  overflow-y: auto;
-  transition: all .3s ease;
-  background-color: transparent;
-  color: #f0f0f0;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: var(--col1-width);
+    width: var(--col2-1-width);
+    height: 100%;
+    padding: 10px calc(10px - var(--scrollbar-left)) 0 10px;
+    overflow-y: auto;
+    transition: all .3s ease;
+    background-color: transparent;
+    color: #f0f0f0;
 }
 
 .col2-1-class.active div {
-  display: inline-block;
+    display: inline-block;
 }
 
 
@@ -144,6 +145,7 @@ img.right {
 #col2-2 {
   width: calc(100% - var(--col2-1-width) - var(--scrollbar-width) + var(--scrollbar-right) - var(--col2-extra));
   margin-left: calc(var(--col2-1-width) + var(--scrollbar-width) - var(--scrollbar-right));
+  z-index: 1;
   /* scroll-snap-type: y mandatory;
   overflow: scroll;
   position: relative; */
@@ -206,7 +208,7 @@ footer{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-y: auto;
+    overflow-y: scroll;
     background: #000000;
 }
 
@@ -252,6 +254,7 @@ footer{
     overflow-y: hidden;
     background: #000000;
     color: #ffffff;
+    z-index: 3;
 }
 
 

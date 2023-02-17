@@ -11,3 +11,24 @@ var changeClass = document.getElementsByClassName("className");
 for (let i = 0; i < changeClass.length; i++) {
   changeClass[i].style.display = "none";
 }
+
+
+
+// Responsive 레이아웃: <button onclick="openAbout()">시 동작
+
+function buttonOnclick() {
+  var tabletStyle = window.matchMedia("(max-width: 800px)");
+  if (tabletStyle.matches) { // ~ Tablet: 800px
+    buttonOnclickTablet()
+  } else { // PC: 801px ~
+    buttonOnclickPC()
+  }
+}
+
+function buttonOnclickTablet() {
+  // ~ Tablet: 800px에서 동작
+}
+
+function buttonOnclickPC() {
+  // PC: 801px ~에서 동작
+}

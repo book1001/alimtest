@@ -197,6 +197,10 @@
     padding-right: 20px;
   }
 
+  .mobileView {
+    display: inline-block;
+  }
+
   #col3 {
     /* display: none; */
     width: 100%;

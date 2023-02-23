@@ -19,7 +19,7 @@ $(window).on( 'load', function() {
 
 // Responsive layout: filterSelection
 
-var lastC = 'all'; // Choose last selected filter when users change window size
+
 function filterSelection(c) {
   var tabletStyle = window.matchMedia("(max-width: 800px)");
   if (tabletStyle.matches) { //~Tablet: 800px
@@ -27,9 +27,39 @@ function filterSelection(c) {
   } else { // PC: 801px~
     filterSelectionPC(c)
   }
-  lastC = c;
 }
 
+// var lastC = 'all'; // Choose last selected filter when users change window size
+// function filterSelection(c) {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { //~Tablet: 800px
+//     filterSelectionTablet(c)
+//   } else { // PC: 801px~
+//     filterSelectionPC(c)
+//   }
+//   lastC = c;
+// }
+
+// var isTablet = false;
+// var isPC = false;
+// var lastC = 'all';
+// function filterSelection(c) {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { // ~ Tablet: 800px
+//     if(!isTablet) {
+//       filterSelectionTablet(c);
+//       isTablet = true;
+//       isPC = false;
+//     }
+//   } else { // PC: 801px ~
+//     if(!isPC) {
+//       filterSelectionPC(c);
+//       isTablet = false;
+//       isPC = true;
+//     }
+//     lastC = c;
+//   }
+// }
 
 function filterSelectionTablet(c) {
   var x = document.getElementsByClassName("filterDiv");

@@ -17,23 +17,6 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
-// Masonry
-var $grid = $('.thumbnail-view').masonry({
-  itemSelector: '.thumbnail-view-item',
-  horizontalOrder: true,
-  columnWidth: '.thumbnail-view-sizer',
-  percentPosition: true,
-});
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry('layout');
-});
-
-$(window).on( 'load', function() {
-  $grid.masonry('layout');
-});
-
-
 // Responsive layout: About
 
 function openAbout() {
@@ -403,24 +386,46 @@ function openShortcutsResizePC() {
 
 
 
+// function test() {
+//   // document.getElementById("col2-2").style.display = "none";
+//   document.getElementById("col2-2").style.display = "none";
+//   document.getElementById("col3").style.display = "block";
+//   document.getElementById("closeContents").style.display = "none";
+// }
+
+
+// window.onresize = function(event) {
+//   if(document.getElementById("col2-2").style.display == "block") {
+//     openShortcutsResize();
+//     // document.getElementById("closeContents").style.display == "block"
+//   } else {
+//     openShortcutsResize();
+//     thumbnailSelection();
+//     // openShortcuts();
+//     // filterSelection(lastC);
+//   }
+// };
+
+// window.onresize = function(event) {
+//   if(document.getElementById("col3").style.display == "block") {
+// test();
+//     // document.getElementById("closeContents").style.display == "block"
+//   } else {
+//
+//     // openShortcutsResize();
+//     // thumbnailSelection();
+//     // openShortcuts();
+//     // filterSelection(lastC);
+//   }
+// };
 
 window.onresize = function(event) {
+
+
   if(document.getElementById("col2-0").style.display == "block") {
     openAbout();
   } else {
     // thumbnailSelection();
-    // openShortcuts();
-    // filterSelection(lastC);
-  }
-};
-
-window.onresize = function(event) {
-  if(document.getElementById("col2-2").style.display == "block") {
-    openShortcutsResize();
-    // document.getElementById("closeContents").style.display == "block"
-  } else {
-    openShortcutsResize();
-    thumbnailSelection();
     // openShortcuts();
     // filterSelection(lastC);
   }

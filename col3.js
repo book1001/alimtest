@@ -19,13 +19,15 @@ $(window).on( 'load', function() {
 
 // Responsive layout: filterSelection
 
+var lastC = 'all'; // Choose last selected filter when users change window size
 function filterSelection(c) {
   var tabletStyle = window.matchMedia("(max-width: 800px)");
-  if (tabletStyle.matches) { // ~ Tablet: 800px
+  if (tabletStyle.matches) { //~Tablet: 800px
     filterSelectionTablet(c)
-  } else { // PC: 801px ~
+  } else { // PC: 801px~
     filterSelectionPC(c)
   }
+  lastC = c;
 }
 
 
@@ -39,6 +41,7 @@ function filterSelectionTablet(c) {
     document.getElementById("col2-1").style.display = "none";
     document.getElementById("col2-2").style.display = "none";
     document.getElementById("col3").style.display = "block";
+    document.getElementById("col4").style.display = "block";
     document.getElementById("closeContents").style.display = "none";
     $grid.masonry('layout');
 
@@ -50,6 +53,7 @@ function filterSelectionTablet(c) {
       document.getElementById("col2-1").style.display = "none";
       document.getElementById("col2-2").style.display = "none";
       document.getElementById("col3").style.display = "block";
+      document.getElementById("col4").style.display = "block";
       document.getElementById("closeContents").style.display = "none";
       $grid.masonry('layout');
     }

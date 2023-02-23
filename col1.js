@@ -206,3 +206,286 @@ function EnKo() {
   document.getElementById("Ko").style.display = "block";
   document.getElementById("En").style.display = "none";
 }
+
+
+// var isTablet = false;
+// var isPC = false;
+// function openAbout() {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { // ~ Tablet: 800px
+//     if(!isTablet) {
+//       openAboutTablet();
+//       isTablet = true;
+//       isPC = false;
+//     }
+//   } else { // PC: 801px ~
+//     if(!isPC) {
+//       openAboutPC();
+//       isTablet = false;
+//       isPC = true;
+//     }
+//   }
+// }
+
+
+// var isTablet = false;
+// var isPC = false;
+// function openAbout() {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { // ~ Tablet: 800px
+//     if(!isTablet) {
+//       openAboutTablet();
+//       isTablet = true;
+//       isPC = false;
+//     }
+//   } else { // PC: 801px ~
+//     if(!isPC) {
+//       openAboutPC();
+//       isTablet = false;
+//       isPC = true;
+//     }
+//   }
+// }
+//
+// window.onresize = function(event) {
+//   openAbout();
+//   openAboutTablet();
+//   openAboutPC();
+// };
+
+// window.onresize = function(event) {
+//   openAbout();
+//   thumbnailSelection();
+//   openShortcuts();
+// };
+
+
+
+// Refresh window (When users change window size PC to tablet)
+// window.onresize = function(event) {
+//   openAbout();
+//   thumbnailSelection();
+//   openShortcuts();
+//   filterSelection('all');
+//   // filterSelection('books');
+//   // filterSelection('typography');
+//   // filterSelection('branding');
+//   // filterSelection('illustration');
+//   // filterSelection('digital');
+//   // filterSelection('google');
+//   // filterSelection('scripts');
+//   // filterSelection('2015');
+//   // filterSelection('2016');
+//   // filterSelection('2017');
+//   // filterSelection('2018');
+//   // filterSelection('2019');
+//   // filterSelection('2020');
+//   // filterSelection('2021');
+//   // filterSelection('2022');
+//   // filterSelection('2023');
+// };
+
+// window.onresize = function(event) {
+//   if(document.getElementById("col2-0").style.display == "block") {
+//     openAbout();
+//   }
+//   else {
+//     thumbnailSelection();
+//     openShortcuts();
+//     filterSelection('all');
+//     filterSelection('books');
+//     filterSelection('typography');
+//     filterSelection('branding');
+//     filterSelection('illustration');
+//     filterSelection('digital');
+//     filterSelection('google');
+//     filterSelection('scripts');
+//     filterSelection('2015');
+//     filterSelection('2016');
+//     filterSelection('2017');
+//     filterSelection('2018');
+//     filterSelection('2019');
+//     filterSelection('2020');
+//     filterSelection('2021');
+//     filterSelection('2022');
+//     filterSelection('2023');
+//   }
+// };
+
+// window.onresize = function(event) {
+//   openAbout();
+//   thumbnailSelection();
+//   openShortcuts();
+//   filterSelection('all');
+// };
+
+// var lastC = 'all';
+// var isTablet = false;
+// var isPC = false;
+// function filterSelection(c) {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { // ~ Tablet: 800px
+//     if(!isTablet) {
+//       filterSelectionTablet(c);
+//       isTablet = true;
+//       isPC = false;
+//     }
+//   } else { // PC: 801px ~
+//     if(!isPC) {
+//       filterSelectionPC(c);
+//       isTablet = false;
+//       isPC = true;
+//     }
+//     lastC = c;
+//   }
+// }
+
+
+var lastC = 'all';
+function filterSelection(c) {
+  var tabletStyle = window.matchMedia("(max-width: 800px)");
+  if (tabletStyle.matches) { //~Tablet: 800px
+    filterSelectionTablet(c)
+  } else { // PC: 801px~
+    filterSelectionPC(c)
+  }
+  lastC = c;
+}
+
+function filterSelectionTablet(c) {
+  var x = document.getElementsByClassName("filterDiv");
+  for (var i = 0; i < x.length; i++) {
+    x[i].classList.remove("show");
+    x[i].parentElement.style.display = "none";
+
+    document.getElementById("col2-0").style.display = "none";
+    document.getElementById("col2-1").style.display = "none";
+    document.getElementById("col2-2").style.display = "none";
+    document.getElementById("col3").style.display = "block";
+    document.getElementById("col4").style.display = "block";
+    document.getElementById("closeContents").style.display = "none";
+    $grid.masonry('layout');
+
+    if (c == "all" || x[i].classList.contains(c)) {
+      x[i].classList.add("show");
+      x[i].parentElement.style.display = "block";
+
+      document.getElementById("col2-0").style.display = "none";
+      document.getElementById("col2-1").style.display = "none";
+      document.getElementById("col2-2").style.display = "none";
+      document.getElementById("col3").style.display = "block";
+      document.getElementById("col4").style.display = "block";
+      document.getElementById("closeContents").style.display = "none";
+      $grid.masonry('layout');
+    }
+  }
+
+  var descFilter = document.getElementsByClassName("desc-filter");
+  var isActive=false;
+  for (var i = 0; i < descFilter.length; i++) {
+    descFilter[i].classList.remove("active");
+    descFilter[i].style.display = "none";
+
+    if(c == "all" || descFilter[i].classList.contains(c)) {
+      descFilter[i].style.display = "block";
+
+      if (!isActive) {
+        descFilter[i].classList.add("active");
+
+        isActive = true;
+      }
+    }
+  }
+
+  // console.log($('body').scrollTop());
+  $('body').scrollTop(1);
+  $('body').scrollTop(0);
+  // console.log($('body').scrollTop());
+}
+
+
+function filterSelectionPC(c) {
+  var x = document.getElementsByClassName("filterDiv");
+  for (var i = 0; i < x.length; i++) {
+    x[i].classList.remove("show");
+    x[i].parentElement.style.display = "none";
+
+    document.getElementById("col2-0").style.display = "none";
+    document.getElementById("col2-1").style.display = "block";
+    document.getElementById("col2-2").style.display = "block";
+    document.getElementById("col3").style.display = "block";
+    document.getElementById("closeContents").style.display = "none";
+    $grid.masonry('layout');
+
+    if (c == "all" || x[i].classList.contains(c)) {
+      x[i].classList.add("show");
+      x[i].parentElement.style.display = "block";
+
+      document.getElementById("col2-0").style.display = "none";
+      document.getElementById("col2-1").style.display = "block";
+      document.getElementById("col2-2").style.display = "block";
+      document.getElementById("col3").style.display = "block";
+      document.getElementById("closeContents").style.display = "none";
+      $grid.masonry('layout');
+    }
+  }
+
+  var descFilter = document.getElementsByClassName("desc-filter");
+  var isActive=false;
+  for (var i = 0; i < descFilter.length; i++) {
+    descFilter[i].classList.remove("active");
+    descFilter[i].style.display = "none";
+
+    if(c == "all" || descFilter[i].classList.contains(c)) {
+      descFilter[i].style.display = "block";
+
+      if (!isActive) {
+        descFilter[i].classList.add("active");
+
+        isActive = true;
+      }
+    }
+  }
+
+  // console.log($('body').scrollTop());
+  $('body').scrollTop(1);
+  $('body').scrollTop(0);
+  // console.log($('body').scrollTop());
+}
+
+//
+// var isTablet = false;
+// var isPC = false;
+// function openAbout() {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { // ~ Tablet: 800px
+//     if(!isTablet) {
+//       openAboutTablet();
+//       isTablet = true;
+//       isPC = false;
+//     }
+//   } else { // PC: 801px ~
+//     if(!isPC) {
+//       openAboutPC();
+//       isTablet = false;
+//       isPC = true;
+//     }
+//   }
+// }
+//
+//
+window.onresize = function(event) {
+  if(document.getElementById("col2-0").style.display == "block") {
+    openAbout();
+  } else {
+    thumbnailSelection();
+    openShortcuts();
+    filterSelection(lastC);
+  }
+};
+//
+// window.onresize = function(event) {
+//   thumbnailSelection();
+//   openShortcuts();
+//   filterSelection(lastC);
+// };

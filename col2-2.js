@@ -15,7 +15,7 @@ let images = document.getElementsByClassName("zoomIn");
 for(let i=0; i<images.length; i++) {
   images[i].onclick = function(){
     modal.style.display = "block";
-    xIcon.style.display = "block";
+    // xIcon.style.display = "block";
     modalImg.src = this.src;
     // document.body.style.overflowY = "hidden";
   }

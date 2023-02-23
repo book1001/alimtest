@@ -34,6 +34,33 @@
   font-size: 0;
 }
 
+.aboutview_TUD {
+	display: grid;
+  grid-template-columns: 100px auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  font-size: 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.aboutview_YY {
+	display: grid;
+  grid-template-columns: 100px auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  font-size: 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.aboutview_MMYY {
+	display: grid;
+  grid-template-columns: 40px 55px auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  font-size: 0;
+  border-bottom: 1px solid #ffffff;
+}
+
 .aboutview3 {
 	display: grid;
   grid-template-columns: 100px 3fr 1fr;

@@ -88,6 +88,8 @@ function filterSelectionPC(c) {
     document.getElementById("col2-0").style.display = "none";
     document.getElementById("col2-1").style.display = "block";
     document.getElementById("col2-2").style.display = "block";
+    document.getElementById("col3").style.display = "block";
+    document.getElementById("closeContents").style.display = "none";
     $grid.masonry('layout');
 
     if (c == "all" || x[i].classList.contains(c)) {
@@ -97,6 +99,8 @@ function filterSelectionPC(c) {
       document.getElementById("col2-0").style.display = "none";
       document.getElementById("col2-1").style.display = "block";
       document.getElementById("col2-2").style.display = "block";
+      document.getElementById("col3").style.display = "block";
+      document.getElementById("closeContents").style.display = "none";
       $grid.masonry('layout');
     }
   }

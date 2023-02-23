@@ -46,6 +46,8 @@ function openAboutPC() {
   document.getElementById("col2-0").style.display = "block";
   document.getElementById("col2-1").style.display = "none";
   document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col3").style.display = "block";
+  document.getElementById("closeContents").style.display = "none";
 
   console.log($('body').scrollTop());
   $('body').scrollTop(1);
@@ -55,7 +57,7 @@ function openAboutPC() {
 
 
 
-// Responsive layout: Thumbnail
+// Responsive layout: Details
 
 function thumbnailSelection() {
   var tabletStyle = window.matchMedia("(max-width: 800px)");
@@ -83,6 +85,8 @@ function thumbnailSelectionPC() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "block";
   document.getElementById("col2-2").style.display = "block";
+  document.getElementById("col3").style.display = "block";
+  document.getElementById("closeContents").style.display = "none";
 
   console.log($('body').scrollTop());
   $('body').scrollTop(1);
@@ -112,6 +116,7 @@ function openShortcutsTablet() {
 function openShortcutsPC() {
   document.getElementById("col2-2").style.display = "none";
   document.getElementById("col3").style.display = "block";
+  document.getElementById("closeContents").style.display = "none";
 }
 
 

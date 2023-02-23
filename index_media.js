@@ -30,6 +30,7 @@ function myFunction(tabletStyle) {
    document.getElementById("col2-1").style.display = "";
    document.getElementById("col2-2").style.display = "";
    document.getElementById("col3").style.display = "";
+   document.getElementById("closeContents").style.display = "none";
   }
 }
 

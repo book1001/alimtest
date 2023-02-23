@@ -74,6 +74,7 @@
   }
 
   .col2-1-class div {
+    height: calc(100% - var(--col1-height) - var(--col4-height));
     top: calc(var(--col1-height) + var(--col4-height));
     left: 0;
     padding: 10px 20px 0 20px;

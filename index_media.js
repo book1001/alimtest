@@ -8,9 +8,6 @@ function myFunction(tabletStyle) {
     for (let i = 0; i < menuNumber.length; i++) {
       menuNumber[i].style.display = "none";
     }
-    // document.getElementById("col2-1").style.display = "none";
-    // document.getElementById("closeContents").style.display = "inline-block";
-
     if(document.getElementById("col3").style.display == "block") {
       document.getElementById("col2-2").style.display = "none";
       document.getElementById("col3").style.display = "block";
@@ -20,13 +17,9 @@ function myFunction(tabletStyle) {
     }
 
   } else { // PC: 801px ~
-
    for (let i = 0; i < menuNumber.length; i++) {
      menuNumber[i].style.display = "inline-block";
    }
-   // document.getElementById("col2-1").style.display = "block";
-   // document.getElementById("closeContents").style.display = "none";
-
    document.getElementById("col2-1").style.display = "";
    document.getElementById("col2-2").style.display = "";
    document.getElementById("col3").style.display = "";

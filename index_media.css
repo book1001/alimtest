@@ -199,6 +199,7 @@
   #col3 {
     /* display: none; */
     width: 100%;
+    height: calc(100% - var(--col1-height) - var(--col4-height));
     top: calc(var(--col1-height) + var(--col4-height));
     padding: 10px 10px 0 10px;
   }

@@ -255,7 +255,6 @@ footer{
     background: #000000;
     color: #ffffff;
     z-index: 3;
-    mix-blend-mode: difference;
 }
 
 

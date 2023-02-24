@@ -21,9 +21,10 @@
 
   /* Scrollbar ================================================ */
 
-  ::-webkit-scrollbar-thumb { /* Handle */
+  /* Handle */
+  /* ::-webkit-scrollbar-thumb { 
     background: transparent;
-  }
+  } */
 
   /* html, body ------------------------------------------------ */
 

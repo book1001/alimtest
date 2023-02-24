@@ -24,7 +24,7 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb { /* Handle */
-  background: rgb(255,255,0,1);
+  background: #b2b2b2;
   /* border-radius: 20px; */
   background-clip: padding-box;
   /* border: 8px solid transparent; */

@@ -31,7 +31,7 @@ function openAbout() {
 function openAboutTablet() {
   document.getElementById("col2-0").style.display = "block";
   document.getElementById("col2-1").style.display = "none";
-  // document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col2-2").style.display = "none";
   document.getElementById("col2-2").style.visibility = "hidden";
   document.getElementById("col2-2").style.opacity = "0";
   document.getElementById("col2-2").style.pointerEvents = "none";
@@ -47,7 +47,7 @@ function openAboutTablet() {
 function openAboutPC() {
   document.getElementById("col2-0").style.display = "block";
   document.getElementById("col2-1").style.display = "none";
-  // document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col2-2").style.display = "none";
   document.getElementById("col2-2").style.visibility = "hidden";
   document.getElementById("col2-2").style.opacity = "0";
   document.getElementById("col2-2").style.pointerEvents = "none";
@@ -76,7 +76,7 @@ function thumbnailSelection() {
 function thumbnailSelectionTablet() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "none";
-  // document.getElementById("col2-2").style.display = "block";
+  document.getElementById("col2-2").style.display = "block";
   document.getElementById("col2-2").style.visibility = "visible";
   document.getElementById("col2-2").style.opacity = "1";
   document.getElementById("col2-2").style.pointerEvents = "auto";
@@ -92,7 +92,7 @@ function thumbnailSelectionTablet() {
 function thumbnailSelectionPC() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "block";
-  // document.getElementById("col2-2").style.display = "block";
+  document.getElementById("col2-2").style.display = "block";
   document.getElementById("col2-2").style.visibility = "visible";
   document.getElementById("col2-2").style.opacity = "1";
   document.getElementById("col2-2").style.pointerEvents = "auto";

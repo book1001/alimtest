@@ -205,9 +205,11 @@
   #col3 {
     /* display: none; */
     width: 100%;
-    height: calc(100% - var(--col1-height) - var(--col4-height));
-    top: calc(var(--col1-height) + var(--col4-height));
-    padding: 10px 10px 0 10px;
+    height: 100%;
+    top: 0;
+    /* height: calc(100% - var(--col1-height) - var(--col4-height));
+    top: calc(var(--col1-height) + var(--col4-height)); */
+    padding: calc(var(--col1-height) + var(--col4-height) + 10px) 10px 0 10px;
   }
 
   /* .thumbnail-view {

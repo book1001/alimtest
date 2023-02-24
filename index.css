@@ -85,6 +85,7 @@ img.right {
     padding: 10px 10px 0 20px;
     overflow-y: auto;
     z-index: 3;
+    mix-blend-mode: difference;
 }
 
 

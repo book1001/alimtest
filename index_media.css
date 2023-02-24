@@ -22,7 +22,7 @@
   /* Scrollbar ================================================ */
 
   /* Handle */
-  /* ::-webkit-scrollbar-thumb { 
+  /* ::-webkit-scrollbar-thumb {
     background: transparent;
   } */
 
@@ -188,7 +188,10 @@
   }
 
   #col2-2 {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     width: 100%;
     margin-left: 20px;
   }

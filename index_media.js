@@ -8,8 +8,11 @@ function myFunction(tabletStyle) {
     for (let i = 0; i < menuNumber.length; i++) {
       menuNumber[i].style.display = "none";
     }
+    document.getElementById("col2-2").style.visibility = "hidden";
+    document.getElementById("col2-2").style.opacity = "0";
+    document.getElementById("col2-2").style.pointerEvent = "none";
     if(document.getElementById("col3").style.display == "block") {
-      document.getElementById("col2-2").style.display = "none";
+
       document.getElementById("col3").style.display = "block";
       document.getElementById("closeContents").style.display = "none";
     } else {
@@ -21,7 +24,9 @@ function myFunction(tabletStyle) {
      menuNumber[i].style.display = "inline-block";
    }
    document.getElementById("col2-1").style.display = "";
-   document.getElementById("col2-2").style.display = "";
+   document.getElementById("col2-2").style.visibility = "visible";
+   document.getElementById("col2-2").style.opacity = "1";
+   document.getElementById("col2-2").style.pointerEvent = "auto";
    document.getElementById("col3").style.display = "";
    document.getElementById("closeContents").style.display = "none";
    // $('body').scrollTop(1);

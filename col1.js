@@ -31,7 +31,10 @@ function openAbout() {
 function openAboutTablet() {
   document.getElementById("col2-0").style.display = "block";
   document.getElementById("col2-1").style.display = "none";
-  document.getElementById("col2-2").style.display = "none";
+  // document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col2-2").style.visibility = "hidden";
+  document.getElementById("col2-2").style.opacity = "0";
+  document.getElementById("col2-2").style.pointerEvents = "none";
   document.getElementById("col3").style.display = "none";
   document.getElementById("closeContents").style.display = "none";
 
@@ -44,7 +47,10 @@ function openAboutTablet() {
 function openAboutPC() {
   document.getElementById("col2-0").style.display = "block";
   document.getElementById("col2-1").style.display = "none";
-  document.getElementById("col2-2").style.display = "none";
+  // document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col2-2").style.visibility = "hidden";
+  document.getElementById("col2-2").style.opacity = "0";
+  document.getElementById("col2-2").style.pointerEvents = "none";
   document.getElementById("col3").style.display = "block";
   document.getElementById("closeContents").style.display = "none";
 
@@ -70,7 +76,10 @@ function thumbnailSelection() {
 function thumbnailSelectionTablet() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "none";
-  document.getElementById("col2-2").style.display = "block";
+  // document.getElementById("col2-2").style.display = "block";
+  document.getElementById("col2-2").style.visibility = "visible";
+  document.getElementById("col2-2").style.opacity = "1";
+  document.getElementById("col2-2").style.pointerEvents = "auto";
   document.getElementById("col3").style.display = "none";
   document.getElementById("closeContents").style.display = "inline-block";
 
@@ -83,7 +92,10 @@ function thumbnailSelectionTablet() {
 function thumbnailSelectionPC() {
   document.getElementById("col2-0").style.display = "none";
   document.getElementById("col2-1").style.display = "block";
-  document.getElementById("col2-2").style.display = "block";
+  // document.getElementById("col2-2").style.display = "block";
+  document.getElementById("col2-2").style.visibility = "visible";
+  document.getElementById("col2-2").style.opacity = "1";
+  document.getElementById("col2-2").style.pointerEvents = "auto";
   document.getElementById("col3").style.display = "block";
   document.getElementById("closeContents").style.display = "none";
 
@@ -107,15 +119,19 @@ function openShortcuts() {
 }
 
 function openShortcutsTablet() {
-  document.getElementById("col2-2").style.display = "none";
+  // document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col2-2").style.visibility = "hidden";
+  document.getElementById("col2-2").style.opacity = "0";
+  document.getElementById("col2-2").style.pointerEvents = "none";
   document.getElementById("col3").style.display = "block";
   document.getElementById("closeContents").style.display = "none";
-
-
 }
 
 function openShortcutsPC() {
-  document.getElementById("col2-2").style.display = "none";
+  // document.getElementById("col2-2").style.display = "none";
+  document.getElementById("col2-2").style.visibility = "hidden";
+  document.getElementById("col2-2").style.opacity = "0";
+  document.getElementById("col2-2").style.pointerEvents = "none";
   document.getElementById("col3").style.display = "block";
   document.getElementById("closeContents").style.display = "none";
 }
@@ -185,6 +201,26 @@ function EnKo() {
 //     // filterSelection(lastC);
 //   }
 // };
+
+
+// var isTablet = false;
+// var isPC = false;
+// function openShortcuts() {
+//   var tabletStyle = window.matchMedia("(max-width: 800px)");
+//   if (tabletStyle.matches) { // ~ Tablet: 800px
+//     if(!isTablet) {
+//       openShortcutsTablet();
+//       isTablet = true;
+//       isPC = false;
+//     }
+//   } else { // PC: 801px ~
+//     if(!isPC) {
+//       openShortcutsPC();
+//       isTablet = false;
+//       isPC = true;
+//     }
+//   }
+// }
 
 window.onresize = function(event) {
   if(document.getElementById("col2-0").style.display == "block") {

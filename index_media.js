@@ -24,6 +24,7 @@ function myFunction(tabletStyle) {
      menuNumber[i].style.display = "inline-block";
    }
    document.getElementById("col2-1").style.display = "";
+   document.getElementById("col2-2").style.display = "block";
    document.getElementById("col2-2").style.visibility = "visible";
    document.getElementById("col2-2").style.opacity = "1";
    document.getElementById("col2-2").style.pointerEvent = "auto";

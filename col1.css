@@ -12,6 +12,7 @@ button.col1-btn:hover {
   /* box-shadow: inset 0 -2px 0 0 black; */
   transition: 0.15s linear;
   cursor: pointer;
+  color: gray;
 }
 button.col1-btn.active {
   /* text-transform: uppercase; */

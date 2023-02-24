@@ -111,7 +111,7 @@ function openShortcutsTablet() {
   document.getElementById("col3").style.display = "block";
   document.getElementById("closeContents").style.display = "none";
 
-  
+
 }
 
 function openShortcutsPC() {

@@ -1,55 +1,12 @@
 /* font: import ================================================ */
-
-@font-face {
-  font-family: 'able_studiodoguVF';
-  src: url('./font/able_studiodoguVF.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'GrotesqueMTStd';
-  src: url('./font/GrotesqueMTStd.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Everett-Regular';
-  src: url('./font/Everett-Regular.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Everett-Medium';
-  src: url('./font/Everett-Medium.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Diatype';
-  src: url('./font/ABCDiatype-Regular.otf') format('opentype');
-}
 @font-face {
   font-family: 'NeueHaasGrotesk';
-  src: url('./font/NeueHaasGroteskText-Regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'icons';
-  src: url('./font/icons.eot');
-  src: url('./font/icons.woff2') format('woff2'),
-       url('./font/icons.woff') format('woff'),
-       url('./font/icons.ttf') format('truetype'),
-       url('./font/icons.svg#icons-Regular') format('svg'),
-       url('./font/icons.eot?#iefix') format('embedded-opentype');
+  src: url('./0_font/NeueHaasGroteskText-Regular.woff') format('woff');
+  src: url('./0_font/NeueHaasGroteskText-Regular.woff2') format('woff2');
 }
 
 
-/* text: align ================================================ */
-
-.text-align-left {
-  text-align: left;
-}
-.text-align-center {
-  text-align: center;
-}
-.text-align-right {
-  text-align: right;
-}
-
-
-/* text: drag color ================================================ */
-
+/* default: selected ================================================ */
 ::selection {
   /* color: white;
   background: black; */
@@ -57,191 +14,24 @@
   background: white;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
   /* color: white;
   background: black; */
   color: black;
   background: white;
 }
 
-/* text: default ================================================ */
 
-p {
-  margin: 0;
-}
-
+/* default ================================================ */
 a {
   text-decoration: none;
-  /* color: #ffffff; */
   color: #b2b2b2;
 }
 
-/* En . Ko ================================================ */
-#Ko {
-  display: none;
-}
-
-
-/* font: basic style ================================================ */
-
-.font-weight-bold {
-  font-weight: bold;
-}
-
-
-/* font: about ================================================ */
-
-.font-about-title {
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 17px;
-  letter-spacing: 0.02rem;
-  color: #ffffff;
-
-  padding-bottom: 2px;
-  text-transform: uppercase;
-}
-
-
-/* font: menu ================================================ */
-
-.font-menu{
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 18.72px;
-  letter-spacing: 0.02rem;
-  /* font-size: 1rem;
-  line-height: 1.2;
-  letter-spacing: 0.0rem; */
-  /* text-transform: uppercase; */
-  color: #ffffff;
-
-  /* line-height: 1.3; */
-  /* font-family: Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  line-height: 14px; */
-  /* font-size: 24px;
-  line-height: 28px; */
-  /* font-family: neue-haas-grotesk-display,sans-serif;
-  font-weight: 500;
-  font-style: normal; */
-  /* font-family: neue-haas-grotesk-text,sans-serif;
-  font-weight: 400;
-  font-style: normal; */
-  /* font-family: gopher, sans-serif;
-  font-weight: 300;
-  font-style: normal; */
-}
-
-.font-menu2{
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 18.72px;
-  letter-spacing: 0.02rem;
-  /* font-size: 1rem;
-  line-height: 1.2;
-  letter-spacing: 0.0rem; */
-  color: #ffffff;
-  /* text-transform: uppercase; */
-}
-
-
-/* font: work ================================================ */
-
-.font-title{
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 18.72px;
-  letter-spacing: 0.02rem;
-  /* font-size: 1rem;
-  line-height: 1.2;
-  letter-spacing: 0.0rem; */
-  text-align: left;
-  color: #ffffff;
-  /* text-transform: uppercase; */
-  transition: all .3s ease;
-}
-
-.font-year{
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 18.72px;
-  letter-spacing: 0.02rem;
-  text-align: right;
-  color: #ffffff;
-  transition: all .3s ease;
-}
-
-/* font: description ================================================ */
-
-.font-description{
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 18.72px;
-  /* font-size: 1rem;
-  line-height: 1.2;
-  letter-spacing: 0.0rem; */
-
-  /* font-size: 1.7rem; */
-  /* font-size: 1.3rem; */
-  /* line-height: 1.3; */
-  /* font-family: Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  line-height: 14px; */
-  /* font-size: 24px;
-  line-height: 28px; */
-  /* font-family: neue-haas-grotesk-display,sans-serif;
-  font-weight: 500;
-  font-style: normal; */
-  /* font-family: neue-haas-grotesk-text,sans-serif;
-  font-weight: 400;
-  font-style: normal; */
-  /* font-family: gopher, sans-serif;
-  font-weight: 300;
-  font-style: normal; */
-}
-
-
-.font-description-btn {
-  font-family: NeueHaasGrotesk,sans-serif;
-  font-weight: lighter;
-  font-size: 18.72px;
-
-  margin: 0;
-  padding: 0;
-  border: none;
+button {
   background-color: transparent;
+  border: none;
   cursor: pointer;
-  /* color: #f0f0f0; */
-  color: rgb(255,255,0,1);
+  font-family: 'NeueHaasGrotesk';
+  font-size: 28px;
 }
-
-
-/* font: description ================================================ */
-
-.font-thumbnail{
-  font-family: NeueHaasGrotesk,sans-serif;
-  /* font-family: Helvetica,Arial,sans-serif; */
-  font-weight: normal;
-  font-size: 13.28px;
-  color: #ffffff;
-
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-  padding-top: 15px;
-  text-overflow: ellipsis;
-  /* line-height: 14px; */
-}
-
-
-/* font: inactivated ================================================ */
-
-/* .font-able{
-  font-family: "able_studiodoguVF";
-  font-size: 20rem;
-  font-variation-settings: 'wdth' 0;
-  color: 000000;
-} */

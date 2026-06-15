@@ -1,0 +1,502 @@
+{
+  "Teaching": [
+    {
+      "Semeter": "2026 Spring",
+      "Title": "CFA AR 484 Senior Graphic Design Studio (Thesis)",
+      "Location": "Boston University, MA, US",
+      "Website": "26s.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2026 Spring",
+      "Title": "CFA AR 589 Interactive Design",
+      "Location": "Boston University, MA, US",
+      "Website": "inter.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2025 Fall",
+      "Title": "CFA AR 883 Graduate Graphic Design 2 (Thesis I)",
+      "Location": "Boston University, MA, US",
+      "Website": "25f.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2025 Fall",
+      "Title": "CFA AR 535 Z Software Lab",
+      "Location": "Boston University, MA, US",
+      "Website": "soft.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2025 Spring",
+      "Title": "CFA AR 484 Senior Graphic Design",
+      "Location": "Boston University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2025 Spring",
+      "Title": "CFA AR 497 Junior Type: Motion + Interactivity",
+      "Location": "Boston University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2025 Spring",
+      "Title": "CFA AR 589 Interactive Design",
+      "Location": "Boston University, MA, US",
+      "Website": "inter.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2025 Spring",
+      "Title": "CFA AR 576 Motion Graphics",
+      "Location": "Boston University, MA, US",
+      "Website": "mov.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2024 Fall",
+      "Title": "CFA AR 483 Senior Graphic Design: Collaboration",
+      "Location": "Boston University, MA, US",
+      "Website": "24f.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2024 Fall",
+      "Title": "CFA AR 535 Z Software Lab",
+      "Location": "Boston University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2024 Spring",
+      "Title": "CFA AR 226 Sophomore Graphic Design: Form, Communication",
+      "Location": "Boston University, MA, US",
+      "Website": "24s.gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2024 Spring",
+      "Title": "NMSE 8965-106 Collaborative Study: UI/UX Design",
+      "Location": "Rhode Island School of Design, RI, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2024 Spring",
+      "Title": "ARD 318-01 Graphic Design for The Web",
+      "Location": "Assumption University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2024 Winter",
+      "Title": "CTC 1000-103 Introduction to Computation: Platform 9¾",
+      "Location": "Rhode Island School of Design, RI, US",
+      "Website": "platform934.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2023 Fall",
+      "Title": "CFA AR 381 Junior Graphic Design: Audience, Authorship",
+      "Location": "Boston University, MA, US",
+      "Website": "gardeninthe.net",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Semeter": "2023 Winter",
+      "Title": "DM-1563 ✕ GRAPH-1563 Tools Upside Down",
+      "Location": "Rhode Island School of Design, RI, US",
+      "Website": "toolsupsidedown.com",
+      "Related_Work": "",
+      "Image": ""
+    }
+  ],
+  "Workshops": [
+    {
+      "Year": 2025,
+      "Title": "Multiple Formats Creative Coding Workshop: We Are Multiple Stars!",
+      "Location": "Boston University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2025,
+      "Title": "Creative Coding Workshop",
+      "Location": "University of Georgia, GA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2025,
+      "Title": "Virtual Space Building Workshop",
+      "Location": "University of Georgia, GA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2024,
+      "Title": "Portfolio Making Workshop ",
+      "Location": "Boston University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2024,
+      "Title": "Interactive Variable Font Workshop",
+      "Location": "Otis, CA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "Web Programming Workshop",
+      "Location": "MassArt, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "Searching for New Landscapes",
+      "Location": "Sejong University, Seoul, KR",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2022,
+      "Title": "AR Typography Workshop",
+      "Location": "Rhode Island School of Design, RI, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2022,
+      "Title": "2022 RISD Code Lab AR Poster Workshop",
+      "Location": "Rhode Island School of Design, RI, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    }
+  ],
+  "Speaking": [
+    {
+      "Year": 2024,
+      "Title": "Screen Typography XYZ",
+      "Location": "Korean Society of Typography, Seoul, KR",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2024,
+      "Title": "Searching for New Landscapes",
+      "Location": "Parsons School of Design, NY, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2024,
+      "Title": "Typing Presence",
+      "Location": "Inscript Collective",
+      "Website": "inscript.tf/2024",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "Searching for New Landscapes",
+      "Location": "School for Poetic Computation: SFPC, NY, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "NewOne Talks Vol.15",
+      "Location": "NewOne Talks, Beijing, CN",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "Motion Graphics",
+      "Location": "Parsons School of Design, NY, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "Multiple Formats: Contemporary Art Book Symposium and Art Book Fair",
+      "Location": "Boston University, MA, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2023,
+      "Title": "Searching for New Landscapes",
+      "Location": "Sejong University, Seoul, KR",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2017,
+      "Title": "Mobile UX Design",
+      "Location": "Sejong University, Seoul, KR",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    }
+  ],
+  "Performances": [
+    {
+      "Year": 2023,
+      "Title": "Experiments in Networked Performance",
+      "Location": "School for Poetic Computation: SFPC, NY, US",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2015,
+      "Title": "Barcode Band Performance",
+      "Location": "IIFF: International Intangible Heritage Film Festival: National Intangible Heritage Center, Jeollabuk-do, KR",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    }
+  ],
+  "Awards": [
+    {
+      "Year": 2022,
+      "Title": "KSDS Tangshan International Invitational Exhibition Special Prize",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2021,
+      "Title": "TDC 67 Communication Design Competition",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2013,
+      "Title": "Adobe Design Achievement Awards: Print Communications",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2013,
+      "Title": "Adobe Design Achievement Awards: Print Communications",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2013,
+      "Title": "iF Concept Design Award",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Vimeo Staff Picks",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Adobe Design Achievement Awards: Print Communications",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Adobe Design Achievement Awards: Live Action",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2010,
+      "Title": "Reddot Design Award Winner",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    }
+  ],
+  "Featured_Media": [
+    {
+      "Year": 2022,
+      "Title": "Design Magazine CA 262: Digital Artwork & NFT",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2015,
+      "Title": "S+V+M",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2014,
+      "Title": "Logograma: logo design for dynamic identities",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2014,
+      "Title": "VJs TV",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "eYeka Global",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "OFF magazine",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Curious Brain",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Design boom",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "CeCi magazine",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Naver TVcast",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2012,
+      "Title": "Discovery Channel: Outrageous Acts of Science",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2011,
+      "Title": "Tuvie",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2011,
+      "Title": "Trendhunter",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2011,
+      "Title": "Yanco Design",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2009,
+      "Title": "Maeil Business Newspaper",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    },
+    {
+      "Year": 2009,
+      "Title": "Design Jungle",
+      "Work": "",
+      "Website": "",
+      "Related_Work": "",
+      "Image": ""
+    }
+  ]
+}

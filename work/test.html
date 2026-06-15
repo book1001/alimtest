@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="naver-site-verification" content="a2f6dc73c779bbb018325e96aab39261c5d97361" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/root.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index_media.css">
+  </head>
+
+  <body>
+    <!-- ============================================================================= -->
+    <!-- Menu -->
+    <!-- ============================================================================= -->
+    <div id="menu-container"></div>
+
+
+    <!-- ============================================================================= -->
+    <!-- Sheets -->
+    <!-- ============================================================================= -->
+    <style>
+      #c-filter{
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 200px;
+        height: 100%;
+        padding: 100px 0 0 10px;
+        overflow-y: hidden;
+        /* mix-blend-mode: difference; */
+        z-index: 2;
+        /* background: red; */
+      }
+      
+      #c-filter button {
+        display: block;
+        color: white;
+      }
+      
+      #c-main {
+      }
+
+      #main-images{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        font-size: 0;
+      }
+
+      .titlesticky {
+        position: sticky;
+        position: -webkit-sticky;
+        /* top: 10px; */
+        top: 0px;
+        z-index: 6;
+        /* mix-blend-mode: difference; */
+        font-size: 26px;
+        color: red;
+      }
+
+
+      .workview1 {
+        display: grid;
+        margin-bottom: 20px;
+        row-gap: 20px;
+        font-size: 0;
+      }
+
+
+      .project-title {
+        font-family: NeueHaasGrotesk, sans-serif;
+        font-weight: lighter;
+        font-size: 18.72px;
+        letter-spacing: 0.02rem;
+        text-align: left;
+        /* text-transform: uppercase; */
+        transition: all .3s ease;
+      }
+
+      .project-card {
+        padding: 100px 600px 0 200px;
+        font-size: 20px;
+      }
+
+      #main-description {
+        position: fixed;
+        top: 0;
+        right: 100px;
+        width: 400px;
+        height: 100%;
+        padding: 100px 0 0 10px;
+        overflow-y: auto;
+      }
+
+      #c-thumbnail {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100%;
+        padding: 100px 0 0 10px;
+        overflow-y: auto;
+      }
+
+      .thumbnail-item {
+        width: 100%;
+        background: black;
+      }
+    </style>
+    
+    <div id="c-filter"></div>
+
+    <div id="c-main">
+      <div id="main-images">
+        <div id="sec_RadioClub" class="sec_item" style="scroll-snap-align: start;">
+
+            <div class="titlesticky">
+                Communal Radio Club
+            </div>
+
+            
+            <div class="workview1">
+              <img class="zoomIn" src="./img_main/Detail_2024_RadioClub_main_fish,dance.gif" style="width: 100%;">
+            </div>
+            <div class="workview1">
+              <img class="zoomIn" src="./img_main/Detail_2024_RadioClub_info_crab.gif" style="width: 100%;">
+            </div>
+            <div class="workview1">
+            	<div><img class="zoomIn" src="./img_main/Detail_2024_RadioClub_info_dance.gif" style="width: 100%;"></div>
+            </div>
+  
+          </div>
+
+        <div id="sec_FrozenIslandLive" class="sec_item" style="scroll-snap-align: start;">
+
+            <div class="titlesticky">
+                Frozen Island. Live
+            </div>
+
+            <div class="workview1">
+              <div><img class="center" src="./img_main/Detail_2023_FrozenIslandLive_cover_open.gif" style="width: 50%; padding-bottom: 10%;"></div>
+            </div>
+
+            <div class="workview2" style="column-gap: 0px; padding-bottom: 100px;">
+              <div><img class="zoomIn center" src="./img_main/Detail_2023_FrozenIslandLive_p.3,4.png" style="width: 100%; padding-bottom: 20%;"></div>
+              <div><img class="zoomIn center" src="./img_main/Detail_2023_FrozenIslandLive_p.7,8.png" style="width: 100%; padding-bottom: 20%;"></div>
+              <div><img class="zoomIn center" src="./img_main/Detail_2023_FrozenIslandLive_body.gif" style="width: 100%; padding-bottom: 20%;"></div>
+            	<div><img class="zoomIn center" src="./img_main/Detail_2023_FrozenIslandLive_p.37,38.png" style="width: 100%; padding-bottom: 20%;"></div>
+              <div><img class="center" src="./img_main/Detail_2023_FrozenIslandLive_cover_flip.gif" style="width: 100%;"></div>
+              <div><img class="zoomIn center" src="./img_main/Detail_2023_FrozenIslandLive_stamps.png" style="width: 100%;"></div>
+            </div>
+
+          </div>
+      </div>
+
+      <div id="main-description"></div>
+    </div>
+
+    <div id="c-thumbnail"></div>
+
+
+    <!-- ============================================================================= -->
+    <!-- script -->
+    <!-- ============================================================================= -->
+    <script type="text/javascript" src="/menu.js"></script>
+    <!-- <script type="text/javascript" src="./work.js"></script> -->
+  </body>
+</html>

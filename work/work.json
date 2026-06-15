@@ -1,0 +1,512 @@
+{
+  "Filter": {
+    "Category": [
+      "Book",
+      "Digital",
+      "Website",
+      "Typography",
+      "Installation",
+      "Poster",
+      "Branding",
+      "Commissioned",
+      "Illustration",
+      "Class",
+      "Practice",
+      "Script"
+    ],
+    "Year": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "Projects": [
+    {
+      "Title": "Communal Radio Club",
+      "Identifier": "RadioClub",
+      "Category": "Digital, Website",
+      "Year": "2024",
+      "Related_Work": "",
+      "Bg": "black",
+      "Color": "white",
+      "Thumbnail": "Thumbnail_2024_RadioClub.png",
+      "Description": [
+        "It’s truly wonderful that, across this vast expanse of Earth, you and I can come together in the same space and listen to the same music simultaneously. <button onclick=\"window.open('https://communalradio.club','_blank')\" class=\"font-description-btn\">–Communal Radio Club</button> is a space where visitors can listen to live radio stations. Clicking the blue jog dial in the middle of the screen will play a random radio station with an odd animation. ",
+        "<img src=\"./img_main/Detail_2024_RadioClub_phone_1.gif\" style=\"width: 80%; display: block;\">",
+        "We live in a world where we listen to music of our tastes whenever we want. Through Spotify, YouTube, Apple Music, among others, we pick, play, and skip tracks at will. Music has truly become one of the most accessible forms of media from the evolution of technology.",
+        "<img src=\"./img_main/Detail_2024_RadioClub_favicon.gif\" style=\"width: 90%; display: block;\">",
+        "Yet, even in this world, radio keeps broadcasting 24/7, crossing borders. Turning on the radio in my small room, I imagine someone living on the other side of the Earth listening to the same music together. The sense of connection is truly exhilarating. In the Community Radio Club, you can leave your names on the listener list to mark your presence. Encountering a familiar name upon returning to the site will add an extra layer of excitement to the experience. ",
+        "This project emerged from the NPC Artist workshop led by <button onclick=\"window.open('https://johnprovencher.com','_blank')\" class=\"font-description-btn\">John Provenche</button> at the <button onclick=\"window.open('https://fruitful.school','_blank')\" class=\"font-description-btn\">Fruitful School</button>."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<img class=\"zoomIn\" src=\"./img_main/Detail_2024_RadioClub_main_fish,dance.gif\" style=\"width: 100%;\">\n</div>",
+        "<div class=\"workview1\">\n<img class=\"zoomIn\" src=\"./img_main/Detail_2024_RadioClub_info_crab.gif\" style=\"width: 100%;\">\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2024_RadioClub_info_dance.gif\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Frozen Island. Live",
+      "Identifier": "FrozenIslandLive",
+      "Category": "Book, Digital",
+      "Year": "2023",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2023_FrozenIslandLive.png",
+      "Description": [
+        "This publication translates <button onclick=\"location.href='#filter_FrozenIsland'\" class=\"font-description-btn\">“Frozen Island”</button> <button onclick=\"window.open('https://frozenisland.live','_blank')\" class=\"font-description-btn\">(–frozenisland.live)</button> into a physical form. As a gift from <button onclick=\"location.href='#filter_FrozenIsland'\" class=\"font-description-btn\">“Frozen Island”</button>, a set of perforated, lick-and-stick stamps is presented on its cover.",
+        "<img src=\"./img_main/Detail_2023_FrozenIslandLive_tagging.gif\" style=\"width: 100%; display: block;\">",
+        "Each stamp is a mini-portal that takes readers to surprising moments on Google Maps. By tagging the stamp with their phones, people can travel to strange and beautiful places in the world.",
+        "The oval circles used throughout “Frozen Island. Live” are indicative of the Earth, the viewing eyes of users, and the idea of a portal."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<div><img class=\"center\" src=\"./img_main/Detail_2023_FrozenIslandLive_cover_open.gif\" style=\"width: 50%; padding-bottom: 10%;\"></div>\n</div>",
+        "<div class=\"workview2\" style=\"column-gap: 0px; padding-bottom: 100px;\">\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2023_FrozenIslandLive_p.3,4.png\" style=\"width: 100%; padding-bottom: 20%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2023_FrozenIslandLive_p.7,8.png\" style=\"width: 100%; padding-bottom: 20%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2023_FrozenIslandLive_body.gif\" style=\"width: 100%; padding-bottom: 20%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2023_FrozenIslandLive_p.37,38.png\" style=\"width: 100%; padding-bottom: 20%;\"></div>\n<div><img class=\"center\" src=\"./img_main/Detail_2023_FrozenIslandLive_cover_flip.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2023_FrozenIslandLive_stamps.png\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Tools Upside Down",
+      "Identifier": "TUD",
+      "Category": "Website, Class",
+      "Year": "2023",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2023_TUD.png",
+      "Description": [
+        "“Tools Upside Down” was a Wintersession course taught at Rhode Island School of Design in 2023. This class website was designed to enhance the creative environment which was one of the necessary footholds of the class.",
+        "As an open canvas, anyone can type what they want on the website. During the class, it was used as a chat room, drawing tool, sign-up sheet, Q&A, and a space to complain about being hungry. Further, this website encourages visitors to connect with students and their work. When visitors click on the names floating on the website, they can visit students' Instagram pages.",
+        "In addition to these social purposes, it was utilized as a shortcut to collect class materials that are scattered in Google Drives and Are.na.",
+        "<button onclick=\"window.open('https://toolsupsidedown.com','_blank')\" class=\"font-description-btn\">–toolsupsidedown.com</button>",
+        "<p class=\"font-description\">\n<img class=\"left\" src=\"./img_main/Detail_2023_TUD_type_1.gif\" style=\"width: calc(100% - 10px); display: block;\">\n<br>\nCourse Description ↓\n<br><br>\n“Tools Upside Down” discovers new ways to use tools by hacking, twisting, and flipping them. Including contemporary digital tools, students will be encouraged to bring the tools from their own fields of expertise. By exploring and subverting all the tools we use, the course places a strong emphasis on experimental processes and outcomes.\n<br><br>\nCo-taught with <button onclick=\"window.open('https://dowonyoo.com','_blank')\" class=\"font-description-btn\">Dowon Yoo</button>\n<br><br>\n</p>"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2023_TUD_1.gif\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2023_TUD_2.gif\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2023_TUB_signup_1.gif\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "iAm Type Specimen",
+      "Identifier": "iAm_specimen",
+      "Category": "Typography, Book",
+      "Year": "2020",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2020_iAm_Specimen.png",
+      "Description": [
+        "We are often deprived of the opportunity to define ourselves and who we are. As you are the master of your own life and destiny, you alone have the right to define yourself.",
+        "My font called “i.Am” supports one’s right to self-expression, liberty, and uniqueness.",
+        "This piece was honored with the Certificate of Typographic Excellence at TDC 67 Communication Design Competition."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<img class=\"zoomIn\" src=\"./img_main//Detail_2020_iAm_p.3,4,5.jpg\" style=\"width: 100%;\">\n</div>",
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn\" src=\"./img_main//Detail_2020_iAm_p.6,7.jpg\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main//Detail_2020_iAm_p.12,13.jpg\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2020_iAm_p.8,9.jpg\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2020_iAm_p.14,15.jpg\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2020_iAm_p.8,10,11.jpg\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2020_iAm_p.16,17.jpg\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2020_iAm_p.18,19.jpg\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Barcode Band ― The Fourth Project",
+      "Identifier": "BarcodeBand",
+      "Category": "Digital",
+      "Year": "2017",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2018_BarcodeBand.png",
+      "Description": [
+        "The music box created for this project contains two barcode scanners and musical instrument graphics made of barcodes. When the graphics are scanned, they represent the inherent sounds and create music that plays from the box.",
+        "The barcodes are made of ink and printed on paper. However, when they are scanned, the scattered ink is transformed into a non-physical form of sound. Digital codes compress lots of data into a single easily scannable form, enabling vast amounts of information to be quickly accessible. I believe this is the essence of digitization. This new digital instrument compresses the heavy musical instruments onto a single piece of paper, exemplifying the core of digitization.",
+        "<button onclick=\"window.open('https://vimeo.com/41132461','_blank')\" class=\"font-description-btn\">The first Barcode Band project</button> was made in 2012 with Woonjin Kang and Yongduk Kim. This is the project that I later developed into a portable version."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-9\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/387102413?color=ffffff&title=0&byline=0&portrait=0\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview1\">\n<img class=\"zoomIn\" src=\"./img_main/Detail_2018_BarcodeBand_R1.gif\" style=\"width: 100%;\">\n</div>",
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_BarcodeBand_2.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_BarcodeBand_6.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_BarcodeBand_3.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_BarcodeBand_4.png\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Dot Dot Dot",
+      "Identifier": "DotDotDot",
+      "Category": "Typography, Script",
+      "Year": "2022",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2022_DotDotDot.png",
+      "Description": [
+        "“Dot Dot Dot” is a project that includes different forms of dots. It was developed through a series of simple practices. The first practice was conducted by using a circular ruler. I sprayed on the ruler and created an uppercase alphabet.",
+        "I took photos of the alphabet with my iPhone. While zooming in and out of the photo, I found that the arrangement and the transition of the typeface on the app were visually satisfying. I then made my own compositions from this idea.",
+        "For the second practice, I applied a little glass to the app and generated pixelated images. In order to represent the aesthetic of the practice, I created a script <button onclick=\"location.href='#filter_NemoNemo'\" class=\"font-description-btn\">“Nemo Nemo”</button> that can generate pixelated images and applied the code to the compositions created in the first practice."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\" style=\"padding-bottom: 40px;\">\n<img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot.png\" style=\"width: 96%;\">\n</div>",
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2022_DotDotDot_1.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot_pixelated_1.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2022_DotDotDot_2.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot_pixelated_2.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2022_DotDotDot_3.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot_pixelated_3.png\" style=\"width: 90%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "able",
+      "Identifier": "able",
+      "Category": "Typography",
+      "Year": "2021",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2021_able.png",
+      "Description": [
+        "“able”, which implies ability and possibility, is a variable font of which users can change the width freely.",
+        "From the idea that “able” looks like rubber bands, I made a webpage where users can play around with the font. The width of “able” changes with the movement of the user’s mouse, and whenever users hit the Random button, a random word and image related to the versatile uses of rubber bands pop up.",
+        "Every single page can be printed as a postcard, and the original website where the images were downloaded can be shown when the mouse moves to the bottom-right most area."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-10\" style=\"padding-bottom: 40px;\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/700106058?h=d26e8e47dd\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview1\">\n<img class=\"zoomIn\" src=\"./img_main/Detail_2021_able.svg\" style=\"width: 100%;\">\n</div>"
+      ]
+    },
+    {
+      "Title": "And On And On",
+      "Identifier": "AndOn",
+      "Category": "Typography, Practice",
+      "Year": "2022",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2022_AndOn.png",
+      "Description": [
+        "“And On And On” was created by following the process of office work.",
+        "<img class=\"left\" src=\"./img_main/Detail_2022_AndOn_printer.gif\" style=\"width: calc(100% - 10px); display: block;\">",
+        "Each letter was designed by using Google Sheets and then printed out with a home printer. I glued the edges of the papers together, put the connected papers into the printer, and hit the print button while making a loop of the papers.",
+        "<img class=\"center\" src=\"./img_main/Detail_2022_AndOn_roll.jpg\" style=\"width: 50%; display: block;\">",
+        "As a printer does not recognize the end of the loop, it continuously prints, and the letters of the expression “And On And On” automatically go through the printer over and over."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview3\">\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_AndOn_1.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_AndOn_2.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_AndOn_3.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_AndOn_4.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_AndOn_5.png\" style=\"width: 100%;\"></div>\n<div></div>\n</div>",
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2022_DotDotDot_1.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot_pixelated_1.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2022_DotDotDot_2.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot_pixelated_2.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2022_DotDotDot_3.png\" style=\"width: 90%;\"></div>\n<div><img class=\"zoomIn left\" src=\"./img_main/Detail_2022_DotDotDot_pixelated_3.png\" style=\"width: 90%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Frozen Island",
+      "Identifier": "FrozenIsland",
+      "Category": "Digital, Website",
+      "Year": "2022",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2022_FrozenIsland.png",
+      "Description": [
+        "Google Maps not only accumulates information about locations but also records unexpected moments in time. Frozen Island is an archive of frozen time on Google Maps. Viewers can explore these captured moments by dropping their Google Maps avatars into the Mario Pipe on the island. When users discover new findings, they can report them to request new postings.",
+        "<img class=\"left zoomIn\" src=\"./img_main/Detail_2022_FrozenIsland_Hiawatha_eyeview.gif\" style=\"width: calc(100% - 10px); display: block;\">",
+        "<img class=\"left zoomIn\" src=\"./img_main/Detail_2022_FrozenIsland_Hiawatha_eyeview.gif\" style=\"width: calc(100% - 10px); display: block;\">",
+        "<img class=\"center\" src=\"./img_main/Detail_2022_FrozenIsland_Gamepad.jpg\" style=\"width: 80%; display: block;\">",
+        "<img class=\"left zoomIn\" src=\"./img_main/Detail_2022_FrozenIsland_Viewer1.png\" style=\"width: calc(100% - 10px); display: block;\">",
+        "The intriguing moments displayed on Frozen Island were printed on 35mm film slides as well. The slides are the layers of frozen time. Just like looking at a sample under a microscope, you can observe the frozen time more closely under a slide viewer."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-10\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/765519550?h=98014fc8c6\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_FrozenIsland_Viewing.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_FrozenIsland_TV1.gif\" style=\"width: 80%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_FrozenIsland_Hiawatha.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2022_FrozenIsland_Slide1.gif\" style=\"width: 60%; display: block;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_FrozenIsland_FrogRock.gif\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Dancing in the Moonlight",
+      "Identifier": "DancingMoonlight",
+      "Category": "Digital, Website, Practice",
+      "Year": "2022",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2022_DancingMoonlight.gif",
+      "Description": [
+        "I don’t like being in a closed space because the space represents the restriction of freedom. I assume that I’m not the only one who doesn’t like it. Many countries still have travel restrictions due to the pandemic or even because of the ongoing war in Ukraine. This project strives to reclaim mobility and recover a sense of community.",
+        "<img class=\"center\" src=\"./img_main/Detail_2022_DancingMoonlight_Pegman.png\" style=\"width: 30%; display: block;\">",
+        "When users drop the Google Maps avatar onto the place they want to go, they can dance at that location with music while traversing virtual streets. Anyone can record and share their dance moves as well as dance together with other users.",
+        "<img class=\"center\" src=\"./img_main/Detail_2022_DancingMoonlight_pp_Ian.gif\" style=\"width: 65%; display: block;\">",
+        "The title, “Dancing in the Moonlight,” was named after a song with the same name. Sherman Kelly wrote this song while recovering from a severe injury after being attacked by a gang.",
+        "<img class=\"center\" src=\"./img_main/Detail_2022_DancingMoonlight_pp_Karan.gif\" style=\"width: 65%; display: block;\">",
+        "I’ve always thought that Google Maps is the Earth in miniature. Above the earth, the moon always shines down. The avatars created by participants are shown on Google Maps in yellow as figures of moonlight. If more participants join this project, the initially dark Google Maps interface will become brighter with their individual moonlight avatars."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-10\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/728533246?h=14325cc8d9\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_DancingMoonlight_Intro,DropAvatar.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_DancingMoonlight_AvatarChange.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_DancingMoonlight_Share.gif\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2022_DancingMoonlight_AvatarMap.gif\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Portal",
+      "Identifier": "Portal",
+      "Category": "Digital, Website, Installation",
+      "Year": "2022",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2022_Portal.png",
+      "Description": [
+        "Today, many countries still have travel restrictions. Due to self-isolation related to the pandemic or the ongoing war in Ukraine, people nowadays lose the freedom of mobility.",
+        "“Portal” opens the gate to the world on the walls within your own home. Now you can go anywhere in the world by saying the names of the places you care about. This could mean your hometown that you haven't been to in a long time or a new travel destination. The portal was made from Google Maps, therefore you can traverse virtual streets in the “Portal”.",
+        "Technically, “Portal” is not a real portal. It was made using web programming language and then projected on the wall. A smartphone is used as a controller when you traverse virtual streets on Google Maps.",
+        "However, this piece does not articulate the truth. “Portal” is a doorway to the new world. It is a piece about pursuing freedom under restrictions. By tweaking the truth, “Portal” generates magic and makes our lives more fun and pleasurable."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-9\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/722226260?h=4aabd4e909\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview1\">\n<img class=\"center\" src=\"./img_main/Detail_2022_ThePortal_Open.gif\" style=\"width: 80%;\">\n<img class=\"center\" src=\"./img_main/Detail_2022_ThePortal_Providence,Eiffel.gif\" style=\"width: 80%;\">\n</div>"
+      ]
+    },
+    {
+      "Title": "A Song of Ice and Fire",
+      "Identifier": "IceAndFire",
+      "Category": "Book, Digital, Illustration, Practice, Script",
+      "Year": "2021",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2021_IceAndFire.png",
+      "Description": [
+        "“A Song of Ice and Fire” is a book generated by code. When I run the script, the pages of the book are automatically created, and the images on the left side of the book are converted into the images on the right side.",
+        "<img src=\"./img_main/Detail_2021_IceAndFire_animated.gif\" style=\"width: calc(100% - 10px); display: block;\">",
+        "The facial expressions of the generated images reminded me of the sense of madness I felt when watching “Game of Thrones.” As a result, I named my book after the original novel behind the TV series — “A Song of Ice and Fire.”"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-9\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/718869891?h=b8488fd411\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"video-16-9\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/699950863?h=45ce026e8a\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview2\" style=\"padding-top: 80px; padding-bottom: 80px;\">\n<img class=\"zoomIn right\" src=\"./img_main/Detail_2021_IceAndFire_p.1.png\" style=\"width: 93%;\">\n<img class=\"zoomIn left\" src=\"./img_main/Detail_2021_IceAndFire_p.14.png\" style=\"width: 93%;\">\n</div>",
+        "<div class=\"workview1\">\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2021_IceAndFire_p.8,9.png\" style=\"width: 93%;\">\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2021_IceAndFire_p.10,11.png\" style=\"width: 93%;\">\n</div>"
+      ]
+    },
+    {
+      "Title": "Nemo Nemo",
+      "Identifier": "NemoNemo",
+      "Category": "Digital, Practice, Script",
+      "Year": "2022",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2022_NemoNemo.gif",
+      "Description": [
+        "\"Nemo Nemo\" is a script that converts videos into pixelated illustrations, which allows you to produce/derive animated gif images or png sequences from the original video.",
+        "I put the pixelated cat generated by \"Nemo Nemo\" onto my MacBook touch bar to create a motion poster.",
+        "<img class=\"left\" src=\"./img_main/Detail_2022_NemoNemo1.gif\" style=\"width: calc(100% - 10px);\">"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-10\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/688606851?h=d3201d4ec6\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"video-16-10\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/688606936?h=cf34a31fc8\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"mobileView font-description\">\n<img src=\"./img_main/Detail_2022_NemoNemo1.gif\" style=\"width: 100%; padding-bottom: 40px;\">\n\"Nemo Nemo\" is a script that converts videos into pixelated illustrations, which allows you to produce/derive animated gif images or png sequences from the original video.\n<br><br>\nI put the pixelated cat generated by \"Nemo Nemo\" onto my MacBook touch bar to create a motion poster.\n</div>"
+      ]
+    },
+    {
+      "Title": "Five",
+      "Identifier": "Five",
+      "Category": "Book, Installation",
+      "Year": "2019",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2019_Five.png",
+      "Description": [
+        "In “Now We Are Five”, one of David Sedaris’ essays, he reminisces about his lost sister and reflects on his previous indifference toward her.",
+        "<img class=\"left zoomIn\" src=\"./img_main/Detail_2019_Five_Sedaris.svg\" style=\"width: 50%; display: block;\">",
+        "Throughout “Now We Are Five”, Sedaris apologizes for his indifference toward Tiffany. In my writing, \"Five”, I apologize for forgetting my aunts."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<img class=\"zoomIn\" src=\"./img_main/Detail_2019_Five_p.1.png\" style=\"width: 100%;\">\n</div>",
+        "<div class=\"workview3_07-1-2\">\n<div>\n<img class=\"zoomIn\" src=\"./img_main/Detail_2019_Five_Me.svg\" style=\"width: 100%;\">\n</div>\n<div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2019_Five_1.png\" style=\"width: 80%; padding-bottom: 20px;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2019_Five_2.png\" style=\"width: 80%; padding-bottom: 50px;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2019_Five_children.svg\" style=\"width: 80%; padding-bottom: 20px;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2019_Five_particles.svg\" style=\"width: 30%; padding-bottom: 20px;\"></div>\n</div>\n<div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2019_Five_p.4-4,4-5.png\" style=\"width: 100%; padding-bottom: 20px;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2019_Five_p.5-6,6-1.png\" style=\"width: 100%; padding-bottom: 20px;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2019_Five_p.6-4,6-5.png\" style=\"width: 100%; padding-bottom: 20px;\"></div>\n</div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Palm Tree",
+      "Identifier": "PalmTree",
+      "Category": "Installation, Practice",
+      "Year": "2019",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2019_Five_sketch2.png",
+      "Description": [
+        "The initial illustrations for <button onclick=\"location.href='#filter_Five'\" class=\"font-description-btn\">“Five”</button>"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2019_Five_sketch2.png\" style=\"width: 60%;\">\n</div>",
+        "<div id=\"filter_Five_sketch1\" class=\"filterDiv illustration 2019 show\">\n<div class=\"work-padding-title\"></div>\n\n<div class=\"workview1\">\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2019_Five_sketch1.png\" style=\"width: 60%;\">\n</div>\n</div>"
+      ]
+    },
+    {
+      "Title": "The Library Project",
+      "Identifier": "TheLibraryProject",
+      "Category": "Book",
+      "Year": "2015",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2015_TheLibraryProject.png",
+      "Description": [
+        "The Google Books Library Project was started in order to digitize every book in the world. Since the idea came out in 2004, the project has generated controversy regarding the demise of paper books. “The Library Project” is an outline of the Google Books Library Project.",
+        "<img class=\"left\" src=\"./img_main/Detail_2015_TheLibraryProject_10.png\" style=\"width: 75%; display: block;\">"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview3_11-7-7\" style=\"padding-bottom: 50px;\">\n<div>\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2015_TheLibraryProject_layout_1.png\" style=\"width: 65%;\">\n</div>\n<div>\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2015_TheLibraryProject_2.png\" style=\"width: 100%;\">\n</div>\n<div>\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2015_TheLibraryProject_3.png\" style=\"width: 100%;\">\n</div>\n</div>",
+        "<div class=\"workview3_11-7-7\" style=\"padding-bottom: 50px;\">\n<div>\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2015_TheLibraryProject_moving.gif\" style=\"width: 100%;\">\n</div>\n<div>\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2015_TheLibraryProject_8.png\" style=\"width: 100%;\">\n</div>\n<div>\n<img class=\"zoomIn center\" src=\"./img_main/Detail_2015_TheLibraryProject_9.png\" style=\"width: 100%;\">\n</div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Numbering",
+      "Identifier": "Numbering",
+      "Category": "Typography",
+      "Year": "2015",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2015_Numbering.png",
+      "Description": [
+        "Numbering is a participatory form of typography that users can do themselves. People can draw figures and characters freely on grids that consist of circular and rectangular shapes.",
+        "<img class=\"center\" src=\"./img_main/Detail_2015_Numbering_moving.gif\" style=\"width: 90%; display: block;\">",
+        "<img class=\"center\" src=\"./img_main/Detail_2015_Numbering_alim.png\" style=\"width: 85%; display: block;\">"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2015_Numbering_1.png\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn right\" src=\"./img_main/Detail_2015_Numbering_Stay,Ruok.png\" style=\"width: 85.8%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Spooky December",
+      "Identifier": "SpookyDecember",
+      "Category": "Typography, Poster",
+      "Year": "2015",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2015_SpookyDecember.png",
+      "Description": [
+        "By only using Riso black ink, I intended to give the impression of neon spot colors. The pink graphic on the poster is made using pink color paper.",
+        "<img class=\"center\" src=\"./img_main/Detail_2015_SpookyDecember_ink.png\" style=\"width: 50%; display: block;\">"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview2\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2015_SpookyDecember_posters1.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2015_SpookyDecember_posters2.png\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "RYB",
+      "Identifier": "RYB",
+      "Category": "Poster",
+      "Year": "2015",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2015_RYB.png",
+      "Description": [
+        "Series of posters to celebrate launching new Riso color drums — Red, Yellow, and Blue"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2015_RYB_R.png\" style=\"width: 50%; padding-bottom: 40px;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2015_RYB_Y.png\" style=\"width: 50%; padding-bottom: 40px;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2015_RYB_B.png\" style=\"width: 50%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Measured Creature",
+      "Identifier": "MeasuredCreature",
+      "Category": "Digital",
+      "Year": "2018",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2018_MeasuredCreature.png",
+      "Description": [
+        "Measured Creature is a digital microscopic organism born in smartphones. Its entity lies within a hologram and grows in three dimensions in the real world. Its growth rate is proportional to the frequency of the owner's smartphone use. Every time the owner uses the phone, the Measured creature grows into a larger organism.",
+        "<img class=\"left\" src=\"./img_main/Detail_2018_MeasuredCreature_moving1.gif\" style=\"width: calc(100% - 10px); padding-bottom: 20px; display: block;\">",
+        "<img class=\"left\" src=\"./img_main/Detail_2018_MeasuredCreature_moving2.gif\" style=\"width: calc(100% - 10px); display: block;\">"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-9\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/387106240\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_MeasuredCreature_1.png\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_MeasuredCreature_2.png\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_MeasuredCreature_3.png\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2018_MeasuredCreature_4.png\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Cube Zero Zero × Six",
+      "Identifier": "CubeZeroZeroSix",
+      "Category": "Digital, Website",
+      "Year": "2019",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2019_CubeZeroZeroSix.png",
+      "Description": [
+        "Cube Zero Zero × Six takes its motif from the film Cube (1997).",
+        "<img class=\"left\" src=\"./img_main/Detail_2019_CubeZeroZeroSix_R1.gif\" style=\"width: calc(100% - 10px); display: block;\">",
+        "When users type any film title on the search bar, reviews of the film are sorted into negative and positive categories by machine learning. While positive reviews are represented as blue cubes, negative reviews are shown as red cubes.",
+        "Based on the web data, Cube Zero Zero × Six continuously grows as an artificial web organism."
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"video-16-10\">\n<iframe class=\"video-responsive\" src=\"https://player.vimeo.com/video/387108036\" frameborder=\"0\" allowfullscreen></iframe>\n</div>",
+        "<div class=\"workview1\">\n<div><img src=\"./img_main/Detail_2019_CubeZeroZeroSix_1.gif\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img src=\"./img_main/Detail_2019_CubeZeroZeroSix_2.png\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Experiment",
+      "Identifier": "Experiment",
+      "Category": "Poster, Practice",
+      "Year": "2016",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2016_Experiment.png",
+      "Description": [
+        "“Experiment” was created as a project for cost-efficiency. Using my old home printer, I produced prints similar to screen-printing outcomes.",
+        "<img class=\"left\" src=\"./img_main/Detail_2016_Experiment_pinter.png\" style=\"width: 90%; display: block;\">"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview4\">\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_1.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_2.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_3.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_4.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_5.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_6.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_7.png\" style=\"width: 100%;\"></div>\n<div><img class=\"zoomIn center\" src=\"./img_main/Detail_2016_Experiment_8.png\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    },
+    {
+      "Title": "Illustrations for the science web magazine, “Horizon”",
+      "Identifier": "KIAS",
+      "Category": "Typography, Commissioned, Illustration",
+      "Year": "2021",
+      "Related_Work": "",
+      "Bg": "white",
+      "Color": "black",
+      "Thumbnail": "Thumbnail_2021_KIAS_SoundStudy.png",
+      "Description": [
+        "Illustrations for the science web magazine, “Horizon”"
+      ],
+      "Description_Kr": [],
+      "Images": [
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2021_KIAS_SoundStudy.gif\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2021_KIAS_Universality.gif\" style=\"width: 100%;\"></div>\n</div>",
+        "<div class=\"workview1\">\n<div><img class=\"zoomIn\" src=\"./img_main/Detail_2021_KIAS_Infosphere.jpg\" style=\"width: 100%;\"></div>\n</div>"
+      ]
+    }
+  ]
+}

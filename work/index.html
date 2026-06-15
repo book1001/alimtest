@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="naver-site-verification" content="a2f6dc73c779bbb018325e96aab39261c5d97361" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/root.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="./work.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index_media.css">
+  </head>
+
+  <body>
+    <!-- ============================================================================= -->
+    <!-- Menu -->
+    <!-- ============================================================================= -->
+    <div id="menu-container"></div>
+
+
+    <!-- ============================================================================= -->
+    <!-- Sheets -->
+    <!-- ============================================================================= -->
+    <style>
+      #c-filter{
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 200px;
+        height: 100%;
+        padding: 100px 0 0 10px;
+        overflow-y: hidden;
+        mix-blend-mode: difference;
+        z-index: 2;
+      }
+      
+      #c-filter button {
+        display: block;
+        color: white;
+      }
+
+      #c-projects {
+        opacity: 0;
+      }
+
+      #c-projects.active {
+        opacity: 1;
+      }
+
+      #projects-main{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        font-size: 0;
+      }
+
+      .main {
+        min-height: 300px;
+        padding: 100px 600px 0 200px;
+        font-size: 20px;
+      }
+
+      .main-header {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        z-index: 6;
+        font-size: 26px;
+        color: red;
+      }
+
+
+      .header-title {
+        font-family: NeueHaasGrotesk, sans-serif;
+        font-weight: lighter;
+        font-size: 18.72px;
+        letter-spacing: 0.02rem;
+        text-align: left;
+        /* text-transform: uppercase; */
+        transition: all .3s ease;
+      }
+
+      .main-images {
+        min-height: 300px;
+      }
+
+      #projects-sub {
+        position: fixed;
+        top: 0;
+        right: 100px;
+        width: 400px;
+        height: 100%;
+        padding: 100px 0 0 10px;
+        overflow-y: auto;
+      }
+      
+      #close-projects {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        cursor: pointer;
+      }
+
+      .sub {
+        display: none;
+        position: absolute;
+        top: 0;
+        /* left: var(--col1-width);
+        width: var(--col2-1-width); */
+        height: 100%;
+        /* padding: 10px calc(10px - var(--scrollbar-left)) 0 10px; */
+        overflow-y: auto;
+        transition: all .3s ease;
+      }
+
+      .sub.active {
+        display: block;
+      }
+
+      #c-thumbnails {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        /* width: 80%; */
+        height: 80%;
+        padding: 100px 0 0 10px;
+        overflow-y: auto;
+        /* transition: width 0.3s; */
+        /* flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100px; */
+      }
+
+      #c-thumbnails.active {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100px;
+      }
+
+      .thumbnail {
+        max-width: 200px;
+      }
+
+      .thumbnail-img {
+        width: 100%;
+        background: black;
+      }
+    </style>
+    
+    <div id="c-filter"></div>
+
+    <div id="c-projects">
+      <div id="projects-main"></div>
+      <div id="projects-sub"></div>
+      <div id="close-projects">Close</div>
+    </div>
+
+    <div id="c-thumbnails"></div>
+
+
+    <!-- ============================================================================= -->
+    <!-- script -->
+    <!-- ============================================================================= -->
+    <script type="text/javascript" src="/menu.js"></script>
+    <script type="text/javascript" src="./work_2_no_lazyimg.js"></script>
+  </body>
+</html>

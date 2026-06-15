@@ -1,0 +1,48 @@
+[JS]
+
+
+선택자
+document.querySelector("#name");
+
+
+요소생성
+document.createElement("div");
+document.createElement("h2");
+document.createElement("button");
+
+
+요소생성: 텍스트
+variable.textContent =  'text'; 
+
+
+요소생성: a tag 요소
+variable.href = "https://url.com";
+variable.target = "_blank";
+
+
+부모 안에 자식 넣기
+parent.appendChild(child1);
+parent.append(child1, child2);
+
+
+Id 삽입
+variable.id = "id";
+
+
+Class 삽입
+variable.classList.add("class1");
+variable.classList.add("class1", "class2", "class3");
+
+
+내부 지우기 (중복 생성 방지)
+document.querySelector("#name").innerHTML = "";
+
+
+
+[CSS]
+
+직계 선택자
+.class1 > .class2 > .class3
+
+모든 선택자
+.class1 .class3

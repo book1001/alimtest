@@ -42,13 +42,13 @@
         color: white;
       }
 
-      #c-projects {
+      /* #c-projects {
         opacity: 0;
       }
 
       #c-projects.active {
         opacity: 1;
-      }
+      } */
 
       #projects-main{
         position: fixed;
@@ -61,9 +61,14 @@
       }
 
       .main {
-        min-height: 300px;
+        display: none;
+        height: 100vh;
         padding: 100px 600px 0 200px;
         font-size: 20px;
+      }
+
+      .main.active {
+        display: block;
       }
 
       .main-header {
@@ -126,8 +131,8 @@
 
       #c-thumbnails {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-direction: row;
+        flex-wrap: wrap; */
         justify-content: space-around;
         align-items: flex-start;
         align-content: flex-start;
@@ -140,9 +145,9 @@
         padding: 100px 0 0 10px;
         overflow-y: auto;
         /* transition: width 0.3s; */
-        /* flex-direction: column;
+        flex-direction: column;
         flex-wrap: nowrap;
-        width: 100px; */
+        width: 100px;
       }
 
       #c-thumbnails.active {
@@ -176,6 +181,6 @@
     <!-- script -->
     <!-- ============================================================================= -->
     <script type="text/javascript" src="/menu.js"></script>
-    <script type="text/javascript" src="./work_2_no_lazyimg.js"></script>
+    <script type="text/javascript" src="./work_3_no_lazyimg.js"></script>
   </body>
 </html>

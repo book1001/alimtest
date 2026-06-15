@@ -188,6 +188,13 @@ async function loadJson() {
 
         atag.addEventListener("click", (e) => {
           e.preventDefault();
+
+          history.pushState(
+            null,
+            "",
+            "#" + project.Identifier
+          );
+          
           document.querySelector("#c-thumbnails").classList.add("active");
           document.querySelector("#c-projects").classList.add("active");
 

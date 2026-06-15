@@ -215,7 +215,7 @@ async function loadJson() {
           });
 
           if (!isLast) {
-            target.style.height = "auto";
+            target.style.minHeight = "auto";
           }
           
         });

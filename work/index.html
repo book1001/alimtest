@@ -95,6 +95,11 @@
         min-height: 300px;
       }
 
+      .main-images img {
+        height: auto;
+        display: block;
+      }
+
       #projects-sub {
         position: fixed;
         top: 0;
@@ -171,7 +176,7 @@
     <div id="c-projects">
       <div id="projects-main"></div>
       <div id="projects-sub"></div>
-      <div id="close-projects">Close</div>
+      <button id="close-projects" onclick="location.href='/'">Close</button>
     </div>
 
     <div id="c-thumbnails"></div>
@@ -181,6 +186,6 @@
     <!-- script -->
     <!-- ============================================================================= -->
     <script type="text/javascript" src="/menu.js"></script>
-    <script type="text/javascript" src="./work_1_no_lazyimg.js"></script>
+    <script type="text/javascript" src="./work.js"></script>
   </body>
 </html>

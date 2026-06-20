@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="./0_icon/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <meta name="naver-site-verification" content="a2f6dc73c779bbb018325e96aab39261c5d97361" />
 
     <!-- css -->
@@ -19,6 +20,60 @@
     <!-- Menu -->
     <!-- ============================================================================= -->
     <div id="menu-container"></div>
+
+
+    <!-- ============================================================================= -->
+    <!-- Sheets -->
+    <!-- ============================================================================= -->
+    <style>
+      #c-filter{
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 200px;
+        height: 100%;
+        padding: 100px 0 0 10px;
+        overflow-y: hidden;
+        mix-blend-mode: difference;
+        z-index: 2;
+      }
+      
+      #c-filter button {
+        display: block;
+        color: white;
+      }
+
+      #c-thumbnails {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        /* justify-content: space-around; */
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 80%;
+        padding: 100px 0 0 10px;
+        overflow-y: auto;
+        /* transition: width 0.3s; */
+      }
+
+      .thumbnail {
+        max-width: 200px;
+      }
+
+      .thumbnail-img {
+        width: 100%;
+        background: black;
+      }
+    </style>
+    
+    <div id="c-filter"></div>
+    <div id="c-thumbnails"></div>
 
 
     <!-- ============================================================================= -->

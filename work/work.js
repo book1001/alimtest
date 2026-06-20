@@ -1,119 +1,80 @@
-let projectStore = [];
+let projectImageObserver = null;
 
-// -------------------------
-// IMAGE OBSERVER
-// -------------------------
-const mainImageObserver = new IntersectionObserver((entries, observer) => {
-
-  entries.forEach(entry => {
-
-    if (!entry.isIntersecting) return;
-
-    const img = entry.target;
-
-    if (img.src) {
-      observer.unobserve(img);
-      return;
-    }
-
-    const src = img.dataset.src;
-    if (!src) return;
-
-    img.src = src;
-    img.classList.add("loaded");
-
-    observer.unobserve(img);
-  });
-
-}, {
-  root: document.querySelector("#projects-main"),
-  rootMargin: "400px"
-});
-
-// const mainImageObserver = new IntersectionObserver((entries, observer) => {
-
-//   entries.forEach(entry => {
-
-//     if (!entry.isIntersecting) return;
-
-//     const img = entry.target;
-
-//     img.src = img.dataset.src;
-
-//     img.onload = () => {
-//       img.classList.add("loaded");
-//     };
-
-//     img.removeAttribute("data-src");
-//     observer.unobserve(img);
-//   });
-
-// }, {
-//   root: document.querySelector("#projects-main"),
-//   // rootMargin: "150px",
-//   // threshold: 0.1
-//   rootMargin: "400px"
-// });
-
-
-// -------------------------
-// LOAD JSON
-// -------------------------
 async function loadJson() {
-
-  const data = await fetch("./work.json")
+  const data = await fetch("./work_kh.json")
     .then(res => res.json());
 
-  projectStore = data.Projects;
-
   // -------------------------
-  // FILTER
+  // FILTER 렌더링
   // -------------------------
   const filter = document.querySelector("#c-filter");
   filter.innerHTML = "";
 
+  // -------------------------
+  // Show All
+  // -------------------------
   const showAllBtn = document.createElement("button");
   showAllBtn.textContent = "Show All";
   showAllBtn.onclick = () => filterSender("all");
+
   filter.appendChild(showAllBtn);
+
 
   Object.entries(data.Filter).forEach(([objectName, items]) => {
 
     const list = document.createElement("div");
+    if (objectName === "Category") {
+      list.classList.add("filter-category");
+    }
+    if (objectName === "Year") {
+      list.classList.add("filter-year");
+    }
+    
+    // 🔥 Year일 때만 reverse
+    const sortedItems = (objectName === "Year")
+      ? [...items].reverse()
+      : items;
 
-    if (objectName === "Category") list.classList.add("filter-category");
-    if (objectName === "Year") list.classList.add("filter-year");
+    sortedItems.forEach(item => {
 
-    items.forEach(item => {
-      const btn = document.createElement("button");
-      btn.textContent = item;
-      btn.onclick = () => filterSender(item);
-      list.appendChild(btn);
+      const filterBtn = document.createElement("button");
+      filterBtn.textContent = item;
+      filterBtn.setAttribute("onclick", `filterSender('${item}')`);
+      list.appendChild(filterBtn);
     });
 
     filter.appendChild(list);
   });
 
   // -------------------------
-  // MAIN + THUMBNAIL
+  // PROJECTS 렌더링
   // -------------------------
   const projects = document.querySelector("#projects-main");
-  const thumbnailCol = document.querySelector("#c-thumbnails");
-
   projects.innerHTML = "";
+
+  const descriptionCol = document.querySelector("#projects-sub");
+  descriptionCol.innerHTML = "";
+
+  const thumbnailCol = document.querySelector("#c-thumbnails");
   thumbnailCol.innerHTML = "";
 
-  projectStore.forEach((project, projectIndex) => {
+
+  data.Projects.forEach((project, projectIndex) => {
 
     const card = document.createElement("div");
 
     const categories = project.Category
       .split(",")
-      .map(c => c.trim().replace(/\s+/g, "_"));
+      .map(category =>
+        category.trim().replace(/\s+/g, "_")
+      );
 
     const years = project.Year
       .split(",")
-      .map(y => y.trim());
+      .map(year =>
+        `${year.trim()}`
+        // `Y${year.trim()}`
+      );
 
     card.classList.add(
       "main",
@@ -121,412 +82,288 @@ async function loadJson() {
       ...categories,
       ...years
     );
-
     card.dataset.index = projectIndex;
-    card.id = project.Identifier.replace("#", "");
-
-    // -------------------------
-    // TITLE
-    // -------------------------
-    const titleContainer = document.createElement("div");
-    titleContainer.classList.add("main-header");
-
-    const title = document.createElement("h2");
-    title.classList.add("header-title");
-    title.textContent = project.Title;
-
-    titleContainer.appendChild(title);
-    card.appendChild(titleContainer);
-
-    // -------------------------
-    // IMAGES (LAZY)
-    // -------------------------
-    const imagesWrap = document.createElement("div");
-    imagesWrap.classList.add("main-images");
-
-    // HTML 구조 그대로 유지
-    imagesWrap.innerHTML = project.Images
-      ? project.Images.join("")
-      : "";
-
-    // append 먼저
-    card.appendChild(imagesWrap);
+    card.id = project.Identifier;
 
 
-    const imgs = imagesWrap.querySelectorAll("img");
 
-    imgs.forEach(img => {
+    // A~E 단일값들 출력
+    Object.entries(project).forEach(([objectName, value]) => {
 
-      const src = img.getAttribute("src");
+      if (!value || value.toString().trim() === "") return;
 
-      if (!src) return;
+      // -------------------------
+      // TITLE
+      // -------------------------
+      if (objectName === "Title") {
+        const titleContainer = document.createElement("div");
+        titleContainer.classList.add("main-header");
+        const title = document.createElement("h2");
+        title.classList.add("header-title");
+        title.textContent = value;
+        titleContainer.appendChild(title);
+        card.appendChild(titleContainer);
+      }
 
-      // 즉시 로딩 방지
-      img.removeAttribute("src");
-      img.dataset.src = src;
+      // -------------------------
+      // Images
+      // -------------------------
+      if (objectName === "Images") {
+        const title = document.createElement("div");
+        title.classList.add("main-images");
+        title.innerHTML = prepareLazyImages(value.join(""));
+        card.appendChild(title);
+      }
 
-      // observer 등록
-      mainImageObserver.observe(img);
-    });
+      // // -------------------------
+      // // Bg
+      // // -------------------------
+      // if (objectName === "Bg") {
+      //   card.style.backgroundColor = value;
+      // }
 
-    // const imagesWrap = document.createElement("div");
-    // imagesWrap.classList.add("main-images");
+      // // -------------------------
+      // // Bg
+      // // -------------------------
+      // if (objectName === "Color") {
+      //   card.style.color = value;
+      // }
 
-    // if (project.Images && project.Images.length > 0) {
 
-    //   project.Images.forEach(htmlString => {
+      // -------------------------
+      // DESCRIPTION (HTML 허용)
+      // -------------------------
+      if (objectName === "Description") {
 
-    //     const wrapper = document.createElement("div");
+        const categories = project.Category
+          .split(",")
+          .map(category =>
+            category.trim().replace(/\s+/g, "_")
+          );
 
-    //     const img = document.createElement("img");
-    //     img.classList.add("lazy-main-img");
+        const years = project.Year
+          .split(",")
+          .map(year =>
+            `${year.trim()}`
+            // `Y${year.trim()}`
+          );
 
-    //     img.dataset.src = extractSrc(htmlString);
+        const desc = document.createElement("div");
+        desc.classList.add(
+          "sub",
+          "filterReceiver",
+          ...categories,
+          ...years
+        );
+        desc.dataset.index = projectIndex;
+        desc.innerHTML = prepareLazyImages(value.join(""));
+        // desc.style.color = project.Color;
 
-    //     img.src = ""; // 핵심: 즉시 로딩 방지
+        descriptionCol.appendChild(desc);
+      }
 
-    //     mainImageObserver.observe(img);
+      // -------------------------
+      // Thumbnail
+      // -------------------------
+      if (objectName === "Thumbnail") {
 
-    //     wrapper.appendChild(img);
-    //     imagesWrap.appendChild(wrapper);
-    //   });
-    // }
+        const categoryList = document.createElement("div");
 
-    // card.appendChild(imagesWrap);
-    projects.appendChild(card);
+        const categories = project.Category
+          .split(",")
+          .map(category =>
+            category.trim().replace(/\s+/g, "_")
+          );
 
-    // -------------------------
-    // THUMBNAIL
-    // -------------------------
-    const thumbWrap = document.createElement("div");
+        const years = project.Year
+          .split(",")
+          .map(year =>
+            `${year.trim()}`
+            // `Y${year.trim()}`
+          );
 
-    thumbWrap.classList.add(
-      "thumbnail",
-      "filterReceiver",
-      ...categories,
-      ...years
-    );
+        categoryList.classList.add(
+          "thumbnail",
+          "filterReceiver",
+          ...categories,
+          ...years
+        );
+      
 
-    const atag = document.createElement("a");
-    atag.href = "#" + project.Identifier;
+        const atag = document.createElement("a");
+        atag.href = "#" + project.Identifier;
 
-    const img = document.createElement("img");
-    img.classList.add("thumbnail-img");
-    img.src = "./img_thumbnail/" + project.Thumbnail;
+        atag.addEventListener("click", (e) => {
+          e.preventDefault();
 
-    atag.appendChild(img);
-    thumbWrap.appendChild(atag);
-    thumbnailCol.appendChild(thumbWrap);
+          const url = new URL(window.location);
 
-    // -------------------------
-    // CLICK
-    // -------------------------
+          const currentFilter = localStorage.getItem("activeFilter") || "all";
 
-    atag.addEventListener("click", (e) => {
+          let hash = "";
 
-      e.preventDefault();
+          // filter가 있을 때만 추가
+          if (currentFilter && currentFilter !== "all") {
+            hash += `filter=${currentFilter}&`;
+          }
+          // id는 항상 마지막
+          // hash += `id=${project.Identifier}`;
+          hash += `${project.Identifier}`;
+          url.hash = hash;
 
-      const id = project.Identifier;
-      const target = document.querySelector("#" + id);
+          history.pushState(null, "", url);
 
-      window.location.hash = id;
+          document.querySelector("#c-thumbnails").classList.add("active");
+          document.querySelector("#c-projects").classList.add("active");
 
-      // 1. 이미지 즉시 로딩 (layout freeze)
-      forceLoadImages(target);
+          const target = document.querySelector("#" + project.Identifier);
 
-      // 2. UI open
-      document.querySelector("#c-thumbnails").classList.add("active");
-      document.querySelector("#c-projects").classList.add("active");
+          loadImagesIn(target);
 
-      // 3. scroll ONLY (DOM 변화 없이)
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
+          const container = document.querySelector("#projects-main");
 
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+          container.scrollTo({
+            top: target.offsetTop,
+            behavior: "smooth"
           });
 
+          updateActiveSub();
         });
-      });
 
-      // 4. sub는 scroll 이후
-      setTimeout(() => {
-        renderSub(projectIndex);
-      }, 300);
+
+        const img = document.createElement("img");
+        img.classList.add("thumbnail-img");
+        img.src = "./img_thumbnail/" + value;
+
+        atag.appendChild(img);
+        categoryList.appendChild(atag);
+        thumbnailCol.appendChild(categoryList);
+      }
+
     });
 
-    
-    // atag.addEventListener("click", (e) => {
-
-    //   e.preventDefault();
-
-    //   const id = project.Identifier;
-    //   const target = document.querySelector("#" + id);
-
-    //   window.location.hash = id;
-
-    //   // 1. 이미지 먼저 고정
-    //   forceLoadImages(target);
-
-    //   // 2. UI open
-    //   document.querySelector("#c-thumbnails").classList.add("active");
-    //   document.querySelector("#c-projects").classList.add("active");
-
-    //   // 3. layout 안정화 후 scroll
-    //   requestAnimationFrame(() => {
-    //     requestAnimationFrame(() => {
-    //       target.scrollIntoView({
-    //         behavior: "smooth",
-    //         block: "start"
-    //       });
-    //     });
-    //   });
-
-    //   // 4. sub render 약간 delay
-    //   setTimeout(() => {
-    //     renderSub(projectIndex);
-    //   }, 100);
-    // });
-
-    // atag.addEventListener("click", (e) => {
-
-    //   e.preventDefault();
-
-    //   const id = project.Identifier;
-
-    //   const target = document.querySelector("#" + id);
-
-    //   // 🔥 1. URL hash 업데이트 (중요)
-    //   window.location.hash = id;
-
-    //   // 🔥 2. 이미지 즉시 로딩 (핵심 해결)
-    //   forceLoadImages(target);
-
-    //   // UI open
-    //   document.querySelector("#c-thumbnails").classList.add("active");
-    //   document.querySelector("#c-projects").classList.add("active");
-
-    //   // scroll (안정 버전)
-    //   target.scrollIntoView({
-    //     behavior: "smooth",
-    //     block: "start"
-    //   });
-
-    //   renderSub(projectIndex);
-    // });
-
-
-
-    // atag.addEventListener("click", (e) => {
-
-    //   e.preventDefault();
-
-    //   document.querySelector("#c-thumbnails")
-    //     .classList.add("active");
-
-    //   document.querySelector("#c-projects")
-    //     .classList.add("active");
-
-    //   const target = document.querySelector(
-    //     "#" + project.Identifier.replace("#", "")
-    //   );
-
-    //   document.querySelector("#projects-main").scrollTo({
-    //     top: target.offsetTop,
-    //     behavior: "smooth"
-    //   });
-
-    //   renderSub(projectIndex);
-    // });
-
+    projects.appendChild(card);
   });
 
-  // -------------------------
-  // INIT
-  // -------------------------
-  const container = document.querySelector("#projects-main");
-
-  container.addEventListener("scroll", updateActiveSub);
-  updateActiveSub();
-
-  document.querySelector("#close-projects")
-    .addEventListener("click", () => {
-
-      document.querySelector("#c-thumbnails")
-        .classList.remove("active");
-
-      document.querySelector("#c-projects")
-        .classList.remove("active");
-
-    });
+  initProjectImageObserver();
 }
 
 // loadJson();
+
+
 
 loadJson().then(() => {
 
   const projectsMain = document.querySelector("#projects-main");
   projectsMain.addEventListener("scroll", updateActiveSub);
+
   updateActiveSub();
 
-  document.querySelector("#close-projects").addEventListener("click", () => {
-      document.querySelector("#c-thumbnails").classList.remove("active");
-      document.querySelector("#c-projects").classList.remove("active");
-  });
+  const savedFilter = localStorage.getItem("activeFilter");
+
+  if (savedFilter && savedFilter !== "all") {
+    filterSender(savedFilter);
+  }
+
+  goToHash();
+  window.addEventListener("hashchange", goToHash);
 
 });
 
 
-function extractSrc(htmlString) {
-  const match = htmlString.match(/src=["'](.*?)["']/);
-  return match ? match[1] : "";
+function prepareLazyImages(html) {
+
+  return html.replace(
+    /<img\b([^>]*?)\s+src=(["'])(.*?)\2/gi,
+    (match, attrs, quote, src) => {
+      if (/\sdata-src=/i.test(attrs)) return match;
+      return `<img${attrs} data-src=${quote}${src}${quote}`;
+    }
+  );
 }
 
-function forceLoadImages(target) {
+function initProjectImageObserver() {
 
-  const imgs = target.querySelectorAll("img");
+  const container = document.querySelector("#projects-main");
 
-  imgs.forEach(img => {
+  if (!window.IntersectionObserver) {
+    document.querySelectorAll(".main-images").forEach(loadImagesIn);
+    return;
+  }
 
-    const src = img.dataset.src || img.src;
-    if (!src) return;
+  if (projectImageObserver) {
+    projectImageObserver.disconnect();
+  }
 
-    // ❗ scroll 안정화 핵심
-    img.style.minHeight = img.height ? img.height + "px" : "300px";
+  projectImageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
 
-    img.src = src;
+      loadImagesIn(entry.target);
+      projectImageObserver.unobserve(entry.target);
+    });
+  }, {
+    root: container,
+    rootMargin: "800px 0px"
+  });
+
+  document.querySelectorAll(".main").forEach((project, index) => {
+    projectImageObserver.observe(project);
+
+    if (index < 2) {
+      loadImagesIn(project);
+      projectImageObserver.unobserve(project);
+    }
+  });
+}
+
+function loadImagesIn(container) {
+
+  if (!container) return;
+
+  container.querySelectorAll("img[data-src]").forEach(img => {
+    img.src = img.dataset.src;
     img.removeAttribute("data-src");
   });
 }
 
-// function forceLoadImages(target) {
-
-//   target.querySelectorAll("img").forEach(img => {
-
-//     const src = img.dataset.src || img.src;
-//     if (!src) return;
-
-//     img.src = src;
-//     img.removeAttribute("data-src");
-
-//     // 🔥 중요: height 흔들림 방지
-//     img.style.minHeight = "300px";
-//   });
-// }
-
-// function forceLoadImages(target) {
-
-//   target.querySelectorAll("img").forEach(img => {
-
-//     mainImageObserver.unobserve(img); // ⭐ 핵심
-
-//     const src = img.dataset.src;
-
-//     if (!src) return;
-
-//     img.src = src;
-//     img.classList.add("loaded");
-//   });
-// }
-
-// function forceLoadImages(target) {
-
-//   target.querySelectorAll("img").forEach(img => {
-
-//     mainImageObserver.unobserve(img); // ⭐ 핵심
-
-//     const src = img.dataset.src;
-
-//     if (!src) return;
-
-//     img.src = src;
-//     img.classList.add("loaded");
-//   });
-// }
-
-// function forceLoadImages(target) {
-
-//   target.querySelectorAll("img").forEach(img => {
-
-//     const src = img.dataset.src || img.getAttribute("src");
-
-//     if (!src) return;
-
-//     img.src = src;
-//     img.removeAttribute("data-src");
-
-//     img.onload = () => img.classList.add("loaded");
-//   });
-// }
-
-// function forceLoadImages(target) {
-
-//   const imgs = target.querySelectorAll("img[data-src]");
-
-//   imgs.forEach(img => {
-
-//     img.src = img.dataset.src;
-//     img.removeAttribute("data-src");
-
-//     img.onload = () => {
-//       img.classList.add("loaded");
-//     };
-//   });
-// }
-
-
-function renderSub(index) {
-
-  const container = document.querySelector("#projects-sub");
-  container.innerHTML = "";
-
-  const project = projectStore[index];
-
-  const desc = document.createElement("div");
-  desc.classList.add("sub", "active");
-  desc.dataset.index = index;
-
-  desc.innerHTML = project.Description
-    ? project.Description.join("")
-    : "";
-
-  container.appendChild(desc);
-}
-
-
-// function filterSender(filterName) {
-
-//   const receivers = document.querySelectorAll(".filterReceiver");
-
-//   // Show All
-//   if (filterName === "all") {
-
-//     receivers.forEach(receiver => {
-//       receiver.style.display = "";
-//     });
-
-//     return;
-//   }
-
-//   receivers.forEach(receiver => {
-
-//     if (receiver.classList.contains(filterName)) {
-//       receiver.style.display = "";
-//     } else {
-//       receiver.style.display = "none";
-//     }
-
-//   });
-
-// }
 
 function filterSender(filterName) {
+
+  localStorage.setItem("activeFilter", filterName);
+
+  const url = new URL(window.location);
+
+  // 🔥 현재 id 유지
+  const { id } = parseHashParams();
+
+  // 필터 없음 + id만 있음
+  if (filterName === "all") {
+
+    if (id) {
+      url.hash = id;          // #FrozenIslandLive
+    } else {
+      url.hash = "";
+    }
+
+  } else {
+
+    const params = new URLSearchParams();
+
+    params.set("filter", filterName);
+
+    if (id) {
+      params.set("id", id);
+    }
+
+    url.hash = params.toString();
+  }
+
+  history.replaceState(null, "", url);
 
   const receivers = document.querySelectorAll(".filterReceiver");
 
   receivers.forEach(receiver => {
-
     if (
       filterName === "all" ||
       receiver.classList.contains(filterName)
@@ -535,10 +372,35 @@ function filterSender(filterName) {
     } else {
       receiver.style.display = "none";
     }
-
   });
 
+
   updateActiveSub();
+}
+
+
+
+function parseHashParams() {
+  const hash = window.location.hash.replace("#", "");
+
+  // #BarcodeBand 지원
+  if (
+    hash &&
+    !hash.includes("=") &&
+    !hash.includes("&")
+  ) {
+    return {
+      filter: null,
+      id: hash
+    };
+  }
+
+  const params = new URLSearchParams(hash);
+
+  return {
+    filter: params.get("filter"),
+    id: params.get("id")
+  };
 }
 
 
@@ -548,62 +410,68 @@ function updateActiveSub() {
     ".main:not([style*='display: none'])"
   );
 
+  const subs = document.querySelectorAll(".sub");
+
+  // 전부 숨김
+  subs.forEach(sub => {
+    sub.classList.remove("active");
+  });
+
   if (mains.length === 0) return;
 
   let activeIndex = 0;
 
   mains.forEach((main, index) => {
 
-    if (main.getBoundingClientRect().top <= 100) {
+    const rect = main.getBoundingClientRect();
+
+    if (rect.top <= 100) {
       activeIndex = index;
     }
 
   });
 
-  renderSub(activeIndex);
+  const activeMain = mains[activeIndex];
+
+  const targetIndex = activeMain.dataset.index;
+
+  const targetSub = document.querySelector(
+    `.sub[data-index="${targetIndex}"]`
+  );
+
+  if (targetSub) {
+    targetSub.classList.add("active");
+    loadImagesIn(targetSub);
+  }
+
 }
 
-// function updateActiveSub() {
 
-//   const mains = document.querySelectorAll(
-//     ".main:not([style*='display: none'])"
-//   );
+function goToHash() {
+  const { filter, id } = parseHashParams();
 
-//   const subs = document.querySelectorAll(".sub");
+  const activeFilter =
+    filter || localStorage.getItem("activeFilter") || "all";
 
-//   // 전부 숨김
-//   subs.forEach(sub => {
-//     sub.classList.remove("active");
-//   });
+  filterSender(activeFilter);
 
-//   if (mains.length === 0) return;
+  if (!id) return;
 
-//   let activeIndex = 0;
+  const target = document.getElementById(id);
+  if (!target) return;
 
-//   mains.forEach((main, index) => {
+  document.querySelector("#c-thumbnails").classList.add("active");
+  document.querySelector("#c-projects").classList.add("active");
 
-//     const rect = main.getBoundingClientRect();
+  loadImagesIn(target);
 
-//     if (rect.top <= 100) {
-//       activeIndex = index;
-//     }
+  requestAnimationFrame(() => {
+    document.querySelector("#projects-main")
+      .scrollTo({
+        top: target.offsetTop,
+        behavior: "auto"
+      });
+  });
 
-//   });
-
-//   const activeMain = mains[activeIndex];
-
-//   const targetIndex = activeMain.dataset.index;
-
-//   const targetSub = document.querySelector(
-//     `.sub[data-index="${targetIndex}"]`
-//   );
-
-//   if (targetSub) {
-//     targetSub.classList.add("active");
-//   }
-
-// }
-
-
-
-
+  updateActiveSub();
+}
